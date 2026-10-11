@@ -16,7 +16,7 @@ Device: OPPO Pad Mini OPD2515. This publishes the current session reports, inclu
 | Cosa performance profiles | No clear improvement in streaming or DroidDeck gameplay. Original profiles restored. | [Streaming test](oppo-mini-game-profile-results.md), [DroidDeck test](oppo-mini-droiddeck-profile-results.md) |
 | DroidDeck event logging | Bounded observation found no actionable event-daemon overhead. No logging changes applied; DroidDeck investigation shelved. | [Overhead check](oppo-mini-droiddeck-log-overhead.md) |
 
-Pre-existing Wi-Fi/root helpers were retained. The buffer helper is the persistent change introduced by the buffer trials; it waits for boot, checks firmware identity, limits requests to the exact foreground app and resets when that app leaves. Runtime activation/off-switch verified; reboot and actual foreground-switch testing were not performed during gameplay. Charging investigation was skipped.
+Pre-existing Wi-Fi/root helpers were retained. The buffer helper is the persistent change introduced by the buffer trials; it waits for boot, checks firmware identity, limits requests to the exact foreground app and resets when that app leaves. Runtime activation/off-switch, actual reboot startup, and app-to-launcher reset/reactivation verified; see [reboot verification](oppo-mini-buffer-reboot-verification.md). Charging investigation was skipped.
 
 ## Reports and supporting analysis
 
@@ -53,6 +53,8 @@ Pre-existing Wi-Fi/root helpers were retained. The buffer helper is the persiste
 - [OPPO Cosa performance-profile stream test](oppo-mini-game-profile-results.md)
 - [Risk of Rain 2 / DroidDeck Cosa profile test](oppo-mini-droiddeck-profile-results.md)
 - [DroidDeck OPPO event-log overhead check](oppo-mini-droiddeck-log-overhead.md)
+
+- [Buffer helper reboot and foreground-switch verification](oppo-mini-buffer-reboot-verification.md)
 
 ## Reproducibility and evidence boundaries
 

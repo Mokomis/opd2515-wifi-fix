@@ -35,3 +35,6 @@ For removal, create the disable marker, wait at least7sec, then verify /data/adb
 ## Benefit boundary
 
 Repeated value2 tests reduced completed-frame display waiting by about1.1–1.3ms in this game stream, with no consistent pacing penalty. This is not a measured input-to-photon improvement or evidence for enabling it in other apps. See oppo-mini-buffer-value2-results.md.
+
+
+Follow-up: [real reboot and foreground-switch verification passed](oppo-mini-buffer-reboot-verification.md). This supersedes the earlier reboot/switch test limitation.
