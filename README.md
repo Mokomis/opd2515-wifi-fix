@@ -23,6 +23,8 @@ echo "42 6 9 118 125 100 20 0" > /sys/class/net/wlan0/unit_test_target
 
 `42` is the thermal manager, `9` is "reconfigure", and the five numbers after it are the two thresholds and the controller's three gains (stock: `90 105 100 20 0`). The setting lives in firmware memory, so it is lost when Wi-Fi is switched off, the driver reloads or the tablet reboots.
 
+**This only holds while the tablet is fairly cool.** The false readings ride on top of the chip's real temperature. With the chip at 38 to 40 °C they peaked at 112 °C, under the new threshold. After a long session that heated the chip to 57 to 62 °C, one read 119 °C, crossed 118 °C, and the pauses came back. See [When the tablet is hot](#when-the-tablet-is-hot).
+
 > [!CAUTION]
 > Always send all five values. Sent without them, the firmware takes thresholds of 0 and 50 °C and keeps the radio paused until the tablet is rebooted.
 
@@ -84,6 +86,25 @@ One game session with both fixes, about four minutes at 441 to 832 Mb/s, against
 
 A separate temperature sensor on the board next to the Wi-Fi chip stayed at 33.6 to 34.6 °C through every false reading.
 
+### When the tablet is hot
+
+All the results above were taken with the Wi-Fi chip's working sensors at 38 to 40 °C. They do not hold on a hot tablet.
+
+After about 15 minutes of streaming with the GPU held at a high clock, the board sensor read 51 °C and the chip's working sensors 57 to 62 °C. Sensor 6 then gave a false reading of 119 °C. That is above the raised 118 °C threshold, so the firmware throttled transmission again:
+
+| Chip temperature | Highest false reading seen | Stalls in the ping probe |
+|---|---|---|
+| 38 to 40 °C | 112 °C | 0 in three one-minute runs |
+| 57 to 62 °C | 119 °C | 2 of about 290 ms in 30 seconds |
+
+The firmware log showed the same sequence as before the fix: sensor 6 as the hottest sensor, then a mitigation command. In the same log the sensors' own error flags stayed at zero, so the firmware does not recognise the reading as false.
+
+What follows from this:
+
+- The fix depends on how hot the tablet runs. Anything that heats it (a high GPU clock floor, charging while playing, a warm room) narrows the margin.
+- Raising the thresholds further would cover a hotter chip, but 125 °C is the stock upper threshold, and going past it leaves the chip without its own heat protection. That was not tried.
+- The Wi-Fi board data on the tablet has a field named `invalid_Bits_Mask` beside the thermal thresholds. By its name it would take a faulty sensor out of the list, which would be the proper fix. That reading is a guess from the name, and it has not been tried.
+
 ## Install
 
 You need the OPPO Pad Mini OPD2515 on ColorOS `OPD2515_16.0.10.500(CN01)` (Wi-Fi driver `5.2.1.144V`), rooted with KernelSU or another root that runs scripts from `/data/adb/service.d/`.
@@ -142,6 +163,7 @@ If that prints a number above zero, try `gEnablePrimaryStaMloCap=0` in the drive
 
 ## What was not tested, and what it costs
 
+- **It stops working on a hot tablet.** See [When the tablet is hot](#when-the-tablet-is-hot). The measurements in this README were taken cool.
 - **The chip's own protection starts later.** With the thresholds at 118 / 125 °C, a Wi-Fi chip that really overheats is throttled 28 °C later than stock. The board sensor beside it never passed 35 °C here, on one tablet.
 - **Battery.** The patched driver keeps the link at 320 MHz when idle, where stock drops to 80 MHz to save power. The cost was not measured.
 - **Multi-link is gone.** The tablet no longer uses two bands at once. On the network used here it never did.
