@@ -12,6 +12,9 @@ Device: OPPO Pad Mini OPD2515. This publishes the current session reports, inclu
 | Touch reporting | Temporary selector increased delivered touch events about151→275/sec. Original selector restored; faster mode parked for later. | [Touch test](oppo-mini-touch-and-buffer-options.md), [follow-ups](oppo-mini-follow-up-notes.md) |
 | Background/memory policy | No demonstrated unwanted failure warranting a new exemption. o-stop(40) maps to Recents cleanup. Existing AdrenoFloor protection retained. | [Live check](oppo-mini-memory-policy-runtime.md), [policy explanation](oppo-background-freezing-explained.md) |
 | Streaming diagnostics | Scheduling, GPU, network/audio and frame-ledger findings retained below. Diagnostic app builds were reverted; original app restored. Host cap trial was skipped. | Individual reports below |
+| Controller timing | Typical delivered stick-report interval about1ms; no demonstrated worthwhile bridge optimization. No changes applied. | [Controller measurements](oppo-mini-controller-timing.md) |
+| Cosa performance profiles | No clear improvement in streaming or DroidDeck gameplay. Original profiles restored. | [Streaming test](oppo-mini-game-profile-results.md), [DroidDeck test](oppo-mini-droiddeck-profile-results.md) |
+| DroidDeck event logging | Bounded observation found no actionable event-daemon overhead. No logging changes applied; DroidDeck investigation shelved. | [Overhead check](oppo-mini-droiddeck-log-overhead.md) |
 
 Pre-existing Wi-Fi/root helpers were retained. The buffer helper is the persistent change introduced by the buffer trials; it waits for boot, checks firmware identity, limits requests to the exact foreground app and resets when that app leaves. Runtime activation/off-switch verified; reboot and actual foreground-switch testing were not performed during gameplay. Charging investigation was skipped.
 
@@ -45,6 +48,11 @@ Pre-existing Wi-Fi/root helpers were retained. The buffer helper is the persiste
 - [Mini touch-rate and display-buffer investigation](oppo-mini-touch-and-buffer-options.md)
 - [OPPO Mini follow-up: Wi-Fi, presentation, thermal callbacks](oppo-mini-wifi-thermal-presentation.md)
 - [REA Android bridge repair](rea-android-bridge-repair.md)
+
+- [Kishi controller timing](oppo-mini-controller-timing.md)
+- [OPPO Cosa performance-profile stream test](oppo-mini-game-profile-results.md)
+- [Risk of Rain 2 / DroidDeck Cosa profile test](oppo-mini-droiddeck-profile-results.md)
+- [DroidDeck OPPO event-log overhead check](oppo-mini-droiddeck-log-overhead.md)
 
 ## Reproducibility and evidence boundaries
 
