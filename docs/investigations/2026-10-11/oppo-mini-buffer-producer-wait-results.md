@@ -4,6 +4,8 @@
 
 ## Finding
 
+> Audit note: decode and present run sequentially on one thread, so a wait inside frame N's `QueuePresentKHR` delays frame N+1's acquisition. A shorter acquisition-to-latch interval is then expected even if no frame latches earlier. The two disabled runs also differ by 0.86 ms. This table does not separate a real gain from moved waiting. See [independent audit 2.2](independent-audit.md#22-the-same-frames-reach-latch-sooner-result-has-a-cross-frame-confound).
+
 The tweak shifts approximately0.85ms into the traced QueuePresentKHR call, but the same frames still reach compositor latch sooner from image acquisition: median reductions0.70ms and1.60ms in two local comparisons. This supports a small benefit over the observed rendering segment, rather than a wholly artificial reduction of post-ready waiting. Decode, host/network, presentation after latch and input-to-photon timing remain unresolved.
 
 | Run | Setting | QueuePresentKHR median ms | Acquisition to latch median ms | Same-frame mean ms | Matched frames |

@@ -6,9 +6,9 @@ Device: OPPO Pad Mini OPD2515. This publishes the current session reports, inclu
 
 | Topic | Current result | Report |
 |---|---|---|
-| Buffer control | Per-app value2 with alignment on is installed for Punktfunk. Typical completed-frame waiting improved about1.1–1.3ms in repeated trials; total input-to-screen latency remains unmeasured. | [Value2 repeats](oppo-mini-buffer-value2-results.md), [installed helper](oppo-mini-buffer-permanent.md) |
+| Buffer control | Per-app value2 with alignment on is installed for Punktfunk. Median completed-frame waiting (ready-to-present) improved about 1.1–1.3 ms in repeated trials, mainly by removing variance; the share of presentation gaps over 10.4 ms did not change. Total input-to-screen latency remains unmeasured, and the installed helper itself was never measured. See the [independent audit](independent-audit.md). | [Value2 repeats](oppo-mini-buffer-value2-results.md), [installed helper](oppo-mini-buffer-permanent.md) |
 | Alignment | Turning alignment off worsened the measured delay. Original alignment-on setting restored. | [Comparison](oppo-mini-buffer-alignment-results.md) |
-| Earlier producer waits | About0.85ms extra queueing wait, while the same frames reached compositor latch0.7–1.6ms sooner. This covers acquisition-to-latch, not complete decode-to-display. | [Trace results](oppo-mini-buffer-producer-wait-results.md) |
+| Earlier producer waits | About 0.85 ms extra queueing wait, while the same frames reached compositor latch 0.7–1.6 ms sooner from acquisition. This covers acquisition-to-latch, not complete decode-to-display; because decode and present share one thread, the wait can delay the next frame's acquisition, so this does not show an earlier latch ([audit 2.2](independent-audit.md#22-the-same-frames-reach-latch-sooner-result-has-a-cross-frame-confound)). | [Trace results](oppo-mini-buffer-producer-wait-results.md) |
 | Touch reporting | Temporary selector increased delivered touch events about151→275/sec. Original selector restored; faster mode parked for later. | [Touch test](oppo-mini-touch-and-buffer-options.md), [follow-ups](oppo-mini-follow-up-notes.md) |
 | Background/memory policy | No demonstrated unwanted failure warranting a new exemption. o-stop(40) maps to Recents cleanup. Existing AdrenoFloor protection retained. | [Live check](oppo-mini-memory-policy-runtime.md), [policy explanation](oppo-background-freezing-explained.md) |
 | Streaming diagnostics | Scheduling, GPU, network/audio and frame-ledger findings retained below. Diagnostic app builds were reverted; original app restored. Host cap trial was skipped. | Individual reports below |
@@ -16,9 +16,11 @@ Device: OPPO Pad Mini OPD2515. This publishes the current session reports, inclu
 | Cosa performance profiles | No clear improvement in streaming or DroidDeck gameplay. Original profiles restored. | [Streaming test](oppo-mini-game-profile-results.md), [DroidDeck test](oppo-mini-droiddeck-profile-results.md) |
 | DroidDeck event logging | Bounded observation found no actionable event-daemon overhead. No logging changes applied; DroidDeck investigation shelved. | [Overhead check](oppo-mini-droiddeck-log-overhead.md) |
 
-Pre-existing Wi-Fi/root helpers were retained. The buffer helper is the persistent change introduced by the buffer trials; it waits for boot, checks firmware identity, limits requests to the exact foreground app and resets when that app leaves. Runtime activation/off-switch verified; reboot and actual foreground-switch testing were not performed during gameplay. Charging investigation was skipped.
+Pre-existing Wi-Fi/root helpers were retained. The buffer helper is the persistent change introduced by the buffer trials; it waits for boot, checks firmware identity, limits requests to the exact app the VRR service reports as current, and resets when that app is no longer reported (5-second polling). It does not confirm that a request was accepted. Runtime activation/off-switch verified; reboot and actual foreground-switch testing were not performed during gameplay. Charging investigation was skipped.
 
 ## Reports and supporting analysis
+
+- [Independent audit of this investigation](independent-audit.md)
 
 - [Athena protection and keep-alive rules](athena-keepalive-findings.md)
 - [Battery UI to background protection — static REA findings](battery-findings.md)
@@ -56,7 +58,7 @@ Pre-existing Wi-Fi/root helpers were retained. The buffer helper is the persiste
 
 ## Reproducibility and evidence boundaries
 
-- [Artifact SHA256 identities](oppo-mini-artifact-identities.json) identify analyzed firmware components.
+- [Artifact SHA256 identities](oppo-mini-artifact-identities.json) identify some analyzed firmware components. The buffer-control binaries (SurfaceFlinger, libgui, libguiextimpl, COSA.apk, oplus-services.jar) are not in that file; their hashes appear only in [buffer-followup](buffer-followup.md) and [buffer-client-followup](buffer-client-followup.md).
 - [Compact measurement summaries](metrics/) retain aggregate buffer metrics; bool `value` in alignment metrics means strict flag (false=alignment on), not buffer count.
 - [Installed buffer helper source](buffer-helper/) is provided for review. Paths in the install report are device paths. To reproduce, capture your own build fingerprint; the device-specific fingerprint file is not included. These are exact tested-device scripts, not a universal installer.
 - [Diagnostic patches](diagnostic-patches/) are temporary instrumentation, not installed fixes or recommended production app changes.

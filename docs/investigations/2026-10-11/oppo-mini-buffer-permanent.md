@@ -30,8 +30,10 @@ touch /data/adb/punktfunk-buffer/disable
 
 To re-enable, remove that marker and reboot, or start /data/adb/service.d/punktfunk-buffer.sh in the background.
 
-For removal, create the disable marker, wait at least7sec, then verify /data/adb/punktfunk-buffer/status says disabled and its pid file is absent. Remove only /data/adb/service.d/punktfunk-buffer.sh and /data/adb/punktfunk-buffer. Do not remove the whole service.d directory or other modules.
+For removal, create the disable marker, wait at least 7 sec, then verify /data/adb/punktfunk-buffer/status says disabled and its pid file is absent. The status file also says disabled whenever Punktfunk is simply not in front, so the absent pid file is the actual sign that the helper stopped. Remove only /data/adb/service.d/punktfunk-buffer.sh and /data/adb/punktfunk-buffer. Do not remove the whole service.d directory or other modules.
 
 ## Benefit boundary
+
+The helper was never measured running as installed: the value 2 tests predate it, and later comparisons paused it. Its 5-second VRR dump polling and 30-second re-requests are unmeasured. See [independent audit](independent-audit.md).
 
 Repeated value2 tests reduced completed-frame display waiting by about1.1–1.3ms in this game stream, with no consistent pacing penalty. This is not a measured input-to-photon improvement or evidence for enabling it in other apps. See oppo-mini-buffer-value2-results.md.
