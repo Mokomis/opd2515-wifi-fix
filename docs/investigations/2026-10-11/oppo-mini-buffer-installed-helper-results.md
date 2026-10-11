@@ -27,7 +27,7 @@ App logs were streamed continuously with monotonic timestamps and filtered into 
 
 ## Recommendation and state
 
-No proven end-to-end latency gain or consistent stutter benefit. The increased recovery-request rate merits caution. Given the user's preference to stop low-return tuning, disabling this optional helper is reasonable; retaining it is provisional rather than an established latency fix. It remains enabled as promised after the test, pending the user's keep/disable choice. No further broad OPPO experiments are recommended.
+No proven end-to-end latency gain or consistent stutter benefit. The increased recovery-request rate merits caution. Given the user's preference to stop low-return tuning, disabling this optional helper is reasonable; retaining it is provisional rather than an established latency fix. It was restored enabled after the test, then persistently disabled at the user's request; see [final decision](oppo-mini-buffer-final-decision.md). No further broad OPPO experiments are recommended.
 
 The reboot/foreground-switch test separately passed. Claude's audit at49176a5 predates that verification and this installed-helper comparison. This addresses its two proposed device checks without establishing full input-to-screen latency.
 

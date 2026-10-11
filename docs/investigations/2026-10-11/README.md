@@ -6,7 +6,7 @@ Device: OPPO Pad Mini OPD2515. This publishes the current session reports, inclu
 
 | Topic | Current result | Report |
 |---|---|---|
-| Buffer control | Per-app value2 with alignment on is installed for Punktfunk. Ready-to-present timing tightened in repeated trials; total latency benefit remains unproven. Installed-helper comparison showed mixed gap results and more recovery requests when enabled. | [Value2 repeats](oppo-mini-buffer-value2-results.md), [installed helper](oppo-mini-buffer-permanent.md) |
+| Buffer control | Per-app value2 helper is now persistently disabled at the user's request; its files remain installed but inactive. Ready-to-present timing tightened in repeated trials; total latency benefit remains unproven. Installed-helper comparison showed mixed gap results and more recovery requests when enabled. | [Value2 repeats](oppo-mini-buffer-value2-results.md), [installed helper](oppo-mini-buffer-permanent.md) |
 | Alignment | Turning alignment off worsened the measured delay. Original alignment-on setting restored. | [Comparison](oppo-mini-buffer-alignment-results.md) |
 | Earlier producer waits | About0.85ms extra queueing wait, while the same frames reached compositor latch0.7–1.6ms sooner. This covers acquisition-to-latch, not complete decode-to-display. | [Trace results](oppo-mini-buffer-producer-wait-results.md) |
 | Touch reporting | Temporary selector increased delivered touch events about151→275/sec. Original selector restored; faster mode parked for later. | [Touch test](oppo-mini-touch-and-buffer-options.md), [follow-ups](oppo-mini-follow-up-notes.md) |
@@ -16,7 +16,7 @@ Device: OPPO Pad Mini OPD2515. This publishes the current session reports, inclu
 | Cosa performance profiles | No clear improvement in streaming or DroidDeck gameplay. Original profiles restored. | [Streaming test](oppo-mini-game-profile-results.md), [DroidDeck test](oppo-mini-droiddeck-profile-results.md) |
 | DroidDeck event logging | Bounded observation found no actionable event-daemon overhead. No logging changes applied; DroidDeck investigation shelved. | [Overhead check](oppo-mini-droiddeck-log-overhead.md) |
 
-Pre-existing Wi-Fi/root helpers were retained. The buffer helper is the persistent change introduced by the buffer trials; it waits for boot, checks firmware identity, limits requests to the exact foreground app and resets when that app leaves. Runtime activation/off-switch, actual reboot startup, and app-to-launcher reset/reactivation verified; see [reboot verification](oppo-mini-buffer-reboot-verification.md). Charging investigation was skipped.
+Pre-existing Wi-Fi/root helpers were retained. The buffer helper introduced by the trials is now disabled using its persistent marker; see [final decision](oppo-mini-buffer-final-decision.md). Its historical implementation it waits for boot, checks firmware identity, limits requests to the exact foreground app and resets when that app leaves. Runtime activation/off-switch, actual reboot startup, and app-to-launcher reset/reactivation verified; see [reboot verification](oppo-mini-buffer-reboot-verification.md). Charging investigation was skipped.
 
 ## Reports and supporting analysis
 
@@ -57,6 +57,8 @@ Pre-existing Wi-Fi/root helpers were retained. The buffer helper is the persiste
 - [Buffer helper reboot and foreground-switch verification](oppo-mini-buffer-reboot-verification.md)
 
 - [Installed buffer helper on/off comparison](oppo-mini-buffer-installed-helper-results.md)
+
+- [Final buffer-helper decision: disabled](oppo-mini-buffer-final-decision.md)
 
 ## Reproducibility and evidence boundaries
 

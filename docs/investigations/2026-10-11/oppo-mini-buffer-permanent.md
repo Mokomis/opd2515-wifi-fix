@@ -1,6 +1,6 @@
 # Permanent Punktfunk buffer value2
 
-Installed2026-10-11 on the connected OPPO Mini. Value2, non-strict, is currently active for io.unom.punktfunk.mokomis. Existing original app unchanged.
+Installed2026-10-11 on the connected OPPO Mini. Historical installation: value2, non-strict, was active for io.unom.punktfunk.mokomis. It is now persistently disabled; see [final decision](oppo-mini-buffer-final-decision.md). Existing original app unchanged.
 
 ## Installation
 
