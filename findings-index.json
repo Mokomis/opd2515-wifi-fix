@@ -399,5 +399,11 @@
       "bytes": 2045,
       "sha256": "45225466275adb87c2c864a60ec950d181b606fb964ecfe9ef66cc8e2585cd75"
     }
-  ]
+  ],
+  "device_inventory": {
+    "path": "docs/device-inventory/2026-10-11/README.md",
+    "summary": "docs/device-inventory/2026-10-11/summary.json",
+    "handoff": "docs/device-inventory/2026-10-11/HANDOFF.md",
+    "checksums": "docs/device-inventory/2026-10-11/checksums.json"
+  }
 }

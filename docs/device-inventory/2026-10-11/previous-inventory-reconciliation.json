@@ -1,0 +1,102 @@
+[
+  {
+    "path": "/data/oplus/os/battery/guardelf_config.xml",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/oplus/os/battery/startinfo_white.xml",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/oplus/os/battery/notify_whitelist.xml",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/oplus/os/battery/power_surveillance.xml",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/oplus/os/battery/power_save_cfg.xml",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/oplus/os/battery/power_consum_opt_status.xml",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/oplus/os/battery/power_consum_app_first.xml",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/oplus/os/battery/sys_ams_processfilter_list.xml",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/system/refresh_rate_config_user_override.xml",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/system/refresh_rate_config.xml",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/system_ext/etc/sys_filter_list.json",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/oplus/os/startup/sys_rom_black_list.xml",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/oplus/os/startup/startup_manager.xml",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/oplus/os/startup/sys_res_control_config.xml",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/oplus/os/startup/autostart_white_list.txt",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/oplus/os/startup/associate_white_list.txt",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/oplus/os/startup/sys_startup_v3_config_list.xml",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/oplus/os/startup/startup_dynamic_list.xml",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/oplus/os/startup/sys_startup_policy_config.xml",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/oplus/os/bpm/sys_elsa_config_list.xml",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/oplus/os/bpm/sys_cpulimit_config.xml",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/oplus/os/bpm/bpm.xml",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/oplus/os/bpm/sys_oguard_config_list.xml",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/oplus/os/bpm/key_proc.xml",
+    "present_in_fresh_public_manifest": true
+  },
+  {
+    "path": "/data/oplus/os/bpm/fixedRecord.xml",
+    "present_in_fresh_public_manifest": true
+  }
+]

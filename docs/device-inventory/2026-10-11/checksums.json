@@ -1,0 +1,62 @@
+{
+  "HANDOFF.md": {
+    "bytes": 3502,
+    "sha256": "2b5f971542e102c92748eb93e486773e2da4cd53102de65a8690a7bca587db00"
+  },
+  "README.md": {
+    "bytes": 6381,
+    "sha256": "a4992ee69ca05a0f8e1ad81ead70ee8d6f16d238fc46a18958fe05e758e07190"
+  },
+  "archive-coverage.json": {
+    "bytes": 131120,
+    "sha256": "cee91be861bdb433055e97b1f35162be244f9e438b561d327935b01529113dce"
+  },
+  "archive-members.jsonl.gz": {
+    "bytes": 10833550,
+    "sha256": "d574e2e5c96f418cdd9856d52e37139e6d54cead61e5d7d1663f9d08f4ce6f09"
+  },
+  "collection-method.json": {
+    "bytes": 980,
+    "sha256": "04f66f40f21f05fa5ac3072ed2d1997154b598c7c758bd70a678352b94b361e7"
+  },
+  "configuration-candidates.jsonl.gz": {
+    "bytes": 177022,
+    "sha256": "2bf5c5d70382d05f05ca3c5844ea4b4a00232859477add92e00a86976fa40804"
+  },
+  "device-identity.txt": {
+    "bytes": 106,
+    "sha256": "35c57ff32122ed1cda88788cacad93be9ac57acf4a6c96f13055dcb712b4b653"
+  },
+  "embedded-configuration-candidates.jsonl.gz": {
+    "bytes": 8381575,
+    "sha256": "e3e68e546d6e98cc5614e726d760088b7f3e8f3fc06cd73db778b74d6a7e58b2"
+  },
+  "filesystem-manifest.jsonl.gz": {
+    "bytes": 460760,
+    "sha256": "f20620d1008502a636da11df4bea664cfe2b2b101d732830e448f314c8c06fb6"
+  },
+  "mount-coverage.json": {
+    "bytes": 28585,
+    "sha256": "39d5dcf116ae960927935589527039fb05bb03d5e6843f005b16513ad27fef09"
+  },
+  "previous-inventory-reconciliation.json": {
+    "bytes": 2843,
+    "sha256": "734be757337db64631827025c49b49b7f705fac90d7069fbb40ca91cdc824782"
+  },
+  "property-names.json": {
+    "bytes": 104540,
+    "sha256": "5f9b58d97a497ef45c7ae46bc0c0f7a9a0125a0f2bdb30ac69da8800e5d90a0f"
+  },
+  "runtime-services.txt": {
+    "bytes": 34426,
+    "sha256": "03d707595f0e6d01a1353b0aae735e22dfb605bdddbb333aad2bddb4529be8d2"
+  },
+  "settings-names.txt": {
+    "bytes": 37104,
+    "sha256": "86a4643c8260e10b3fc85a7cb7501ac9ef601a5d09d4707237e1c3186e0ba295"
+  },
+  "summary.json": {
+    "bytes": 4215,
+    "sha256": "7cb9f79cbf7ffda376db6b64c84180cd5175dafd2920c3575fd384bfbbdc0516"
+  }
+}

@@ -4,6 +4,8 @@ Public findings on ColorOS / Android16, Wi-Fi WCN7750, graphics frame pacing, to
 
 Start with [final recommendations](docs/investigations/2026-10-11/final-recommendations.md), then the [full investigation index](docs/investigations/2026-10-11/README.md) and [independent audit](docs/investigations/2026-10-11/independent-audit.md).
 
+New inventory-first research: [fresh device file inventory and Claude handoff](docs/device-inventory/2026-10-11/README.md). This read-only scan expands the earlier targeted inventory; it does not reactivate tuning.
+
 ## Final conclusions
 
 - Existing Wi-Fi/root setup was retained. Its original Wi-Fi fixes are documented in [README](README.md); later experiments did not comprehensively revalidate them.

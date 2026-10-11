@@ -1,0 +1,1190 @@
+[
+  {
+    "mountpoint": "/",
+    "filesystem": "erofs",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/dev",
+    "filesystem": "tmpfs",
+    "options": "rw,nosuid,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/dev/pts",
+    "filesystem": "devpts",
+    "options": "rw,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/proc",
+    "filesystem": "proc",
+    "options": "rw,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/sys",
+    "filesystem": "sysfs",
+    "options": "rw,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/sys/fs/selinux",
+    "filesystem": "selinuxfs",
+    "options": "rw,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/mnt",
+    "filesystem": "tmpfs",
+    "options": "rw,nosuid,nodev,noexec,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/mnt/vendor/oplusreserve",
+    "filesystem": "ext4",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/mnt/installer",
+    "filesystem": "tmpfs",
+    "options": "rw,nosuid,nodev,noexec,relatime",
+    "mount_root": "/user"
+  },
+  {
+    "mountpoint": "/mnt/androidwritable",
+    "filesystem": "tmpfs",
+    "options": "rw,nosuid,nodev,noexec,relatime",
+    "mount_root": "/user"
+  },
+  {
+    "mountpoint": "/metadata",
+    "filesystem": "f2fs",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/system_ext",
+    "filesystem": "erofs",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/product",
+    "filesystem": "erofs",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/product/overlay",
+    "filesystem": "overlay",
+    "options": "ro,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/vendor",
+    "filesystem": "erofs",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/vendor_dlkm",
+    "filesystem": "ext4",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/system_dlkm",
+    "filesystem": "erofs",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/odm",
+    "filesystem": "erofs",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/my_product",
+    "filesystem": "erofs",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/my_engineering",
+    "filesystem": "erofs",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/my_company",
+    "filesystem": "erofs",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/my_carrier",
+    "filesystem": "erofs",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/my_region",
+    "filesystem": "erofs",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/my_heytap",
+    "filesystem": "erofs",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/my_stock",
+    "filesystem": "erofs",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/my_preload",
+    "filesystem": "erofs",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/my_bigball",
+    "filesystem": "erofs",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/my_manifest",
+    "filesystem": "erofs",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex",
+    "filesystem": "tmpfs",
+    "options": "rw,nosuid,nodev,noexec,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/bootstrap-apex",
+    "filesystem": "tmpfs",
+    "options": "rw,nosuid,nodev,noexec,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/linkerconfig",
+    "filesystem": "tmpfs",
+    "options": "rw,nosuid,nodev,noexec,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/dev/blkio",
+    "filesystem": "cgroup",
+    "options": "rw,nosuid,nodev,noexec,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/sys/fs/cgroup",
+    "filesystem": "cgroup2",
+    "options": "rw,nosuid,nodev,noexec,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/dev/cpuctl",
+    "filesystem": "cgroup",
+    "options": "rw,nosuid,nodev,noexec,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/dev/cpuset",
+    "filesystem": "cgroup",
+    "options": "rw,nosuid,nodev,noexec,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/dev/memcg",
+    "filesystem": "cgroup",
+    "options": "rw,nosuid,nodev,noexec,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/sys/kernel/tracing",
+    "filesystem": "tracefs",
+    "options": "rw,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/bootstrap-apex/com.android.tzdata@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/bootstrap-apex/com.android.tzdata",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/bootstrap-apex/com.android.i18n@1",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/bootstrap-apex/com.android.i18n",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/bootstrap-apex/com.android.runtime@1",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/bootstrap-apex/com.android.runtime",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/bootstrap-apex/com.android.virt@3",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/bootstrap-apex/com.android.virt",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/tmp",
+    "filesystem": "tmpfs",
+    "options": "rw,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/config",
+    "filesystem": "configfs",
+    "options": "rw,nosuid,nodev,noexec,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/dev/binderfs",
+    "filesystem": "binder",
+    "options": "rw,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/sys/fs/fuse/connections",
+    "filesystem": "fusectl",
+    "options": "rw,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/sys/fs/bpf",
+    "filesystem": "bpf",
+    "options": "rw,nosuid,nodev,noexec,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/sys/fs/pstore",
+    "filesystem": "pstore",
+    "options": "rw,nosuid,nodev,noexec,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/mnt/vm",
+    "filesystem": "tmpfs",
+    "options": "rw,nosuid,nodev,noexec,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/product/app",
+    "filesystem": "overlay",
+    "options": "ro,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/product/priv-app",
+    "filesystem": "overlay",
+    "options": "ro,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/product/lib64",
+    "filesystem": "overlay",
+    "options": "ro,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/product/lib",
+    "filesystem": "overlay",
+    "options": "ro,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/product/etc/permissions",
+    "filesystem": "overlay",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/product/framework",
+    "filesystem": "overlay",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/mnt/vendor/persist",
+    "filesystem": "ext4",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/vendor/firmware_mnt",
+    "filesystem": "vfat",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/vendor/dsp",
+    "filesystem": "ext4",
+    "options": "ro,nosuid,nodev,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/vendor/bt_firmware",
+    "filesystem": "vfat",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/mnt/vendor/qmcs",
+    "filesystem": "vfat",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/mnt/vendor/spunvm",
+    "filesystem": "vfat",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/vendor/soccp_firmware",
+    "filesystem": "vfat",
+    "options": "ro,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/mnt/oplus/op2",
+    "filesystem": "ext4",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/storage",
+    "filesystem": "tmpfs",
+    "options": "rw,nosuid,nodev,noexec,relatime",
+    "mount_root": "/user/0"
+  },
+  {
+    "mountpoint": "/data",
+    "filesystem": "f2fs",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/proc/sys/fs/binfmt_misc",
+    "filesystem": "binfmt_misc",
+    "options": "rw,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/linkerconfig",
+    "filesystem": "tmpfs",
+    "options": "rw,nosuid,nodev,noexec,relatime",
+    "mount_root": "/default"
+  },
+  {
+    "mountpoint": "/data_mirror",
+    "filesystem": "tmpfs",
+    "options": "rw,nosuid,nodev,noexec,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/data_mirror/data_ce/null",
+    "filesystem": "f2fs",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/user"
+  },
+  {
+    "mountpoint": "/data_mirror/data_de/null",
+    "filesystem": "f2fs",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/user_de"
+  },
+  {
+    "mountpoint": "/data_mirror/misc_ce/null",
+    "filesystem": "f2fs",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/misc_ce"
+  },
+  {
+    "mountpoint": "/data_mirror/misc_de/null",
+    "filesystem": "f2fs",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/misc_de"
+  },
+  {
+    "mountpoint": "/data_mirror/storage_area",
+    "filesystem": "f2fs",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/storage_area"
+  },
+  {
+    "mountpoint": "/data_mirror/cur_profiles",
+    "filesystem": "f2fs",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/misc/profiles/cur"
+  },
+  {
+    "mountpoint": "/data_mirror/ref_profiles",
+    "filesystem": "f2fs",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/misc/profiles/ref"
+  },
+  {
+    "mountpoint": "/apex/com.android.appsearch@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.appsearch",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/vendor.oplus.hardware.stability.aidl@1",
+    "filesystem": "ext4",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.uwb@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.uwb",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.hardware.cas@1",
+    "filesystem": "ext4",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/vendor.oplus.hardware.stability.aidl",
+    "filesystem": "ext4",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.hardware.cas",
+    "filesystem": "ext4",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.crashrecovery@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.crashrecovery",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.compos@3",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.compos",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.healthfitness@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.healthfitness",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.scheduling@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.scheduling",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.configinfrastructure@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.configinfrastructure",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.art@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.art",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/vendor.oplus.hardware.engineer.aidl@1",
+    "filesystem": "ext4",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.profiling@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.i18n@1",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.profiling",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.tzdata@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.i18n",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.tzdata",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.rkpd@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.rkpd",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.devicelock@1",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.devicelock",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.adservices@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.adservices",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.ipsec@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.ipsec",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.conscrypt@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.conscrypt",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.apex.cts.shim@1",
+    "filesystem": "ext4",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/vendor.oplus.hardware.engineer.aidl",
+    "filesystem": "ext4",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.google.android.widevine@190250226",
+    "filesystem": "ext4",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.google.android.widevine",
+    "filesystem": "ext4",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.apex.cts.shim",
+    "filesystem": "ext4",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.runtime@1",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.runtime",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.media@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.media",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.extservices@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.extservices",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.ondevicepersonalization@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.ondevicepersonalization",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.resolv@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.resolv",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.os.statsd@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.os.statsd",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.uprobestats@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.uprobestats",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.mediaprovider@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.mediaprovider",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.media.swcodec@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.media.swcodec",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.adbd@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.adbd",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.neuralnetworks@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.neuralnetworks",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.virt@3",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.virt",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.tethering@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.tethering",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.wifi@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.wifi",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.sdkext@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.sdkext",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.permission@360499999",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.permission",
+    "filesystem": "erofs",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/mnt/opex/ovl_update_5687@1",
+    "filesystem": "ext4",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/system_ext/priv-app/OplusExSystemService",
+    "filesystem": "oplus_overlay",
+    "options": "ro,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/product/priv-app/IPeManager",
+    "filesystem": "oplus_overlay",
+    "options": "ro,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/mnt/opex/com.oplus.AutoLayout@14001010",
+    "filesystem": "ext4",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/system_ext/framework/oplusex/com.oplus.AutoLayout",
+    "filesystem": "oplus_overlay",
+    "options": "ro,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/mnt/opex/com.oplus.CustCore@16000008",
+    "filesystem": "ext4",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/system_ext/framework/oplusex/com.oplus.CustCore",
+    "filesystem": "oplus_overlay",
+    "options": "ro,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/mnt/opex/com.oplus.NetworkAssistSys@16001066",
+    "filesystem": "ext4",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/system_ext/framework/oplusex/com.oplus.NetworkAssistSys",
+    "filesystem": "oplus_overlay",
+    "options": "ro,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/system_ext/lib64/oplusex/com.oplus.NetworkAssistSys",
+    "filesystem": "oplus_overlay",
+    "options": "ro,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/mnt/opex/com.oplus.fancyIconLoader@1000000",
+    "filesystem": "ext4",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/system_ext/framework/oplusex/com.oplus.fancyIconLoader",
+    "filesystem": "oplus_overlay",
+    "options": "ro,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/mnt/opex/com.oplus.moduleservices@15000014",
+    "filesystem": "ext4",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/system_ext/framework/oplusex/com.oplus.moduleservices",
+    "filesystem": "oplus_overlay",
+    "options": "ro,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/system_ext/lib64/oplusex/com.oplus.moduleservices",
+    "filesystem": "oplus_overlay",
+    "options": "ro,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/mnt/opex/com.oplus.odmf@16007002",
+    "filesystem": "ext4",
+    "options": "ro,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/system_ext/framework/oplusex/com.oplus.odmf",
+    "filesystem": "oplus_overlay",
+    "options": "ro,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/system_ext/lib64/oplusex/com.oplus.odmf",
+    "filesystem": "oplus_overlay",
+    "options": "ro,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/data/user/0",
+    "filesystem": "f2fs",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/data"
+  },
+  {
+    "mountpoint": "/data_mirror/data_ce/null/0",
+    "filesystem": "f2fs",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/data"
+  },
+  {
+    "mountpoint": "/data/persist_log/oplusreserve/media/log/shutdown",
+    "filesystem": "ext4",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/media/log/shutdown"
+  },
+  {
+    "mountpoint": "/data/persist_log/oplusreserve/media/log/hang_oplus",
+    "filesystem": "ext4",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/media/log/hang_oplus"
+  },
+  {
+    "mountpoint": "/data/persist_log/cache/factory",
+    "filesystem": "ext4",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/factory"
+  },
+  {
+    "mountpoint": "/data/persist_log/oplus_fsck_fulldiskscanuserdata",
+    "filesystem": "ext4",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/oplus_fsck_fulldiskscanuserdata"
+  },
+  {
+    "mountpoint": "/data/persist_log/criticallog",
+    "filesystem": "ext4",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/media/log/criticalLog"
+  },
+  {
+    "mountpoint": "/dev/freezer",
+    "filesystem": "cgroup",
+    "options": "rw,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/data/persist_log/oplusreserve/media/log/minidumpbackup",
+    "filesystem": "ext4",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/media/log/minidump"
+  },
+  {
+    "mountpoint": "/data/persist_log/storage/op2storagelog",
+    "filesystem": "ext4",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/media/log/vold"
+  },
+  {
+    "mountpoint": "/dev/usb-ffs/adb",
+    "filesystem": "functionfs",
+    "options": "rw,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/dev/usb-ffs/ipcr",
+    "filesystem": "functionfs",
+    "options": "rw,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/dev/usb-ffs/aoa",
+    "filesystem": "functionfs",
+    "options": "rw,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/dev/usb-ffs/ctrl",
+    "filesystem": "functionfs",
+    "options": "rw,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/dev/ffs-diag",
+    "filesystem": "functionfs",
+    "options": "rw,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/dev/ffs-diag-1",
+    "filesystem": "functionfs",
+    "options": "rw,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/dev/ffs-diag-2",
+    "filesystem": "functionfs",
+    "options": "rw,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/dev/usb-ffs/mtp",
+    "filesystem": "functionfs",
+    "options": "rw,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/dev/usb-ffs/ptp",
+    "filesystem": "functionfs",
+    "options": "rw,relatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/apex/com.android.art/bin/dex2oat32",
+    "filesystem": "f2fs",
+    "options": "ro,noatime",
+    "mount_root": "/adb/modules/zygisk_vector/bin/dex2oat32"
+  },
+  {
+    "mountpoint": "/apex/com.android.art/bin/dex2oat64",
+    "filesystem": "f2fs",
+    "options": "ro,noatime",
+    "mount_root": "/adb/modules/zygisk_vector/bin/dex2oat64"
+  },
+  {
+    "mountpoint": "/data/incremental/MT_data_app_vmdl515/mount",
+    "filesystem": "incremental-fs",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/data/app/~~0392IPuwoRViCt7P9BVXfA==",
+    "filesystem": "incremental-fs",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/st_2_1"
+  },
+  {
+    "mountpoint": "/storage/emulated",
+    "filesystem": "fuse",
+    "options": "rw,nosuid,nodev,noexec,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/mnt/user/0/emulated",
+    "filesystem": "fuse",
+    "options": "rw,nosuid,nodev,noexec,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/mnt/androidwritable/0/emulated",
+    "filesystem": "fuse",
+    "options": "rw,nosuid,nodev,noexec,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/mnt/installer/0/emulated",
+    "filesystem": "fuse",
+    "options": "rw,nosuid,nodev,noexec,noatime",
+    "mount_root": "/"
+  },
+  {
+    "mountpoint": "/mnt/pass_through/0/emulated",
+    "filesystem": "f2fs",
+    "options": "rw,nosuid,nodev,noatime",
+    "mount_root": "/media"
+  }
+]

@@ -1,0 +1,5437 @@
+[
+  {
+    "path": "/apex/com.android.permission/javalib/framework-permission-s.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.permission/javalib/framework-permission.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.permission/javalib/service-permission.jar",
+    "members": 7,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.permission/priv-app/PermissionController@BP2A.250605.015/PermissionController.apk",
+    "members": 3451,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.permission/priv-app/SafetyCenterResources@BP2A.250605.015/SafetyCenterResources.apk",
+    "members": 19,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.sdkext/javalib/framework-sdkextensions.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.wifi/app/OsuLogin@BP2A.250605.015/OsuLogin.apk",
+    "members": 85,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.wifi/app/WifiDialog@BP2A.250605.015/WifiDialog.apk",
+    "members": 285,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.wifi/javalib/framework-wifi.jar",
+    "members": 4,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.wifi/javalib/service-wifi.jar",
+    "members": 16,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.wifi/priv-app/ServiceWifiResources@BP2A.250605.015/ServiceWifiResources.apk",
+    "members": 11,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.tethering/javalib/framework-connectivity-b.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.tethering/javalib/framework-connectivity-t.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.tethering/javalib/framework-connectivity.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.tethering/javalib/framework-tethering.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.tethering/javalib/service-connectivity.jar",
+    "members": 65,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.tethering/priv-app/ServiceConnectivityResources@BP2A.250605.015/ServiceConnectivityResources.apk",
+    "members": 11,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.tethering/priv-app/TetheringNext@BP2A.250605.015/TetheringNext.apk",
+    "members": 47,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.virt/app/EmptyPayloadApp@BP2A.250605.015/EmptyPayloadApp.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.virt/app/android.system.virtualmachine.res@BP2A.250605.015/android.system.virtualmachine.res.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.virt/javalib/framework-virtualization.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.virt/javalib/service-virtualization.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.virt/priv-app/VmTerminalApp@BP2A.250605.015/VmTerminalApp.apk",
+    "members": 834,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.mediaprovider/javalib/framework-mediaprovider.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.mediaprovider/javalib/framework-pdf-v.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.mediaprovider/javalib/framework-pdf.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.mediaprovider/javalib/framework-photopicker.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.mediaprovider/priv-app/MediaProvider@BP2A.250605.015/MediaProvider.apk",
+    "members": 1717,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.mediaprovider/priv-app/Photopicker@BP2A.250605.015/Photopicker.apk",
+    "members": 1187,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.os.statsd/javalib/framework-statsd.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.os.statsd/javalib/service-statsd.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.ondevicepersonalization/app/FederatedCompute@BP2A.250605.015/FederatedCompute.apk",
+    "members": 45,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.ondevicepersonalization/javalib/framework-ondevicepersonalization.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.ondevicepersonalization/javalib/service-ondevicepersonalization.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.ondevicepersonalization/priv-app/OnDevicePersonalization@BP2A.250605.015/OnDevicePersonalization.apk",
+    "members": 73,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.extservices/javalib/android.ext.adservices.jar",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.extservices/priv-app/ExtServices-sminus@BP2A.250605.015/ExtServices-sminus.apk",
+    "members": 925,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.media/javalib/service-media-s.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.media/javalib/updatable-media.jar",
+    "members": 4,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.apex.cts.shim/priv-app/CtsShimPriv@MAIN/CtsShimPriv.apk",
+    "members": 7,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.apex.cts.shim/app/CtsShim@MAIN/CtsShim.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.conscrypt/javalib/conscrypt.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.ipsec/javalib/android.net.ipsec.ike.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.adservices/app/SdkSandbox@BP2A.250605.015/SdkSandbox.apk",
+    "members": 7,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.adservices/javalib/framework-adservices.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.adservices/javalib/framework-sdksandbox.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.adservices/javalib/service-adservices.jar",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.adservices/javalib/service-sdksandbox.jar",
+    "members": 12,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.adservices/priv-app/AdServicesApk@BP2A.250605.015/AdServicesApk.apk",
+    "members": 900,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.devicelock/javalib/framework-devicelock.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.devicelock/javalib/service-devicelock.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.devicelock/priv-app/DeviceLockController@BP2A.250605.015/DeviceLockController.apk",
+    "members": 878,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.rkpd/javalib/service-rkp.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.rkpd/priv-app/rkpdapp@BP2A.250605.015/rkpdapp.apk",
+    "members": 112,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.i18n/javalib/core-icu4j.jar",
+    "members": 21,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.profiling/javalib/framework-profiling.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.profiling/javalib/service-profiling.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.art/javalib/apache-xml.jar",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.art/javalib/bouncycastle.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.art/javalib/core-libart.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.art/javalib/core-oj.jar",
+    "members": 18,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.art/javalib/okhttp.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.art/javalib/service-art.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.configinfrastructure/app/DeviceConfigServiceResources@BP2A.250605.015/DeviceConfigServiceResources.apk",
+    "members": 7,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.configinfrastructure/javalib/framework-configinfrastructure.jar",
+    "members": 4,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.configinfrastructure/javalib/service-configinfrastructure.jar",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.scheduling/javalib/framework-scheduling.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.scheduling/javalib/service-scheduling.jar",
+    "members": 4,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.healthfitness/app/HealthConnectBackupRestore@BP2A.250605.015/HealthConnectBackupRestore.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.healthfitness/javalib/framework-healthfitness.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.healthfitness/javalib/service-healthfitness.jar",
+    "members": 4,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.healthfitness/priv-app/HealthConnectController@BP2A.250605.015/HealthConnectController.apk",
+    "members": 2106,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.compos/app/CompOSPayloadApp@BP2A.250605.015/CompOSPayloadApp.apk",
+    "members": 9,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.compos/javalib/service-compos.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.crashrecovery/javalib/framework-crashrecovery.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.crashrecovery/javalib/service-crashrecovery.jar",
+    "members": 8,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.uwb/javalib/framework-ranging.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.uwb/javalib/framework-uwb.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.uwb/javalib/service-ranging.jar",
+    "members": 22,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.uwb/javalib/service-uwb.jar",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.uwb/priv-app/ServiceUwbResources@BP2A.250605.015/ServiceUwbResources.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.appsearch/javalib/framework-appsearch.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.appsearch/javalib/service-appsearch.jar",
+    "members": 7,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.appsearch/priv-app/com.android.appsearch.apk@BP2A.250605.015/com.android.appsearch.apk.apk",
+    "members": 422,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.tethering@360499999/javalib/framework-connectivity-b.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.tethering@360499999/javalib/framework-connectivity-t.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.tethering@360499999/javalib/framework-connectivity.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.tethering@360499999/javalib/framework-tethering.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.tethering@360499999/javalib/service-connectivity.jar",
+    "members": 65,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.tethering@360499999/priv-app/ServiceConnectivityResources@BP2A.250605.015/ServiceConnectivityResources.apk",
+    "members": 11,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.tethering@360499999/priv-app/TetheringNext@BP2A.250605.015/TetheringNext.apk",
+    "members": 47,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.sdkext@360499999/javalib/framework-sdkextensions.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.wifi@360499999/app/OsuLogin@BP2A.250605.015/OsuLogin.apk",
+    "members": 85,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.wifi@360499999/app/WifiDialog@BP2A.250605.015/WifiDialog.apk",
+    "members": 285,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.wifi@360499999/javalib/framework-wifi.jar",
+    "members": 4,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.wifi@360499999/javalib/service-wifi.jar",
+    "members": 16,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.wifi@360499999/priv-app/ServiceWifiResources@BP2A.250605.015/ServiceWifiResources.apk",
+    "members": 11,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.scheduling@360499999/javalib/framework-scheduling.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.scheduling@360499999/javalib/service-scheduling.jar",
+    "members": 4,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.virt@3/app/EmptyPayloadApp@BP2A.250605.015/EmptyPayloadApp.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.virt@3/app/android.system.virtualmachine.res@BP2A.250605.015/android.system.virtualmachine.res.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.virt@3/javalib/framework-virtualization.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.virt@3/javalib/service-virtualization.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.virt@3/priv-app/VmTerminalApp@BP2A.250605.015/VmTerminalApp.apk",
+    "members": 834,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.mediaprovider@360499999/javalib/framework-mediaprovider.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.mediaprovider@360499999/javalib/framework-pdf-v.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.mediaprovider@360499999/javalib/framework-pdf.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.mediaprovider@360499999/javalib/framework-photopicker.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.mediaprovider@360499999/priv-app/MediaProvider@BP2A.250605.015/MediaProvider.apk",
+    "members": 1717,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.mediaprovider@360499999/priv-app/Photopicker@BP2A.250605.015/Photopicker.apk",
+    "members": 1187,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.media@360499999/javalib/service-media-s.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.media@360499999/javalib/updatable-media.jar",
+    "members": 4,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.os.statsd@360499999/javalib/framework-statsd.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.os.statsd@360499999/javalib/service-statsd.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.rkpd@360499999/javalib/service-rkp.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.rkpd@360499999/priv-app/rkpdapp@BP2A.250605.015/rkpdapp.apk",
+    "members": 112,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.conscrypt@360499999/javalib/conscrypt.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.ipsec@360499999/javalib/android.net.ipsec.ike.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.i18n@1/javalib/core-icu4j.jar",
+    "members": 21,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.adservices@360499999/app/SdkSandbox@BP2A.250605.015/SdkSandbox.apk",
+    "members": 7,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.adservices@360499999/javalib/framework-adservices.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.adservices@360499999/javalib/framework-sdksandbox.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.adservices@360499999/javalib/service-adservices.jar",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.adservices@360499999/javalib/service-sdksandbox.jar",
+    "members": 12,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.adservices@360499999/priv-app/AdServicesApk@BP2A.250605.015/AdServicesApk.apk",
+    "members": 900,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.devicelock@1/javalib/framework-devicelock.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.devicelock@1/javalib/service-devicelock.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.devicelock@1/priv-app/DeviceLockController@BP2A.250605.015/DeviceLockController.apk",
+    "members": 878,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.healthfitness@360499999/app/HealthConnectBackupRestore@BP2A.250605.015/HealthConnectBackupRestore.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.healthfitness@360499999/javalib/framework-healthfitness.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.healthfitness@360499999/javalib/service-healthfitness.jar",
+    "members": 4,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.healthfitness@360499999/priv-app/HealthConnectController@BP2A.250605.015/HealthConnectController.apk",
+    "members": 2106,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.ondevicepersonalization@360499999/app/FederatedCompute@BP2A.250605.015/FederatedCompute.apk",
+    "members": 45,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.ondevicepersonalization@360499999/javalib/framework-ondevicepersonalization.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.ondevicepersonalization@360499999/javalib/service-ondevicepersonalization.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.ondevicepersonalization@360499999/priv-app/OnDevicePersonalization@BP2A.250605.015/OnDevicePersonalization.apk",
+    "members": 73,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.crashrecovery@360499999/javalib/framework-crashrecovery.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.crashrecovery@360499999/javalib/service-crashrecovery.jar",
+    "members": 8,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.configinfrastructure@360499999/app/DeviceConfigServiceResources@BP2A.250605.015/DeviceConfigServiceResources.apk",
+    "members": 7,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.configinfrastructure@360499999/javalib/framework-configinfrastructure.jar",
+    "members": 4,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.configinfrastructure@360499999/javalib/service-configinfrastructure.jar",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.appsearch@360499999/javalib/framework-appsearch.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.appsearch@360499999/javalib/service-appsearch.jar",
+    "members": 7,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.appsearch@360499999/priv-app/com.android.appsearch.apk@BP2A.250605.015/com.android.appsearch.apk.apk",
+    "members": 422,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.uwb@360499999/javalib/framework-ranging.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.uwb@360499999/javalib/framework-uwb.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.uwb@360499999/javalib/service-ranging.jar",
+    "members": 22,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.uwb@360499999/javalib/service-uwb.jar",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.uwb@360499999/priv-app/ServiceUwbResources@BP2A.250605.015/ServiceUwbResources.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.extservices@360499999/javalib/android.ext.adservices.jar",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.extservices@360499999/priv-app/ExtServices-sminus@BP2A.250605.015/ExtServices-sminus.apk",
+    "members": 925,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.art@360499999/javalib/apache-xml.jar",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.art@360499999/javalib/bouncycastle.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.art@360499999/javalib/core-libart.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.art@360499999/javalib/core-oj.jar",
+    "members": 18,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.art@360499999/javalib/okhttp.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.art@360499999/javalib/service-art.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.permission@360499999/javalib/framework-permission-s.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.permission@360499999/javalib/framework-permission.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.permission@360499999/javalib/service-permission.jar",
+    "members": 7,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.permission@360499999/priv-app/PermissionController@BP2A.250605.015/PermissionController.apk",
+    "members": 3451,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.permission@360499999/priv-app/SafetyCenterResources@BP2A.250605.015/SafetyCenterResources.apk",
+    "members": 19,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.compos@3/app/CompOSPayloadApp@BP2A.250605.015/CompOSPayloadApp.apk",
+    "members": 9,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.compos@3/javalib/service-compos.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.profiling@360499999/javalib/framework-profiling.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.profiling@360499999/javalib/service-profiling.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.apex.cts.shim@1/priv-app/CtsShimPriv@MAIN/CtsShimPriv.apk",
+    "members": 7,
+    "exit_code": 0
+  },
+  {
+    "path": "/apex/com.android.apex.cts.shim@1/app/CtsShim@MAIN/CtsShim.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/bootstrap-apex/com.android.virt/app/EmptyPayloadApp@BP2A.250605.015/EmptyPayloadApp.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/bootstrap-apex/com.android.virt/app/android.system.virtualmachine.res@BP2A.250605.015/android.system.virtualmachine.res.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/bootstrap-apex/com.android.virt/javalib/framework-virtualization.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/bootstrap-apex/com.android.virt/javalib/service-virtualization.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/bootstrap-apex/com.android.virt/priv-app/VmTerminalApp@BP2A.250605.015/VmTerminalApp.apk",
+    "members": 834,
+    "exit_code": 0
+  },
+  {
+    "path": "/bootstrap-apex/com.android.i18n/javalib/core-icu4j.jar",
+    "members": 21,
+    "exit_code": 0
+  },
+  {
+    "path": "/bootstrap-apex/com.android.i18n@1/javalib/core-icu4j.jar",
+    "members": 21,
+    "exit_code": 0
+  },
+  {
+    "path": "/bootstrap-apex/com.android.virt@3/app/EmptyPayloadApp@BP2A.250605.015/EmptyPayloadApp.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/bootstrap-apex/com.android.virt@3/app/android.system.virtualmachine.res@BP2A.250605.015/android.system.virtualmachine.res.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/bootstrap-apex/com.android.virt@3/javalib/framework-virtualization.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/bootstrap-apex/com.android.virt@3/javalib/service-virtualization.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/bootstrap-apex/com.android.virt@3/priv-app/VmTerminalApp@BP2A.250605.015/VmTerminalApp.apk",
+    "members": 834,
+    "exit_code": 0
+  },
+  {
+    "path": "/mnt/opex/com.oplus.odmf@16007002/javalib/odmf.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/mnt/opex/com.oplus.moduleservices@15000014/javalib/moduleservices.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/mnt/opex/com.oplus.moduleservices@15000014/javalib/crypto.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/mnt/opex/com.oplus.fancyIconLoader@1000000/javalib/fancyIconRes.apk",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/mnt/opex/com.oplus.fancyIconLoader@1000000/javalib/fancyicon.jar",
+    "members": 1,
+    "exit_code": 0
+  },
+  {
+    "path": "/mnt/opex/com.oplus.NetworkAssistSys@16001066/javalib/networkservices.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/mnt/opex/com.oplus.NetworkAssistSys@16001066/app/NetworkAssistSys.apk",
+    "members": 1857,
+    "exit_code": 0
+  },
+  {
+    "path": "/mnt/opex/com.oplus.CustCore@16000008/priv-app/CustCoreApp/CustCore.apk",
+    "members": 245,
+    "exit_code": 0
+  },
+  {
+    "path": "/mnt/opex/com.oplus.CustCore@16000008/javalib/OplusMdmAdapter.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/mnt/opex/com.oplus.CustCore@16000008/javalib/OplusMdmInterface.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/mnt/opex/com.oplus.AutoLayout@14001010/javalib/autolayout.jar",
+    "members": 1,
+    "exit_code": 0
+  },
+  {
+    "path": "/mnt/opex/ovl_update_5687@1/system_ext/priv-app/OplusExSystemService/OplusExSystemService.apk",
+    "members": 1708,
+    "exit_code": 0
+  },
+  {
+    "path": "/mnt/opex/ovl_update_5687@1/product/priv-app/IPeManager/IPeManager.apk",
+    "members": 2304,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_engineering/etc/security/otacerts.zip",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_engineering/etc/security/specialcerts.zip",
+    "members": 1,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_preload/del-app/aiqiyi_pad/com.qiyi.video.pad.apk",
+    "members": 18943,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_preload/del-app/banmabaike-pad/com.fenbi.android.pedia.apk",
+    "members": 4809,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_preload/del-app/douyin_pad/com.ss.android.ugc.aweme.apk",
+    "members": 23833,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_preload/del-app/jianyingzyb-PAD/com.lemon.lvpro.apk",
+    "members": 3962,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/app/AIPaint/AIPaint.apk",
+    "members": 1871,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/app/AONService/AONService.apk",
+    "members": 1860,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/app/Aod/Aod.apk",
+    "members": 2647,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/app/AudioEffectCenter/AudioEffectCenter.apk",
+    "members": 284,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/app/OplusCamera/OplusCamera.apk",
+    "members": 4284,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/app/PCEngine/PCEngine.apk",
+    "members": 769,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/app/SmartMediaController/SmartMediaController.apk",
+    "members": 1481,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/app/SogouInput_U_Product/SogouInput_U_Product.apk",
+    "members": 10655,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/app/SwitchAccess/SwitchAccess.apk",
+    "members": 2247,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/app/TrichromeLibrary64CN/TrichromeLibrary64CN.apk",
+    "members": 17,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/app/WebViewGoogle64CN/WebViewGoogle64CN.apk",
+    "members": 391,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/app/talkback/talkback.apk",
+    "members": 1723,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/del-app/HeytapReader/HeytapReader.apk",
+    "members": 4966,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/del-app/HotGamesFolder/HotGamesFolder.apk",
+    "members": 1943,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/del-app/WpsLauncher/WpsLauncher.apk",
+    "members": 1782,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/etc/aisubsystem/Plugin/plugin-cloud_entity_extraction-187699205-1008-pall-domestic.apk",
+    "members": 148,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/etc/string_super_computing.zip",
+    "members": 91,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/media/bootanimation/bootanimation.zip",
+    "members": 225,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/media/bootanimation/rbootanimation.zip",
+    "members": 63,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/non_overlay/app/GoogleExtShared/GoogleExtShared.apk",
+    "members": 7,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/non_overlay/app/GooglePrintRecommendationService/GooglePrintRecommendationService.apk",
+    "members": 92,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/non_overlay/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk",
+    "members": 815,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/CarrierConfigOverlay.lvy.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/GmsConfigOverlayCommonCN/GmsConfigOverlayCommonCN.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/GmsConfigOverlayNoSafetyCenter/GmsConfigOverlayNoSafetyCenter.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/LauncherResourceOverlay/LauncherResourceOverlay.apk",
+    "members": 536,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/OplusConfigOverlayComms/OplusConfigOverlayComms.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/SystemUIFingerprintRes_17_0_FY_Icon.apk",
+    "members": 58,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/SystemUIFingerprintRes_17_0_FY_Press.apk",
+    "members": 68,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/SystemUIFingerprintRes_17_0_HY_Icon.apk",
+    "members": 110,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/SystemUIFingerprintRes_17_0_HY_Press.apk",
+    "members": 49,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/SystemUIFingerprintRes_17_0_Halo_Icon.apk",
+    "members": 57,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/SystemUIFingerprintRes_17_0_Halo_Press.apk",
+    "members": 52,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/SystemUIFingerprintRes_17_0_JD_Icon.apk",
+    "members": 57,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/SystemUIFingerprintRes_17_0_JD_Press.apk",
+    "members": 66,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/SystemUIFingerprintRes_17_0_LY_Icon.apk",
+    "members": 57,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/SystemUIFingerprintRes_17_0_LY_Press.apk",
+    "members": 68,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/SystemUIFingerprintRes_17_0_NONE_Press.apk",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/SystemUIFingerprintRes_17_0_QY_Icon.apk",
+    "members": 58,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/SystemUIFingerprintRes_17_0_QY_Press.apk",
+    "members": 68,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/SystemUIFingerprintRes_17_0_SW_Icon.apk",
+    "members": 58,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/SystemUIFingerprintRes_17_0_SW_Press.apk",
+    "members": 68,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/SystemUIFingerprintRes_17_0_XW_Icon.apk",
+    "members": 57,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/SystemUIFingerprintRes_17_0_XW_Press.apk",
+    "members": 64,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/SystemUIFingerprintRes_17_0_ZF_Icon.apk",
+    "members": 57,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/SystemUIFingerprintRes_17_0_ZF_Press.apk",
+    "members": 71,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/android_framework_res_overlay.display.product.25928.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/android_framework_res_overlay.tablet.location.timezone.lvy.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/aon.frameworkres.overlay.product.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/com.android.SystemUIResOverlay.25928.apk",
+    "members": 41,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/com.android.wallpaper.livepicker.overlay.25928.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/framework_res_overlay.network.lvy.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/overlay/oplus_framework_res_overlay.display.product.25928_sm8845.apk",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/priv-app/ConfigUpdater/ConfigUpdater.apk",
+    "members": 61,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/priv-app/GmsCore/GmsCore.apk",
+    "members": 12194,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/priv-app/GmsCore/m/independent/AndroidPlatformServices.apk",
+    "members": 1942,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk",
+    "members": 201,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/priv-app/GooglePlayServicesUpdater/GooglePlayServicesUpdater.apk",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/priv-app/IPeManager/IPeManager.apk",
+    "members": 2100,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/priv-app/OVoiceManagerService/OVoiceManagerService.apk",
+    "members": 956,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/priv-app/RemoteControl/RemoteControl.apk",
+    "members": 2637,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/product_overlay/framework/com.oplus.camera.unit.sdk.adapter.jar",
+    "members": 1,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_product/product_overlay/framework/com.oplus.camera.unit.sdk.jar",
+    "members": 1,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_region/etc/aisubsystem/Plugin/plugin-cloud_livephoto_matting-185622557-1006-full-domestic-33-aall-release.apk",
+    "members": 14,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_region/etc/aisubsystem/Plugin/plugin-full_search_llm_cn-189796359-150014-pall-CN.apk",
+    "members": 155,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/AIMemory/AIMemory.apk",
+    "members": 4261,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/AIWidgets/AIWidgets.apk",
+    "members": 1068,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/AIWriter/AIWriter.apk",
+    "members": 2284,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/ARCore/ARCore.apk",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/AssistantScreen/AssistantScreen.apk",
+    "members": 6081,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/Browser/Browser.apk",
+    "members": 15409,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/COSA/COSA.apk",
+    "members": 1480,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/ChildrenSpace/ChildrenSpace.apk",
+    "members": 1955,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/CloudService/CloudService.apk",
+    "members": 3047,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/ColorAccessibilityAssistant/ColorAccessibilityAssistant.apk",
+    "members": 2393,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/ColorDirectService/ColorDirectService.apk",
+    "members": 4610,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/Colorx/Colorx.apk",
+    "members": 738,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/DigitalWellBeing/DigitalWellBeing.apk",
+    "members": 2198,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/FileEncryption/FileEncryption.apk",
+    "members": 1783,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/FloatAssistant/FloatAssistant.apk",
+    "members": 1692,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/Gleaner/Gleaner.apk",
+    "members": 1562,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/Instant/Instant.apk",
+    "members": 6243,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/InstantService/InstantService.apk",
+    "members": 415,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/Karaoke/Karaoke.apk",
+    "members": 1686,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/KeKePay/KeKePay.apk",
+    "members": 3581,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/LocationProxy/LocationProxy.apk",
+    "members": 1721,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/MCS/MCS.apk",
+    "members": 1718,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/MSPService/MSPService.apk",
+    "members": 6663,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/MapComFrame/MapComFrame.apk",
+    "members": 459,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/OVoiceManagerSkillService/OVoiceManagerSkillService.apk",
+    "members": 406,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/OWork/OWork.apk",
+    "members": 2234,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/OcrScanner/OcrScanner.apk",
+    "members": 3271,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/OpenCapabilityService/OpenCapabilityService.apk",
+    "members": 1782,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/OplusAudioMonitor/OplusAudioMonitor.apk",
+    "members": 15,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/OplusOperationManual/OplusOperationManual.apk",
+    "members": 2666,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/OplusPhoneActivation/OplusPhoneActivation.apk",
+    "members": 1607,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/OplusSecurityKeyboard/OplusSecurityKeyboard.apk",
+    "members": 170,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/OppoWeatherService/OppoWeatherService.apk",
+    "members": 1946,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/PhoneNOAreaInquireProvider/PhoneNOAreaInquireProvider.apk",
+    "members": 1465,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/RegService/RegService.apk",
+    "members": 54,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/RomUpdate/RomUpdate.apk",
+    "members": 364,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/SecurePay/SecurePay.apk",
+    "members": 1704,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/ShareScreen/ShareScreen.apk",
+    "members": 2143,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/SmartEngine/SmartEngine.apk",
+    "members": 2583,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/SmartLock/SmartLock.apk",
+    "members": 1606,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/SmartSideBar/SmartSideBar.apk",
+    "members": 2750,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/StdSP/StdSP.apk",
+    "members": 2036,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/TTSAccessibilityEngine/TTSAccessibilityEngine.apk",
+    "members": 631,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/VariUIEngine/VariUIEngine.apk",
+    "members": 1502,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/ViewTalk/ViewTalk.apk",
+    "members": 1866,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/WallpaperChooser/WallpaperChooser.apk",
+    "members": 2004,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/app/WifiBackupRestore/WifiBackupRestore.apk",
+    "members": 1945,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/del-app/BackupAndRestore/BackupAndRestore.apk",
+    "members": 2645,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/del-app/BrowserVideo/BrowserVideo.apk",
+    "members": 9541,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/del-app/Calculator2/Calculator2.apk",
+    "members": 2866,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/del-app/Calendar/Calendar.apk",
+    "members": 4535,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/del-app/Clock/Clock.apk",
+    "members": 2656,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/del-app/FileManager/FileManager.apk",
+    "members": 3169,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/del-app/Gamecenter/Gamecenter.apk",
+    "members": 6518,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/del-app/KeKeThemeSpace/KeKeThemeSpace.apk",
+    "members": 9889,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/del-app/KeKeUserCenterMember/KeKeUserCenterMember.apk",
+    "members": 4344,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/del-app/Melody/Melody.apk",
+    "members": 2674,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/del-app/Music/Music.apk",
+    "members": 5239,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/del-app/NewSoundRecorder/NewSoundRecorder.apk",
+    "members": 3017,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/del-app/OPPOStore/OPPOStore.apk",
+    "members": 9600,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/del-app/OplusDocumentsReader/OplusDocumentsReader.apk",
+    "members": 12026,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/del-app/OplusEmail/OplusEmail.apk",
+    "members": 3159,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/del-app/OppoCompass2/OppoCompass2.apk",
+    "members": 2058,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/del-app/OppoNote2/OppoNote2.apk",
+    "members": 6985,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/del-app/OppoTranslation/OppoTranslation.apk",
+    "members": 2554,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/del-app/OppoWeather2/OppoWeather2.apk",
+    "members": 4226,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/del-app/Tips/Tips.apk",
+    "members": 1782,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/etc/aisubsystem/Plugin/plugin-pcr_code-187699292-1060-pall.apk",
+    "members": 22,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/non_overlay/app/OBrain/OBrain.apk",
+    "members": 399,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/overlay/OplusSystemuiResOverlay/OplusSystemuiResOverlay.apk",
+    "members": 8,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/AIUnit/AIUnit.apk",
+    "members": 1919,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/AccessoryFramework/AccessoryFramework.apk",
+    "members": 2696,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/BlackListApp/BlackListApp.apk",
+    "members": 2094,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/CTAutoRegist/CTAutoRegist.apk",
+    "members": 16,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/CallServiceKit/CallServiceKit.apk",
+    "members": 411,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/CodeBook/CodeBook.apk",
+    "members": 2535,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/ColorfulEngine/ColorfulEngine.apk",
+    "members": 2248,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/Contacts/Contacts.apk",
+    "members": 3893,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/ContentPortal/ContentPortal.apk",
+    "members": 2821,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/Cota/Cota.apk",
+    "members": 1821,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/DCS/DCS.apk",
+    "members": 475,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/DRS/DRS.apk",
+    "members": 472,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/DSF/DSF.apk",
+    "members": 1748,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/FindMyPhone/FindMyPhone.apk",
+    "members": 3071,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/GlobalCollect/GlobalCollect.apk",
+    "members": 891,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/GlobalSearch/GlobalSearch.apk",
+    "members": 5044,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/HeyCast/HeyCast.apk",
+    "members": 1553,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/HeyTapSpeechAssist/HeyTapSpeechAssist.apk",
+    "members": 9855,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/InCallUI/InCallUI.apk",
+    "members": 3232,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/KeKeAppDetail/KeKeAppDetail.apk",
+    "members": 2339,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/KeKeMarket/KeKeMarket.apk",
+    "members": 4851,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/KeKeOplusThemeStore-CN/KeKeOplusThemeStore-CN.apk",
+    "members": 1979,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/KeKeUserCenter/KeKeUserCenter.apk",
+    "members": 35,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/KeKeUserCenterAccount/KeKeUserCenterAccount.apk",
+    "members": 2838,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/MDSService/MDSService.apk",
+    "members": 1565,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/MediaTurbo/MediaTurbo.apk",
+    "members": 1993,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/Metis/Metis.apk",
+    "members": 2827,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/Mms/Mms.apk",
+    "members": 4113,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/MyDevices/MyDevices.apk",
+    "members": 3327,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/NumberRecognition/NumberRecognition.apk",
+    "members": 771,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/OPSynergy/OPSynergy.apk",
+    "members": 3687,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/OShare/OShare.apk",
+    "members": 2198,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/OpenID/OpenID.apk",
+    "members": 1029,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/OplusBootReg/OplusBootReg.apk",
+    "members": 1710,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/OplusGames/OplusGames.apk",
+    "members": 8769,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/OplusScreenRecorder/OplusScreenRecorder.apk",
+    "members": 1908,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/OplusThirdKit/OplusThirdKit.apk",
+    "members": 1801,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/OppoGallery2/OppoGallery2.apk",
+    "members": 9031,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/PadConnect/PadConnect.apk",
+    "members": 1679,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/PhoneManager/PhoneManager.apk",
+    "members": 6173,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/RemoteGuardService/RemoteGuardService.apk",
+    "members": 346,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/SandboxRuntime/SandboxRuntime.apk",
+    "members": 9,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/SceneService/SceneService.apk",
+    "members": 3969,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/Screenshot/Screenshot.apk",
+    "members": 3411,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/SecurityGuard/SecurityGuard.apk",
+    "members": 45,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/StudyCenter/StudyCenter.apk",
+    "members": 3976,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/UMS/UMS.apk",
+    "members": 3816,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/VideoGallery/VideoGallery.apk",
+    "members": 2329,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/Wallpapers/Wallpapers.apk",
+    "members": 2117,
+    "exit_code": 0
+  },
+  {
+    "path": "/my_stock/priv-app/dmp/dmp.apk",
+    "members": 4281,
+    "exit_code": 0
+  },
+  {
+    "path": "/odm/etc/camera/sticker/material/animoji/data.zip",
+    "members": 4,
+    "exit_code": 0
+  },
+  {
+    "path": "/odm/etc/camera/sticker/material/animoji/snowleopard_v_0_0_0_9.zip",
+    "members": 32,
+    "exit_code": 0
+  },
+  {
+    "path": "/odm/overlay/SecureElementResTarget_OdmVintfDisabled.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/odm/overlay/framework_res_overlay_Network.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/ModuleMetadata/ModuleMetadata.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/AIPaint/AIPaint.apk",
+    "members": 1871,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/AONService/AONService.apk",
+    "members": 1860,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/Aod/Aod.apk",
+    "members": 2647,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/AudioEffectCenter/AudioEffectCenter.apk",
+    "members": 284,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/OplusCamera/OplusCamera.apk",
+    "members": 4284,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/PCEngine/PCEngine.apk",
+    "members": 769,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/SmartMediaController/SmartMediaController.apk",
+    "members": 1481,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/SogouInput_U_Product/SogouInput_U_Product.apk",
+    "members": 10655,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/SwitchAccess/SwitchAccess.apk",
+    "members": 2247,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/TrichromeLibrary64CN/TrichromeLibrary64CN.apk",
+    "members": 17,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/WebViewGoogle64CN/WebViewGoogle64CN.apk",
+    "members": 391,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/talkback/talkback.apk",
+    "members": 1723,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/AIMemory/AIMemory.apk",
+    "members": 4261,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/AIWidgets/AIWidgets.apk",
+    "members": 1068,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/AIWriter/AIWriter.apk",
+    "members": 2284,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/ARCore/ARCore.apk",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/AssistantScreen/AssistantScreen.apk",
+    "members": 6081,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/Browser/Browser.apk",
+    "members": 15409,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/COSA/COSA.apk",
+    "members": 1480,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/ChildrenSpace/ChildrenSpace.apk",
+    "members": 1955,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/CloudService/CloudService.apk",
+    "members": 3047,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/ColorAccessibilityAssistant/ColorAccessibilityAssistant.apk",
+    "members": 2393,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/ColorDirectService/ColorDirectService.apk",
+    "members": 4610,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/Colorx/Colorx.apk",
+    "members": 738,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/DigitalWellBeing/DigitalWellBeing.apk",
+    "members": 2198,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/FileEncryption/FileEncryption.apk",
+    "members": 1783,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/FloatAssistant/FloatAssistant.apk",
+    "members": 1692,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/Gleaner/Gleaner.apk",
+    "members": 1562,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/Instant/Instant.apk",
+    "members": 6243,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/InstantService/InstantService.apk",
+    "members": 415,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/Karaoke/Karaoke.apk",
+    "members": 1686,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/KeKePay/KeKePay.apk",
+    "members": 3581,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/LocationProxy/LocationProxy.apk",
+    "members": 1721,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/MCS/MCS.apk",
+    "members": 1718,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/MSPService/MSPService.apk",
+    "members": 6663,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/MapComFrame/MapComFrame.apk",
+    "members": 459,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/OVoiceManagerSkillService/OVoiceManagerSkillService.apk",
+    "members": 406,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/OWork/OWork.apk",
+    "members": 2234,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/OcrScanner/OcrScanner.apk",
+    "members": 3271,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/OpenCapabilityService/OpenCapabilityService.apk",
+    "members": 1782,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/OplusAudioMonitor/OplusAudioMonitor.apk",
+    "members": 15,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/OplusOperationManual/OplusOperationManual.apk",
+    "members": 2666,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/OplusPhoneActivation/OplusPhoneActivation.apk",
+    "members": 1607,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/OplusSecurityKeyboard/OplusSecurityKeyboard.apk",
+    "members": 170,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/OppoWeatherService/OppoWeatherService.apk",
+    "members": 1946,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/PhoneNOAreaInquireProvider/PhoneNOAreaInquireProvider.apk",
+    "members": 1465,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/RegService/RegService.apk",
+    "members": 54,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/RomUpdate/RomUpdate.apk",
+    "members": 364,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/SecurePay/SecurePay.apk",
+    "members": 1704,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/ShareScreen/ShareScreen.apk",
+    "members": 2143,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/SmartEngine/SmartEngine.apk",
+    "members": 2583,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/SmartLock/SmartLock.apk",
+    "members": 1606,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/SmartSideBar/SmartSideBar.apk",
+    "members": 2750,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/StdSP/StdSP.apk",
+    "members": 2036,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/TTSAccessibilityEngine/TTSAccessibilityEngine.apk",
+    "members": 631,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/VariUIEngine/VariUIEngine.apk",
+    "members": 1502,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/ViewTalk/ViewTalk.apk",
+    "members": 1866,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/WallpaperChooser/WallpaperChooser.apk",
+    "members": 2004,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/app/WifiBackupRestore/WifiBackupRestore.apk",
+    "members": 1945,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/framework/com.google.android.dialer.support.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/framework/ims-ext-common.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/framework/uimservicelibrary.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/framework/com.oplus.camera.unit.sdk.adapter.jar",
+    "members": 1,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/framework/com.oplus.camera.unit.sdk.jar",
+    "members": 1,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/CarrierConfigResCommon_Sys.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/CellBroadcastReceiverResCommon_Sys.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/CompanionDeviceManager__nosdcard__auto_generated_characteristics_rro.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/DisplayCutoutEmulationCorner/DisplayCutoutEmulationCornerOverlay.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/DisplayCutoutEmulationDouble/DisplayCutoutEmulationDoubleOverlay.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/DisplayCutoutEmulationHole/DisplayCutoutEmulationHoleOverlay.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/DisplayCutoutEmulationTall/DisplayCutoutEmulationTallOverlay.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/DisplayCutoutEmulationWaterfall/DisplayCutoutEmulationWaterfallOverlay.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/FontNotoSerifSource/FontNotoSerifSourceOverlay.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/FrameworksResCommon_Sys.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/NavigationBarMode3Button/NavigationBarMode3ButtonOverlay.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/NcmTetheringResCommonGMS_Sys.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/NcmTetheringResCommon_Sys.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/NotesRoleEnabled/NotesRoleEnabledOverlay.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/OplusCarrierConfig.apk",
+    "members": 71,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/SettingsResCommon_Sys.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/SystemUIResCommon_Sys.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/TeleService__nosdcard__auto_generated_characteristics_rro.apk",
+    "members": 16,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/TelecommResCommon_Sys.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/TelephonyProvider__nosdcard__auto_generated_characteristics_rro.apk",
+    "members": 20,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/TelephonyResCommon_Sys.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/TransparentNavigationBar/TransparentNavigationBarOverlay.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/WifiResCommonMainline_Sys.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/WifiResCommon_Sys.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/framework-res__nosdcard__auto_generated_characteristics_rro.apk",
+    "members": 27,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/CarrierConfigOverlay.lvy.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/GmsConfigOverlayCommonCN/GmsConfigOverlayCommonCN.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/GmsConfigOverlayNoSafetyCenter/GmsConfigOverlayNoSafetyCenter.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/LauncherResourceOverlay/LauncherResourceOverlay.apk",
+    "members": 536,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/OplusConfigOverlayComms/OplusConfigOverlayComms.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/SystemUIFingerprintRes_17_0_FY_Icon.apk",
+    "members": 58,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/SystemUIFingerprintRes_17_0_FY_Press.apk",
+    "members": 68,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/SystemUIFingerprintRes_17_0_HY_Icon.apk",
+    "members": 110,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/SystemUIFingerprintRes_17_0_HY_Press.apk",
+    "members": 49,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/SystemUIFingerprintRes_17_0_Halo_Icon.apk",
+    "members": 57,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/SystemUIFingerprintRes_17_0_Halo_Press.apk",
+    "members": 52,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/SystemUIFingerprintRes_17_0_JD_Icon.apk",
+    "members": 57,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/SystemUIFingerprintRes_17_0_JD_Press.apk",
+    "members": 66,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/SystemUIFingerprintRes_17_0_LY_Icon.apk",
+    "members": 57,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/SystemUIFingerprintRes_17_0_LY_Press.apk",
+    "members": 68,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/SystemUIFingerprintRes_17_0_NONE_Press.apk",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/SystemUIFingerprintRes_17_0_QY_Icon.apk",
+    "members": 58,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/SystemUIFingerprintRes_17_0_QY_Press.apk",
+    "members": 68,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/SystemUIFingerprintRes_17_0_SW_Icon.apk",
+    "members": 58,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/SystemUIFingerprintRes_17_0_SW_Press.apk",
+    "members": 68,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/SystemUIFingerprintRes_17_0_XW_Icon.apk",
+    "members": 57,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/SystemUIFingerprintRes_17_0_XW_Press.apk",
+    "members": 64,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/SystemUIFingerprintRes_17_0_ZF_Icon.apk",
+    "members": 57,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/SystemUIFingerprintRes_17_0_ZF_Press.apk",
+    "members": 71,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/android_framework_res_overlay.display.product.25928.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/android_framework_res_overlay.tablet.location.timezone.lvy.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/aon.frameworkres.overlay.product.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/com.android.SystemUIResOverlay.25928.apk",
+    "members": 41,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/com.android.wallpaper.livepicker.overlay.25928.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/framework_res_overlay.network.lvy.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/oplus_framework_res_overlay.display.product.25928_sm8845.apk",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/overlay/OplusSystemuiResOverlay/OplusSystemuiResOverlay.apk",
+    "members": 8,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/ConfigUpdater/ConfigUpdater.apk",
+    "members": 61,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/GmsCore/GmsCore.apk",
+    "members": 12194,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/GmsCore/m/independent/AndroidPlatformServices.apk",
+    "members": 1942,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk",
+    "members": 201,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/GooglePlayServicesUpdater/GooglePlayServicesUpdater.apk",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/IPeManager/IPeManager.apk",
+    "members": 2304,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/OVoiceManagerService/OVoiceManagerService.apk",
+    "members": 956,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/RemoteControl/RemoteControl.apk",
+    "members": 2637,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/AIUnit/AIUnit.apk",
+    "members": 1919,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/AccessoryFramework/AccessoryFramework.apk",
+    "members": 2696,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/BlackListApp/BlackListApp.apk",
+    "members": 2094,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/CTAutoRegist/CTAutoRegist.apk",
+    "members": 16,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/CallServiceKit/CallServiceKit.apk",
+    "members": 411,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/CodeBook/CodeBook.apk",
+    "members": 2535,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/ColorfulEngine/ColorfulEngine.apk",
+    "members": 2248,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/Contacts/Contacts.apk",
+    "members": 3893,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/ContentPortal/ContentPortal.apk",
+    "members": 2821,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/Cota/Cota.apk",
+    "members": 1821,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/DCS/DCS.apk",
+    "members": 475,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/DRS/DRS.apk",
+    "members": 472,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/DSF/DSF.apk",
+    "members": 1748,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/FindMyPhone/FindMyPhone.apk",
+    "members": 3071,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/GlobalCollect/GlobalCollect.apk",
+    "members": 891,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/GlobalSearch/GlobalSearch.apk",
+    "members": 5044,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/HeyCast/HeyCast.apk",
+    "members": 1553,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/HeyTapSpeechAssist/HeyTapSpeechAssist.apk",
+    "members": 9855,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/InCallUI/InCallUI.apk",
+    "members": 3232,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/KeKeAppDetail/KeKeAppDetail.apk",
+    "members": 2339,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/KeKeMarket/KeKeMarket.apk",
+    "members": 4851,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/KeKeOplusThemeStore-CN/KeKeOplusThemeStore-CN.apk",
+    "members": 1979,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/KeKeUserCenter/KeKeUserCenter.apk",
+    "members": 35,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/KeKeUserCenterAccount/KeKeUserCenterAccount.apk",
+    "members": 2838,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/MDSService/MDSService.apk",
+    "members": 1565,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/MediaTurbo/MediaTurbo.apk",
+    "members": 1993,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/Metis/Metis.apk",
+    "members": 2827,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/Mms/Mms.apk",
+    "members": 4113,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/MyDevices/MyDevices.apk",
+    "members": 3327,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/NumberRecognition/NumberRecognition.apk",
+    "members": 771,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/OPSynergy/OPSynergy.apk",
+    "members": 3687,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/OShare/OShare.apk",
+    "members": 2198,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/OpenID/OpenID.apk",
+    "members": 1029,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/OplusBootReg/OplusBootReg.apk",
+    "members": 1710,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/OplusGames/OplusGames.apk",
+    "members": 8769,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/OplusScreenRecorder/OplusScreenRecorder.apk",
+    "members": 1908,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/OplusThirdKit/OplusThirdKit.apk",
+    "members": 1801,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/OppoGallery2/OppoGallery2.apk",
+    "members": 9031,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/PadConnect/PadConnect.apk",
+    "members": 1679,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/PhoneManager/PhoneManager.apk",
+    "members": 6173,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/RemoteGuardService/RemoteGuardService.apk",
+    "members": 346,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/SandboxRuntime/SandboxRuntime.apk",
+    "members": 9,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/SceneService/SceneService.apk",
+    "members": 3969,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/Screenshot/Screenshot.apk",
+    "members": 3411,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/SecurityGuard/SecurityGuard.apk",
+    "members": 45,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/StudyCenter/StudyCenter.apk",
+    "members": 3976,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/UMS/UMS.apk",
+    "members": 3816,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/VideoGallery/VideoGallery.apk",
+    "members": 2329,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/Wallpapers/Wallpapers.apk",
+    "members": 2117,
+    "exit_code": 0
+  },
+  {
+    "path": "/product/priv-app/dmp/dmp.apk",
+    "members": 4281,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.adbd.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.adservices.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.apex.cts.shim.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.appsearch.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.art.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.configinfrastructure.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.conscrypt.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.crashrecovery.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.devicelock.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.extservices.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.healthfitness.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.i18n.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.ipsec.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.media.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.media.swcodec.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.mediaprovider.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.neuralnetworks.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.ondevicepersonalization.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.os.statsd.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.permission.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.profiling.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.resolv.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.rkpd.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.runtime.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.scheduling.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.sdkext.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.tethering.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.tzdata.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.uprobestats.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.uwb.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.virt.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/apex/com.android.wifi.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/app/BasicDreams/BasicDreams.apk",
+    "members": 15,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/app/Bluetooth/Bluetooth.apk",
+    "members": 2112,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/app/BluetoothMidiService/BluetoothMidiService.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/app/BookmarkProvider/BookmarkProvider.apk",
+    "members": 9,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/app/CameraExtensionsProxy/CameraExtensionsProxy.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/app/CaptivePortalLogin/CaptivePortalLogin.apk",
+    "members": 136,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/app/CarrierDefaultApp/CarrierDefaultApp.apk",
+    "members": 13,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/app/CompanionDeviceManager/CompanionDeviceManager.apk",
+    "members": 157,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/app/CrossDeviceServiceBroker/CrossDeviceServiceBroker.apk",
+    "members": 7,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/app/EasterEgg/EasterEgg.apk",
+    "members": 215,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/app/ExtensionsService/ExtensionsService.apk",
+    "members": 19,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/app/PacProcessor/PacProcessor.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/app/SimAppDialog/SimAppDialog.apk",
+    "members": 223,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/app/Traceur/Traceur.apk",
+    "members": 1191,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/app/WallpaperBackup/WallpaperBackup.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/etc/compatible/com.android.art/javalib/apache-xml.jar",
+    "members": 13,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/etc/compatible/com.android.art/javalib/bouncycastle.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/etc/compatible/com.android.art/javalib/core-libart.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/etc/compatible/com.android.art/javalib/core-oj.jar",
+    "members": 18,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/etc/compatible/com.android.art/javalib/okhttp.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/etc/compatible/com.android.art/javalib/service-art.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/etc/security/fsverity/BuildManifest.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/QPerformance.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/QXPerformance.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/UxPerformance.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/WfdCommon.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/abx.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/am.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/android.hardware.biometrics.face-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/android.hardware.biometrics.fingerprint-V2.3-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/android.hardware.ir-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/android.hardware.secure_element-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/android.hidl.base-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/android.hidl.manager-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/android.test.base.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/android.test.mock.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/android.test.runner.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/appwidget.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/bmgr.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/bu.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/com.android.future.usb.accessory.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/com.android.location.provider.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/com.android.media.remotedisplay.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/com.android.mediadrm.signer.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/com.android.nfc_extras.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/content.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/ext.jar",
+    "members": 1175,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/framework-graphics.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/framework-location.jar",
+    "members": 4,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/framework-nfc.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/framework-ondeviceintelligence-platform.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/framework-res.apk",
+    "members": 8376,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/framework.jar",
+    "members": 97,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/hid.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/ifaamanager.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/ims-common.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/incident-helper-cmd.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/javax.obex.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/monkey.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/oplus-framework.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/oplus-service-jobscheduler.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/oplus-services.jar",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/org.apache.http.legacy.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/qcom.fmradio.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/requestsync.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/services.jar",
+    "members": 207,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/sm.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/subsystem-framework.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/svc.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/tcmclient.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/tcmiface.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/telecom.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/telephony-common.jar",
+    "members": 789,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/tradeinmode.jar",
+    "members": 15,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/uiautomator.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/uinput.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/vendor.oplus.hardware.biometrics.fingerprint-V2.1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/vendor.oplus.hardware.commondcs-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/vendor.oplus.hardware.display.MixLut3D-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/vendor.oplus.hardware.nfcExtns-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/vendor.oplus.hardware.olc2-V3-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/vendor.oplus.hardware.opluslights-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/vendor.oplus.hardware.osense.client-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/vendor.oplus.hardware.pogo_keyboard-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/vendor.oplus.hardware.power.powermonitor-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/vendor.oplus.hardware.rpmh-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/vendor.qti.hardware.data.connectionaidl-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/voip-common.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/framework/vr.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/BackupRestoreConfirmation/BackupRestoreConfirmation.apk",
+    "members": 92,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/CellBroadcastLegacyApp/CellBroadcastLegacyApp.apk",
+    "members": 422,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/CredentialManager/CredentialManager.apk",
+    "members": 1999,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/DeviceAsWebcam/DeviceAsWebcam.apk",
+    "members": 480,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/DocumentsUI/DocumentsUI.apk",
+    "members": 771,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/DownloadProviderUi/DownloadProviderUi.apk",
+    "members": 11,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/DynamicSystemInstallationService/DynamicSystemInstallationService.apk",
+    "members": 7,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/E2eeContactKeysProvider/E2eeContactKeysProvider.apk",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/ExternalStorageProvider/ExternalStorageProvider.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/FusedLocation/FusedLocation.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/InputDevices/InputDevices.apk",
+    "members": 61,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/IntentResolver/IntentResolver.apk",
+    "members": 1588,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/LocalTransport/LocalTransport.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/ManagedProvisioning/ManagedProvisioning.apk",
+    "members": 1023,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/MediaProviderLegacy/MediaProviderLegacy.apk",
+    "members": 422,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/MtpService/MtpService.apk",
+    "members": 433,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/MusicFX/MusicFX.apk",
+    "members": 106,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/NetworkStack/NetworkStack.apk",
+    "members": 30,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/NfcNci/NfcNci.apk",
+    "members": 2067,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/ONS/ONS.apk",
+    "members": 7,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/ProxyHandler/ProxyHandler.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/SharedStorageBackup/SharedStorageBackup.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/Shell/Shell.apk",
+    "members": 143,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/Tag/Tag.apk",
+    "members": 172,
+    "exit_code": 0
+  },
+  {
+    "path": "/system/priv-app/UserDictionaryProvider/UserDictionaryProvider.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/apex/com.android.compos.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/AccessibilityMenu/AccessibilityMenu.apk",
+    "members": 601,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/Athena/Athena.apk",
+    "members": 82,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/BTtestmode/BTtestmode.apk",
+    "members": 21,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/Battery/Battery.apk",
+    "members": 2075,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/CertInstaller/CertInstaller.apk",
+    "members": 455,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/CloudAccService/CloudAccService.apk",
+    "members": 2060,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/CrsVcrbtSwitch/CrsVcrbtSwitch.apk",
+    "members": 426,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/EidService/EidService.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/Fido2ClientCN/Fido2ClientCN.apk",
+    "members": 1562,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/FidoAsm/FidoAsm.apk",
+    "members": 23,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/FrameworksUtilsSysService/FrameworksUtilsSysService.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/HTMLViewer/HTMLViewer.apk",
+    "members": 1473,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/HealthService/HealthService.apk",
+    "members": 21,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/ImsDataChannelService/ImsDataChannelService.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/KeyChain/KeyChain.apk",
+    "members": 234,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/KeyguardClockBase/KeyguardClockBase.apk",
+    "members": 1448,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/KeyguardPersonalityClocks/KeyguardPersonalityClocks.apk",
+    "members": 1478,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/KeyguardStyleWidget/KeyguardStyleWidget.apk",
+    "members": 1397,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/LFEHer/LFEHer.apk",
+    "members": 32,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/LogTrialCommercial/LogTrialCommercial.apk",
+    "members": 2779,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/NetworkHealthService/NetworkHealthService.apk",
+    "members": 116,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/NetworkSense_plugin_NetPrediction/NetworkSense_plugin_NetPrediction.apk",
+    "members": 9,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/NetworkSense_plugin_NetScore/NetworkSense_plugin_NetScore.apk",
+    "members": 11,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/NetworkSense_plugin_NetworkSense/NetworkSense_plugin_NetworkSense.apk",
+    "members": 20,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/NetworkSense_plugin_NwEstimate/NetworkSense_plugin_NwEstimate.apk",
+    "members": 14,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/NfcEngineerTest/NfcEngineerTest.apk",
+    "members": 24,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/NotificationCenter/NotificationCenter.apk",
+    "members": 2705,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/NtnSatApp/NtnSatApp.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/OTA/OTA.apk",
+    "members": 1988,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/OTrace/OTrace.apk",
+    "members": 366,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/Olc/Olc.apk",
+    "members": 268,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/OplusAtlasService/OplusAtlasService.apk",
+    "members": 30,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/OplusCommercialEngineerCamera/OplusCommercialEngineerCamera.apk",
+    "members": 375,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/OplusCommercialEngineerMode/OplusCommercialEngineerMode.apk",
+    "members": 1078,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/OplusEngineerNetwork/OplusEngineerNetwork.apk",
+    "members": 1774,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/OplusEyeProtect/OplusEyeProtect.apk",
+    "members": 1326,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/OplusFlexibleWindowUI/OplusFlexibleWindowUI.apk",
+    "members": 1881,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/OplusGestureUI/OplusGestureUI.apk",
+    "members": 2179,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/OplusLocationService/OplusLocationService.apk",
+    "members": 1203,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/OplusMultiApp/OplusMultiApp.apk",
+    "members": 1506,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/OplusQualityProtect/OplusQualityProtect.apk",
+    "members": 26,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/OwkService/OwkService.apk",
+    "members": 8,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/PostmanService/PostmanService.apk",
+    "members": 1883,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/PowerMonitor/PowerMonitor.apk",
+    "members": 254,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/PowerSaveMode/PowerSaveMode.apk",
+    "members": 9,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/PrintSpooler/PrintSpooler.apk",
+    "members": 1566,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/QCC/QCC.apk",
+    "members": 22,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/RsmcSatelliteAuth/RsmcSatelliteAuth.apk",
+    "members": 7,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/SAUHelper/SAUHelper.apk",
+    "members": 12,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/SafeCenter/SafeCenter.apk",
+    "members": 2251,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/SecureElement/SecureElement.apk",
+    "members": 12,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/SecurityPermission/SecurityPermission.apk",
+    "members": 2528,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/SoterService/SoterService.apk",
+    "members": 13,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/SubsysPlugins_plugin_AppSense/SubsysPlugins_plugin_AppSense.apk",
+    "members": 17,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/SubsysPlugins_plugin_BorderPreSearch/SubsysPlugins_plugin_BorderPreSearch.apk",
+    "members": 8,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/SubsysPlugins_plugin_CellMap/SubsysPlugins_plugin_CellMap.apk",
+    "members": 8,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/SubsysPlugins_plugin_CellularQoe/SubsysPlugins_plugin_CellularQoe.apk",
+    "members": 12,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/SubsysPlugins_plugin_MotionSense/SubsysPlugins_plugin_MotionSense.apk",
+    "members": 17,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/SubsysPlugins_plugin_WifiQoe/SubsysPlugins_plugin_WifiQoe.apk",
+    "members": 13,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/SubsystemApp/SubsystemApp.apk",
+    "members": 13,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/SystemAppUpdateService/SystemAppUpdateService.apk",
+    "members": 843,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/SystemUIPlugin/SystemUIPlugin.apk",
+    "members": 1485,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/TTSatelliteAuth/TTSatelliteAuth.apk",
+    "members": 7,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/UAFClient/UAFClient.apk",
+    "members": 76,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/UXDesign/UXDesign.apk",
+    "members": 2134,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/WapiCertManage/WapiCertManage.apk",
+    "members": 18,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/app/workloadclassifier/workloadclassifier.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/etc/security/fsverity/BuildManifestSystemExt.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/ActivityExt.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/OplusQConfigSetting.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/SatelliteClient.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/androidx.camera.extensions.impl.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/androidx.window.extensions.jar",
+    "members": 4,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/androidx.window.sidecar.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/audiosphere.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/com.android.extensions.appfunctions.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/com.qti.dpmframework.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/com.qualcomm.qti.imscmservice-V2.2-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/com.qualcomm.qti.uceservice-V2.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/com.qualcomm.qti.uceservice-V2.1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/com.qualcomm.qti.uceservice-V2.2-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/com.qualcomm.qti.uceservice-V2.3-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/com.quicinc.cne.api-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/com.quicinc.cne.api-V1.1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/com.quicinc.cne.constants-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/com.quicinc.cne.constants-V2.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/com.quicinc.cne.constants-V2.1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/com.vendor.nfc.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/datachannellib.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/defrag_wrapper.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/dpmapi.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/getcplc.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/getnfcc.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/nfcvendorlib.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplus-evolution-ext.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplus-evolution.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplus-framework-res.apk",
+    "members": 1404,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplus-ims-ext.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplus-lbs-services.jar",
+    "members": 24,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplus-subsys-tool.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplus-subsystem-service-ext.jar",
+    "members": 34,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplus-subsystem-service.jar",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplus-telephony-common-ext.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplus-telephony-common.jar",
+    "members": 8,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplus-telephony-rus.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplus-virtual-audio-policy.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplus-wifi-service.jar",
+    "members": 26,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplus_bluetooth_common_ext.jar",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplusex/com.oplus.AutoLayout/autolayout.jar",
+    "members": 1,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplusex/com.oplus.CustCore/OplusMdmAdapter.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplusex/com.oplus.CustCore/OplusMdmInterface.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplusex/com.oplus.NetworkAssistSys/networkservices.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplusex/com.oplus.fancyIconLoader/fancyIconRes.apk",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplusex/com.oplus.fancyIconLoader/fancyicon.jar",
+    "members": 1,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplusex/com.oplus.moduleservices/moduleservices.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplusex/com.oplus.moduleservices/crypto.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/oplusex/com.oplus.odmf/odmf.jar",
+    "members": 3,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/qcrilhook.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/qmapbridge.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/qti-telephony-hidl-wrapper.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/qti-telephony-utils.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/rsmcService.jar",
+    "members": 1,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/soc_bluetooth_ext.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/subsys-camera-plugin.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/subsys-channel-lock-plugin.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/subsys-gps-plugin.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/subsys-imsrtp-plugin.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/subsys-litefeature-plugin.jar",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/subsys-olk-plugin.jar",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/subsys-power-plugin.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/subsys-scene-plugin.jar",
+    "members": 18,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/subsys-sido-plugin.jar",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/subsys-telephony-plugin.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/subsys-wifi-plugin.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor-subsystem-service.jar",
+    "members": 8,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.binderstats-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.biometrics.fingerprintpay-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.charger-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.charger-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.charger-V11-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.cryptoeng-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.cryptoeng-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.engineer-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.engineer-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.fido.fido2ca-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.fido.fidoca-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.gameopt-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.gameopt-V2-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.handlefactory-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.keymint-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.location_aidl-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.midasdev-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.misc-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.misc-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.oplusSensor-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.oplusSensor-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.osense.client-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.osml-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.riskdetect-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.stability.oplus_project-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.stability.oplus_project-V2-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.stability.oplus_project-V3-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.touch-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.touch-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.touch-V2-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.transmessage-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.transmessage-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.oplus.hardware.weaver-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.data.dmapconsent-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.data.dmapconsent-V2-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.data.factory-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.data.factory-V2.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.data.factory-V2.1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.data.factory-V2.2-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.data.factory-V2.3-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.data.factory-V2.4-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.data.factoryservice-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.data.factoryservice-V2-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.data.mwqem-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.data.mwqemaidlservice-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.data.ntn-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.c2pa-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.cacertaidlservice-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.capabilityconfigstore-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.cne.internal.api-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.cne.internal.constants-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.cne.internal.server-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.cne.internal.server-V1.1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.cne.internal.server-V1.2-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.cne.internal.server-V1.3-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.cneaidlservice.internal.api-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.cneaidlservice.internal.server-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.cneaidlservice.internal.server-V2-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.connectionfactory-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.dataactivity-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.dynamicddsaidlservice-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.flow-V1.1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.flowaidlservice-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.iwlan-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.iwlan-V1.1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.iwlandata-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.ka-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.lce-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.lceaidlservice-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.data.qmiaidlservice-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.dpmaidlservice-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.dpmservice-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.dpmservice-V1.1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.fingerprint-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.mwqemadapter-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.mwqemadapteraidlservice-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.sensorscalibrate-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.hardware.slmadapter-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.callcapability-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.callcapabilityaidlservice-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.callinfo-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.configaidlservice-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.configservice-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.configservice-V1.1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.connectionaidlservice-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.datachannelservice-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.datachannelservice-V2-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.datachannelservice-V3-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.factoryaidlservice-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.imscmaidlservice-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.rcsconfig-V1.1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.rcsconfig-V2.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.rcsconfig-V2.1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.rcssip-V1.1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.rcssip-V1.2-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.rcssipaidlservice-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.rcsuceaidlservice-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.ims.uceaidlservice-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.imsdatachannel.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.latency-V2.0-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.latency-V2.2-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/vendor.qti.latencyaidlservice-V1-java.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/videoLogcatExt.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/framework/wapicertstore-qcom.jar",
+    "members": 2,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/overlay/CellBroadcastReceiverModuleOverlay/CellBroadcastReceiverModuleOverlay.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/overlay/CellBroadcastServiceModuleOverlay/CellBroadcastServiceModuleOverlay.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/overlay/NetworkStackOverlayCHN.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/overlay/OplusBluetoothResource.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/overlay/OplusFrameworkBluetoothResource.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/overlay/OplusFrameworkResTabletOverlay.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/overlay/OplusPermissionControllerOverlay/OplusPermissionControllerOverlay.apk",
+    "members": 12,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/overlay/OplusWifiResource.apk",
+    "members": 12,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/overlay/SafetyCenterStylesOverlay/SafetyCenterStylesOverlay.apk",
+    "members": 12,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/overlay/ServiceConnectivityResourcesOverlayCHN.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/overlay/framework_res_overlay_Network.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/AppBooster/AppBooster.apk",
+    "members": 1025,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/AvatarPicker/AvatarPicker.apk",
+    "members": 989,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/BeidouMsgService/BeidouMsgService.apk",
+    "members": 112,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/BlockedNumberProvider/BlockedNumberProvider.apk",
+    "members": 551,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/BlurService/BlurService.apk",
+    "members": 23,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/BuiltInPrintService/BuiltInPrintService.apk",
+    "members": 1315,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/CalendarProvider/CalendarProvider.apk",
+    "members": 59,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/CallLogBackup/CallLogBackup.apk",
+    "members": 13,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/CarrierConfig/CarrierConfig.apk",
+    "members": 422,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/CellBroadcastReceiver/CellBroadcastReceiver.apk",
+    "members": 1806,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/CellBroadcastService/CellBroadcastService.apk",
+    "members": 35,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/ContactsProvider/ContactsProvider.apk",
+    "members": 340,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/DFS/DFS.apk",
+    "members": 1666,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/DeepThinker/DeepThinker.apk",
+    "members": 1787,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/DownloadProvider/DownloadProvider.apk",
+    "members": 11,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/MmsService/MmsService.apk",
+    "members": 21,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/OplusAppPlatform/OplusAppPlatform.apk",
+    "members": 28,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/OplusExSystemService/OplusExSystemService.apk",
+    "members": 1708,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/OplusLauncher/OplusLauncher.apk",
+    "members": 5803,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/OplusNearComm/OplusNearComm.apk",
+    "members": 7,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/OplusNrMode/OplusNrMode.apk",
+    "members": 7,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/OplusVirtualComm/OplusVirtualComm.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/OppoPackageInstaller/OppoPackageInstaller.apk",
+    "members": 1259,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/Settings/Settings.apk",
+    "members": 10200,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/SettingsIntelligence/SettingsIntelligence.apk",
+    "members": 1459,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/SettingsProvider/SettingsProvider.apk",
+    "members": 266,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/StatementService/StatementService.apk",
+    "members": 447,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/StorageManager/StorageManager.apk",
+    "members": 1737,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/SubsysInterfacePlugin/SubsysInterfacePlugin.apk",
+    "members": 21,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/SystemUI/SystemUI.apk",
+    "members": 8624,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/TeleService/TeleService.apk",
+    "members": 2386,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/Telecom/Telecom.apk",
+    "members": 1495,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/TelephonyProvider/TelephonyProvider.apk",
+    "members": 32,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/TrafficMonitor/TrafficMonitor.apk",
+    "members": 2962,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/UpgradeGuide/UpgradeGuide.apk",
+    "members": 1984,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/VDCService/VDCService.apk",
+    "members": 1606,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/VirtualCommService/VirtualCommService.apk",
+    "members": 31,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/VpnDialogs/VpnDialogs.apk",
+    "members": 11,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/WfdService/WfdService.apk",
+    "members": 9,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/WirelessSettings/WirelessSettings.apk",
+    "members": 2358,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/dcf/dcf.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/ims/ims.apk",
+    "members": 20,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/xrcbservice/xrcbservice.apk",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/system_ext/priv-app/xrvdservice/xrvdservice.apk",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/vendor/apex/com.android.hardware.cas.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/vendor/apex/com.google.android.widevine.nonupdatable.apex",
+    "members": 9,
+    "exit_code": 0
+  },
+  {
+    "path": "/vendor/apex/vendor.oplus.hardware.engineer.aidl.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/vendor/apex/vendor.oplus.hardware.stability.aidl.apex",
+    "members": 10,
+    "exit_code": 0
+  },
+  {
+    "path": "/vendor/app/CACertService/CACertService.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/vendor/app/CneApp/CneApp.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/vendor/app/TimeService/TimeService.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/vendor/app/TrustZoneAccessService/TrustZoneAccessService.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/vendor/app/com.qualcomm.qti.gpudrivers.canoe.api36/com.qualcomm.qti.gpudrivers.canoe.api36.apk",
+    "members": 4,
+    "exit_code": 0
+  },
+  {
+    "path": "/vendor/overlay/FrameworksResTarget_Vendor.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/vendor/overlay/NfcResTarget.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/vendor/overlay/SecureElementResTarget_Vendor.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/vendor/overlay/UwbResTarget_Vendor.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/vendor/overlay/WifiResMainlineTarget.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/vendor/overlay/WifiResMainlineTarget_spf.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/vendor/overlay/WifiResTarget.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/vendor/overlay/WifiResTarget_spf.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/vendor/overlay/XpanResTarget_Vendor.apk",
+    "members": 5,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~XijUHni2x_-HQxnbLVBqpg==/com.coloros.colordirectservice-VUz-z5W6P7LWKTfm_DCmTg==/base.apk",
+    "members": 4638,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~wWG6CZF6tO-Rgt5T64mcGg==/com.oplus.appdetail-Ky-s_wbn5OfrNdN6RggLCQ==/base.apk",
+    "members": 2365,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~bARm--sShHQni2-70g355A==/com.heytap.browser-iK8x7p1rYvW7kOKk4Gbd3w==/split_live_video_bundle.apk",
+    "members": 8,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~bARm--sShHQni2-70g355A==/com.heytap.browser-iK8x7p1rYvW7kOKk4Gbd3w==/Browser.apk",
+    "members": 15409,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~Mc0BirGhei36fZlsRIJ1lQ==/com.oplus.screenshot-0QCqejsLGt-lPYr39tx8vg==/base.apk",
+    "members": 3417,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~NDBiW6KT4-OYehBOkgiymQ==/com.oplus.melody-dwuvdm2YEdzGueL0NfDYhw==/base.apk",
+    "members": 2823,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~9hjUOZkZMEAj6ClJIEJaLA==/com.coloros.weather.service--INNnf3WmCNlYkS1C_pNKw==/base.apk",
+    "members": 1831,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~9hjUOZkZMEAj6ClJIEJaLA==/com.coloros.weather.service--INNnf3WmCNlYkS1C_pNKw==/split_config.en.apk",
+    "members": 6,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~9hjUOZkZMEAj6ClJIEJaLA==/com.coloros.weather.service--INNnf3WmCNlYkS1C_pNKw==/split_config.xxhdpi.apk",
+    "members": 120,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~kVgGHD8kQRAoEvXBOCaSyg==/com.coloros.accessibilityassistant-lyda1Mu5dUSctQN1JfPzOQ==/base.apk",
+    "members": 2393,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~Yyqll0i0vIOlyGX1BvDRaw==/com.heytap.mydevices-v_VZ2H4rmM60CmAvPjVvDw==/base.apk",
+    "members": 3327,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~w6elIboj7tFYDTXUaX-D9Q==/com.nearme.instant.platform-LpEv49lTzQPyCVEst9ReOQ==/base.apk",
+    "members": 6608,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~IpRbNxnseOV3dP4d-9xIUQ==/com.oplus.sauhelper-KNlPysWYUbS-Smct9ceoWQ==/base.apk",
+    "members": 4,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~LFwfiyrxefLjypc6up9oFA==/com.coloros.ocs.opencapabilityservice-FiOOrAErx3amBzyr42PYJw==/base.apk",
+    "members": 1782,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~psla-XxiTI8ypZfoadVVVQ==/com.oplus.ota-JOntyQpAWOB46pK2NeQrEg==/base.apk",
+    "members": 2234,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~qcr0eE6WMHSaUruZtfP7Pw==/com.coloros.weather2-96MglRwhZ06wxOMMOGU59g==/base.apk",
+    "members": 4347,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~__nv3znXmZeJeaSTV5ClTw==/com.oplus.games-50wMtl1ENxPtdz6Q-folow==/base.apk",
+    "members": 6950,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~_ZEKSPyFL7tpwio7dRET-w==/com.coloros.calendar-2o8EqgtNjEBghOQ9zh50xA==/base.apk",
+    "members": 4535,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~zpWkkdf9fed9lM29evkDXA==/com.coloros.phonemanager-LTexCMcKZiW1sMhGf9WnSA==/base.apk",
+    "members": 4874,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~OJUo-nmjxe2ntYrZf403Mg==/com.oplus.screenrecorder-Du2ZIsS0PPO_f_ZotNLZFw==/base.apk",
+    "members": 1908,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~WgfJ2MihvMB89962SxhBdA==/com.coloros.findmyphone-uzMy7qEQ1H51n1tdUuzj6g==/base.apk",
+    "members": 2687,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~G2dBbQs77tADmLOHL-pJdQ==/com.coloros.smartsidebar-mNqEfG_6WIhzklg1RAlTGw==/base.apk",
+    "members": 2762,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~_ZWg8a9aYjXVwrMw4LIgWg==/com.heytap.quicksearchbox-V62e0KtZo3r2RpqfX8Im8A==/base.apk",
+    "members": 5910,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~JYohsypHuso2EbWgePaOqA==/com.coloros.operationManual-L4NmF0LrtaYShYbzUtSKUg==/base.apk",
+    "members": 2666,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~d2VDvRZM2-9Wz5zkrEINoA==/com.coloros.securepay-2lRJLw6hvLlL82gmHt0jSQ==/base.apk",
+    "members": 1719,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~lwGOYPWgXHa-P_uucUbKQA==/com.oplus.encryption-yi7_M2250oJM50mipdfqVA==/base.apk",
+    "members": 1818,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~-vpV1_wTqtUR9gTiqLhyKw==/com.coloros.gallery3d-P3-vs479haHsLtp514lWDw==/base.apk",
+    "members": 9062,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~TPPeTZph5_gJY4SD7aTunA==/com.coloros.sceneservice-4PXSIWDP_TbRjq2jNuATqg==/base.apk",
+    "members": 3990,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~mSwSDOAdwyv6CkCBekls_g==/com.oplus.pantanal.ums-dPfT4Pj9z3HL4b_hqo7Mfw==/base.apk",
+    "members": 3894,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~8FO-X-bU7pTsLuoEXLi-EQ==/com.oplus.dmp-tpuRgorSpceSdexopItRtA==/base.apk",
+    "members": 4285,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~nX6YVjCi2Kg4hUKWfivYdg==/com.oplus.deepthinker-GeHXsltEZa9oqewnR3EzBQ==/base.apk",
+    "members": 1872,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~q-ykbp9wOG58sbkuvrYW7g==/com.oplus.globalcollect-iAvSTWUARrP_lWya7xrwuw==/base.apk",
+    "members": 890,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~2MyOFKolZKJs3qAECR0c7Q==/com.oplus.securitypermission-v8jb-w16MY3Ugqpckt_WEA==/base.apk",
+    "members": 2528,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~y_m__URtf60usv3fiIfDgg==/com.heytap.mcs-QJyE-liOVbngb8OEVao4sA==/base.apk",
+    "members": 1689,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~Eq77LeznTOz4YbvPYNbGHw==/com.oplus.aimemory-KEerj2I93abjI0SJm65tNA==/base.apk",
+    "members": 4309,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~sWecz3N6f-Fux2siJIkrjA==/com.oplus.account-0Kf1F8C4243W5kNmt9NAZg==/base.apk",
+    "members": 3024,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~EvbkTQrY8MUXgy3CKbfiEg==/com.oplus.aiunit-XaybDThrFt5oHvDitrnUcQ==/base.apk",
+    "members": 1971,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~2L353cTJExG3tw1IAvuksA==/com.oplus.pay-t9XG2_X29O4YA--b9zSsXg==/base.apk",
+    "members": 3484,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~Ce1-4qL8NpRZhp4wfr-tkg==/com.oplus.metis-3Lv3Q00SgxSPikB__ZaJ-Q==/base.apk",
+    "members": 2836,
+    "exit_code": 0
+  },
+  {
+    "path": "/data/app/~~QazoyTtdZfz8gjoX3dXxZQ==/com.heytap.market-XgtReTx1b1pobp0RJMUS_g==/base.apk",
+    "members": 4911,
+    "exit_code": 0
+  }
+]

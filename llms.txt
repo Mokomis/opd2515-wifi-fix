@@ -13,3 +13,8 @@
 ## Evidence limits
 
 Raw logs, traces, private databases, firmware/APKs and decompiled vendor source are excluded. Local work/ paths and REA IDs are not accessible evidence. Later final recommendations supersede historical current-state claims. No proven end-to-end latency benefit should be inferred from ready-to-present metrics.
+
+## Fresh device inventory
+
+- [Device file inventory and coverage](https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/device-inventory/2026-10-11/README.md)
+- [Inventory-first Claude handoff](https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/device-inventory/2026-10-11/HANDOFF.md)

@@ -1,0 +1,32 @@
+{
+  "start_host_utc": "2026-10-11T17:50:12Z",
+  "excluded": [
+    "/proc",
+    "/sys",
+    "/dev",
+    "/config",
+    "/data_mirror",
+    "/storage",
+    "/mnt/user",
+    "/mnt/runtime",
+    "/mnt/pass_through",
+    "/mnt/installer",
+    "/mnt/androidwritable"
+  ],
+  "reason": "Virtual kernel/device trees excluded; data_mirror and emulated-storage aliases excluded to avoid duplicate traversal. Primary /data/media remains included.",
+  "command": "find / \\( -path /proc -o -path /sys -o -path /dev -o -path /config -o -path /data_mirror -o -path /storage -o -path /mnt/user -o -path /mnt/runtime -o -path /mnt/pass_through -o -path /mnt/installer -o -path /mnt/androidwritable \\) -prune -o -printf '%p\\0%M\\0%U\\0%G\\0%s\\0%i\\0%T@\\0%l\\0%m\\0'",
+  "fields": [
+    "path",
+    "mode",
+    "uid",
+    "gid",
+    "bytes",
+    "inode",
+    "mtime",
+    "symlink_target",
+    "permissions"
+  ],
+  "exit_code": 0,
+  "entries": 457229,
+  "end_host_utc": "2026-10-11T17:50:56Z"
+}

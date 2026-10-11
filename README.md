@@ -1,5 +1,7 @@
 # Wi-Fi stall and width fixes for the OPPO Pad Mini
 
+[Fresh OPPO configuration/file inventory for researchers and LLMs](docs/device-inventory/2026-10-11/README.md): read-only device snapshot, archive-member inventories and explicit coverage limits.
+
 **Public OPPO Pad Mini research:** [all findings by topic](FINDINGS.md) · [final recommendations](docs/investigations/2026-10-11/final-recommendations.md) · [machine-readable catalog](findings-index.json) · [LLM entry point](llms.txt).
 
 Investigation closed: [final recommendations and retained state](docs/investigations/2026-10-11/final-recommendations.md). The optional buffer helper is disabled.
