@@ -134,7 +134,53 @@ To use only the temperature fix, skip step 2. The script leaves the stock driver
 - Sends the thresholds every time the Wi-Fi link comes up, because the firmware forgets them.
 - Android switches wireless debugging off when Wi-Fi goes off. Create `/data/adb/wifi-fix/keep-adb-wifi` if you want the script to switch it back on after the swap. Without that file it does not touch the setting.
 
+- If `/data/adb/wifi-fix/ull-flags` exists, changes what Android's low-latency Wi-Fi mode does before the driver swap. See [Optional: stronger low-latency mode](#optional-stronger-low-latency-mode).
+
 `wireless-debugging.sh` is a separate, optional boot script that switches wireless debugging back on after every reboot. It is not needed for the fixes.
+
+## Optional: stronger low-latency mode
+
+This part is untested on the tablet. It is off unless you create the file below.
+
+An app that holds Android's low-latency Wi-Fi lock (`WifiManager.WIFI_MODE_FULL_LOW_LATENCY`) while it is in the foreground with the screen on gets two things:
+
+- Android switches 802.11 power save off.
+- Qualcomm's Wi-Fi HAL asks the driver for latency level 4, "ultralow".
+
+What level 4 does comes from one driver setting, `wlm_latency_flags_ultralow`. OPPO's driver source sets it to `0x180D83`:
+
+- Android's scan requests are suppressed, and scans skip DFS channels.
+- The tablet roams only after losing the access point's beacons, not because the signal is weak.
+- Two chip-level sleep states are disabled.
+- Nothing changes on the tablet side. The CPUs may still enter deep idle, and the driver keeps batching outgoing packets.
+
+The boot script can replace that value. Put a hex value in `/data/adb/wifi-fix/ull-flags` and reboot:
+
+```sh
+su -c 'echo 0x3010000180F83 > /data/adb/wifi-fix/ull-flags'
+```
+
+`0x3010000180F83` is OPPO's value plus four bits:
+
+| Bit | Effect |
+|---|---|
+| 9 | Firmware power save off. Android already does this when it sets level 4, so this only covers the case where it does not |
+| 40 | Stop batching outgoing packets (the driver's "SWLM") |
+| 48 | Keep CPUs out of deep idle (a CPU wake-up latency vote; which CPUs it covers was not traced) |
+| 49 | Ask for high memory bus bandwidth |
+
+These bits only take effect while an app holds the low-latency lock. The bit meanings come from the comments in `cfg_mlme_fe_wlm.h` and the firmware header `wmi_unified.h` in OPPO's source.
+
+How it works: the driver reads its ini file `wlan/WCNSS_qcom_cfg.ini` only when it loads. The script writes a copy of every such file it finds on the firmware search path, adds the new value before the file's `END` line, and bind-mounts the copy over the original before it reloads the driver. The copies are kept in `/data/adb/wifi-fix/ini/`. If the driver swap is skipped, the driver is not reloaded and the log says the flags apply from the next driver load.
+
+To check that it applies:
+
+- `/data/adb/wifi-fix/log` should show `wlm_latency_flags_ultralow=0x3010000180F83 set in ...`.
+- While your app streams, `dumpsys wifi | grep "Current operation mode"` should print `4`, which means the low-latency lock is active. Without it, this setting does nothing.
+
+What it costs: keeping the CPUs out of deep idle uses more battery and makes more heat, and heat is what brings the thermal pauses back (see [When the tablet is hot](#when-the-tablet-is-hot)). Compare stutter and chip temperature with and without the file.
+
+To turn it off, delete `/data/adb/wifi-fix/ull-flags` and reboot.
 
 ## Turn off or remove
 
@@ -169,6 +215,7 @@ If that prints a number above zero, try `gEnablePrimaryStaMloCap=0` in the drive
 - **Multi-link is gone.** The tablet no longer uses two bands at once. On the network used here it never did.
 - One tablet, one firmware build, one router (a TP-Link Deco mesh on 6 GHz). No other OPPO, OnePlus or realme device was tried. The sensor fault may be a defect of this one unit.
 - The firmware command numbers are not documented. Module 42's sub-commands 1 and 9 are the only ones identified; do not try others.
+- The low-latency flags override has not been run on the tablet. Its file rewrite is checked by `tests/make-ini-test.sh` on a computer, not with Android's own `awk`. Whether the firmware loader reads the bind-mounted copy is untested. OPPO's source is from build `16.0.6.103`, older than the build above, so the stock value may differ; `grep -a -c 0x180D83 /vendor_dlkm/lib/modules/qca_cld3_wcn7750.ko` prints a number above zero if your driver has the same default.
 - `wifi-fix.sh` here differs from the tested copy in one way: switching wireless debugging back on is now behind the `keep-adb-wifi` file. `make-patched-driver.sh` was run on a computer against a copy of the stock driver, where it reproduced the tested file's checksum. It was not run on the tablet.
 
 ## How it was found

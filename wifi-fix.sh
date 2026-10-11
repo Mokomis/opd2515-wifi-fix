@@ -9,6 +9,10 @@
 #     chip sensor returns false single readings of 60-112 C, and at the stock thresholds each one
 #     pauses all transmission for ~100 ms. The firmware forgets the setting whenever it restarts,
 #     so it is sent again each time Wi-Fi comes up.
+#  3. Optional, off unless /data/adb/wifi-fix/ull-flags exists: replaces the driver's flags for
+#     Android's low-latency Wi-Fi mode (latency level 4, "ultralow") with the hex value in that
+#     file. A patched copy of the driver's ini file is bind-mounted over the original before the
+#     driver swap, because the driver reads the ini only when it loads.
 #
 # Off switch: touch /data/adb/wifi-fix/disable and reboot. Uninstall: delete this file and
 # /data/adb/wifi-fix, then reboot.
@@ -26,9 +30,25 @@ PATCHED_SHA=916d50a02c076f33f62cb181487542ab0bb1021f0063f051b6938bbc8b85a6a4
 # module 42 = thermal manager, 9 = reconfigure, then Temp1 Temp2 kp ki kd. All five values are
 # required: sent without them the firmware takes 0/50 C and holds the radio off until reboot.
 THERMAL="42 6 9 118 125 100 20 0"
+ULL_FLAGS=$DIR/ull-flags
+ULL_KEY=wlm_latency_flags_ultralow
 
 say() { echo "$(date '+%F %T') $*" >> "$LOG"; }
 sha() { sha256sum "$1" 2>/dev/null | cut -d' ' -f1; }
+
+# Copies ini $1 to $2 with $ULL_KEY set to $3. The driver stops reading at the line "END", so the
+# key goes in just before it, and any existing $ULL_KEY lines are dropped.
+make_ini() {
+  awk -v line="$ULL_KEY=$3" -v key="$ULL_KEY" '
+    { s = $0; sub(/^[ \t]+/, "", s) }
+    index(s, key) == 1 && substr(s, length(key) + 1) ~ /^[ \t]*=/ { next }
+    !done && s ~ /^END[ \t\r]*$/ { print line; done = 1 }
+    { print }
+    END { if (!done) print line }' "$1" > "$2"
+}
+
+# tests/make-ini-test.sh sources this file to check make_ini
+[ -n "$WIFI_FIX_TEST" ] && return 0
 
 mkdir -p "$DIR"
 : > "$LOG"
@@ -53,17 +73,61 @@ swap_driver() {
   svc wifi disable; sleep 6
   if ! rmmod qca_cld3_wcn7750; then
     say "could not unload the stock driver - leaving it in place"
-  elif insmod "$PATCHED" prealloc_disabled=1; then
-    say "patched driver loaded"
   else
-    say "patched driver refused - reloading stock"
-    insmod "$STOCK" prealloc_disabled=1
+    reloaded=1
+    if insmod "$PATCHED" prealloc_disabled=1; then
+      say "patched driver loaded"
+    else
+      say "patched driver refused - reloading stock"
+      insmod "$STOCK" prealloc_disabled=1
+    fi
   fi
   sleep 3
   [ "$was_on" != 0 ] && svc wifi enable
   rm -f "$DIR/pending"
 }
+
+# The ini is a firmware file, read through the firmware search path. Every copy found is covered,
+# so it does not matter which directory the loader reaches first.
+override_ull_flags() {
+  [ -e "$ULL_FLAGS" ] || return
+  flags=$(tr -d ' \t\r\n' < "$ULL_FLAGS")
+  if ! echo "$flags" | grep -Eq '^0x[0-9A-Fa-f]{1,16}$'; then
+    say "ull-flags must hold one hex value such as 0x180D83 - ignoring it"; return
+  fi
+  found=0
+  done_list=" "
+  for d in $(tr ',' ' ' < /sys/module/firmware_class/parameters/path 2>/dev/null) \
+      /etc/firmware /odm/firmware /vendor/firmware /vendor/firmware_mnt/image /firmware/image; do
+    [ -f "$d/wlan/WCNSS_qcom_cfg.ini" ] || continue
+    ini=$(readlink -f "$d/wlan/WCNSS_qcom_cfg.ini")
+    case $done_list in *" $ini "*) continue ;; esac
+    done_list="$done_list$ini "
+    copy=$DIR/ini/$(echo "$ini" | tr / _)
+    mkdir -p "$DIR/ini"
+    if ! make_ini "$ini" "$copy.new" "$flags" || ! [ -s "$copy.new" ]; then
+      say "could not write a copy of $ini"; rm -f "$copy.new"; continue
+    fi
+    mv "$copy.new" "$copy"
+    # The copy needs the original's SELinux label, or the firmware loader may not read it.
+    chcon "$(ls -Z "$ini" | awk '{print $1}')" "$copy" || say "could not copy the label of $ini"
+    if mount -o bind "$copy" "$ini"; then
+      say "$ULL_KEY=$flags set in $ini"; found=1
+    else
+      say "could not mount over $ini"
+    fi
+  done
+  [ "$found" = 1 ] || say "found no Wi-Fi ini to change - low-latency flags left stock"
+  ull_set=$found
+}
+
+reloaded=0
+ull_set=0
+override_ull_flags
 swap_driver
+if [ "$ull_set" = 1 ] && [ "$reloaded" != 1 ]; then
+  say "the driver was not reloaded, so the low-latency flags apply from the next driver load"
+fi
 
 # Wi-Fi only connects after the first unlock. From then on, send the thresholds each time the
 # link comes up.
