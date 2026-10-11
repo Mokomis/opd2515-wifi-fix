@@ -62,6 +62,8 @@ Pre-existing Wi-Fi/root helpers were retained. The buffer helper introduced by t
 
 - [Final buffer-helper decision: disabled](oppo-mini-buffer-final-decision.md)
 
+- [Touch selector idle-interrupt check](oppo-mini-touch-idle-interrupts.md)
+
 ## Reproducibility and evidence boundaries
 
 - [Artifact SHA256 identities](oppo-mini-artifact-identities.json) cover some analyzed components. Additional buffer-component hashes appear in [receiver](buffer-followup.md) and [client](buffer-client-followup.md) reports; the manifest is incomplete.

@@ -38,3 +38,6 @@ The inactive helper's state is controlled by /data/adb/punktfunk-buffer/disable.
 After an OS update, review any pre-existing root/Wi-Fi modifications against the new firmware before deliberately reusing them. The buffer helper's firmware guard is an extra restriction, not universal compatibility.
 
 Published reports and compact metrics provide the reviewable record. Raw traces, app logs, private databases, firmware/APKs and decompiled vendor source remain local. Static REA claims and runtime measurements cannot all be independently reproduced from this repo. The config inventory covers25 targeted files, not an exhaustive device-wide OPPO configuration catalogue.
+
+
+User-requested follow-up: [short idle-touch IRQ check](oppo-mini-touch-idle-interrupts.md) found identical0.8Hz idle touch interrupts with original and faster selectors. Original current selector restored; no permanent change. Controller-internal idle scanning and power remain unmeasured.

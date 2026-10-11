@@ -20,8 +20,8 @@
       "title": "OPPO Mini investigation findings \u2014 2026-10-11",
       "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/README.md",
       "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/README.md",
-      "bytes": 7781,
-      "sha256": "df67e70f731b1fb698537f145c9cc6122020600aa61963c9b5f440e0656f1fd7"
+      "bytes": 7858,
+      "sha256": "c3c141858125cb3a224927b7de565fc9460a59830e076d84eb6def07b7e22676"
     },
     {
       "path": "docs/investigations/2026-10-11/athena-keepalive-findings.md",
@@ -92,8 +92,8 @@
       "title": "Final recommendations \u2014 OPPO Pad Mini",
       "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/final-recommendations.md",
       "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/final-recommendations.md",
-      "bytes": 6067,
-      "sha256": "c82424e00c635e8fc1fb54297dd6c1787b26296d7e1948ee923f8171c9d3272a"
+      "bytes": 6359,
+      "sha256": "737ca373b6578b3394ccbfea60f938d892026c8f9e13c9238b10d6d8d2bff2e6"
     },
     {
       "path": "docs/investigations/2026-10-11/hans-findings.md",
@@ -398,6 +398,22 @@
       "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/rea-android-bridge-repair.md",
       "bytes": 2045,
       "sha256": "45225466275adb87c2c864a60ec950d181b606fb964ecfe9ef66cc8e2585cd75"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-touch-idle-interrupts.md",
+      "title": "Touch-rate selector: screen-on idle interrupt check",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-touch-idle-interrupts.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-touch-idle-interrupts.md",
+      "bytes": 2742,
+      "sha256": "460f9784dd509a660bbcdabdf559747d34c24074652b71d6aeaeb95cbdd069d7"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/metrics/touch-idle-interrupts.json",
+      "title": "touch-idle-interrupts.json",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/metrics/touch-idle-interrupts.json",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/metrics/touch-idle-interrupts.json",
+      "bytes": 687,
+      "sha256": "3ad8d70b04d06f3b26c96f830b0aab8bbcf4ddef1c4bea4a8e113d89b8355e1f"
     }
   ],
   "device_inventory": {

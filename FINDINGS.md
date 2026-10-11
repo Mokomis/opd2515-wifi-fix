@@ -73,3 +73,5 @@ All completed findings reports are public. Raw traces/logs, private databases, c
 - [Mini touch-rate and display-buffer investigation](docs/investigations/2026-10-11/oppo-mini-touch-and-buffer-options.md)
 - [OPPO Mini follow-up: Wi-Fi, presentation, thermal callbacks](docs/investigations/2026-10-11/oppo-mini-wifi-thermal-presentation.md)
 - [REA Android bridge repair](docs/investigations/2026-10-11/rea-android-bridge-repair.md)
+
+- [Touch selector: screen-on idle interrupt check](docs/investigations/2026-10-11/oppo-mini-touch-idle-interrupts.md)

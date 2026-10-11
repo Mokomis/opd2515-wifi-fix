@@ -1,0 +1,32 @@
+[
+  {
+    "index": 0,
+    "selector": 0,
+    "seconds": 15.005431083962321,
+    "touch_interrupt_delta": 12,
+    "touch_interrupt_hz": 0.7997104470277765,
+    "before": "0, 12",
+    "after": "0, 12",
+    "screen_awake": true
+  },
+  {
+    "index": 1,
+    "selector": 5,
+    "seconds": 15.001414624974132,
+    "touch_interrupt_delta": 12,
+    "touch_interrupt_hz": 0.7999245604492912,
+    "before": "5, 28",
+    "after": "5, 28",
+    "screen_awake": true
+  },
+  {
+    "index": 2,
+    "selector": 0,
+    "seconds": 15.004257916007191,
+    "touch_interrupt_delta": 12,
+    "touch_interrupt_hz": 0.7997729755896745,
+    "before": "0, 12",
+    "after": "0, 12",
+    "screen_awake": true
+  }
+]
