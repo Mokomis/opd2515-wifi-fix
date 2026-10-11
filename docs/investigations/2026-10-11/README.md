@@ -6,7 +6,7 @@ Device: OPPO Pad Mini OPD2515. This publishes the current session reports, inclu
 
 | Topic | Current result | Report |
 |---|---|---|
-| Buffer control | Per-app value2 with alignment on is installed for Punktfunk. Typical completed-frame waiting improved about1.1–1.3ms in repeated trials; total input-to-screen latency remains unmeasured. | [Value2 repeats](oppo-mini-buffer-value2-results.md), [installed helper](oppo-mini-buffer-permanent.md) |
+| Buffer control | Per-app value2 with alignment on is installed for Punktfunk. Ready-to-present timing tightened in repeated trials; total latency benefit remains unproven. Installed-helper comparison showed mixed gap results and more recovery requests when enabled. | [Value2 repeats](oppo-mini-buffer-value2-results.md), [installed helper](oppo-mini-buffer-permanent.md) |
 | Alignment | Turning alignment off worsened the measured delay. Original alignment-on setting restored. | [Comparison](oppo-mini-buffer-alignment-results.md) |
 | Earlier producer waits | About0.85ms extra queueing wait, while the same frames reached compositor latch0.7–1.6ms sooner. This covers acquisition-to-latch, not complete decode-to-display. | [Trace results](oppo-mini-buffer-producer-wait-results.md) |
 | Touch reporting | Temporary selector increased delivered touch events about151→275/sec. Original selector restored; faster mode parked for later. | [Touch test](oppo-mini-touch-and-buffer-options.md), [follow-ups](oppo-mini-follow-up-notes.md) |
@@ -55,6 +55,8 @@ Pre-existing Wi-Fi/root helpers were retained. The buffer helper is the persiste
 - [DroidDeck OPPO event-log overhead check](oppo-mini-droiddeck-log-overhead.md)
 
 - [Buffer helper reboot and foreground-switch verification](oppo-mini-buffer-reboot-verification.md)
+
+- [Installed buffer helper on/off comparison](oppo-mini-buffer-installed-helper-results.md)
 
 ## Reproducibility and evidence boundaries
 
