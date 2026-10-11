@@ -1,0 +1,15 @@
+# OPPO Pad Mini OPD2515 research
+
+> Public device-specific findings on Wi-Fi, ColorOS policies, graphics frame pacing, touch, controller input and streaming. Investigation closed; optional buffer helper disabled. Findings are limited to the tested firmware/device. Total input-to-screen latency was not measured.
+
+## Read first
+
+- [Public findings and complete catalog](https://github.com/Mokomis/opd2515-wifi-fix/blob/main/FINDINGS.md)
+- [Final recommendations and retained state](https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/final-recommendations.md)
+- [Investigation index](https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/README.md)
+- [Historical independent audit](https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/independent-audit.md)
+- [Machine-readable catalog with raw URLs and checksums](https://github.com/Mokomis/opd2515-wifi-fix/blob/main/findings-index.json)
+
+## Evidence limits
+
+Raw logs, traces, private databases, firmware/APKs and decompiled vendor source are excluded. Local work/ paths and REA IDs are not accessible evidence. Later final recommendations supersede historical current-state claims. No proven end-to-end latency benefit should be inferred from ready-to-present metrics.

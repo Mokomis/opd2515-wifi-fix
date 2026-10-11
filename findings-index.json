@@ -1,0 +1,403 @@
+{
+  "schema_version": 1,
+  "device": "OPPO Pad Mini OPD2515",
+  "investigation_date": "2026-10-11",
+  "status": "closed",
+  "buffer_helper": "persistently disabled",
+  "entry_point": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/FINDINGS.md",
+  "evidence_boundary": "Published reports and compact metrics; raw/private/vendor artifacts remain local.",
+  "files": [
+    {
+      "path": "docs/scheduler-and-latency-findings.md",
+      "title": "OPPO game scheduling and Wi-Fi latency level 4 on the OPD2515: source findings",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/scheduler-and-latency-findings.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/scheduler-and-latency-findings.md",
+      "bytes": 14319,
+      "sha256": "38717843989fd124625c1aa06f4f6285d667b3bfb8a4d6bf51eaf8b8ed9a5e1c"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/README.md",
+      "title": "OPPO Mini investigation findings \u2014 2026-10-11",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/README.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/README.md",
+      "bytes": 7781,
+      "sha256": "df67e70f731b1fb698537f145c9cc6122020600aa61963c9b5f440e0656f1fd7"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/athena-keepalive-findings.md",
+      "title": "Athena protection and keep-alive rules",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/athena-keepalive-findings.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/athena-keepalive-findings.md",
+      "bytes": 9445,
+      "sha256": "707d7a94d027f36744a64e9deb475a0790ebf40223d68d45c98863e3024075c8"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/battery-findings.md",
+      "title": "Battery UI to background protection \u2014 static REA findings",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/battery-findings.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/battery-findings.md",
+      "bytes": 5050,
+      "sha256": "a9347d30a8bc3debe299decbb993a27599ea46cb5d9e313f56372df07d096684"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/buffer-client-followup.md",
+      "title": "Mini OGFR producer control, 2026-10-11",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/buffer-client-followup.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/buffer-client-followup.md",
+      "bytes": 6084,
+      "sha256": "a5deb9fd9ef9674b9fd102cdb3caaf919ffc27bc780da3260bdc668e6820a931"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/buffer-followup.md",
+      "title": "Mini Cosa display-buffer follow-up",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/buffer-followup.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/buffer-followup.md",
+      "bytes": 14050,
+      "sha256": "fcce67514270717bd7deffbc753a8bdb49684b7cd05e9fe7e8c348c9c3c47a12"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/buffer-helper/boot.sh",
+      "title": "boot.sh",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/buffer-helper/boot.sh",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/buffer-helper/boot.sh",
+      "bytes": 117,
+      "sha256": "c32e1dc927abecf9e0fd6ba1c7f5039f8d16aa9d1e72009831daeb445c1d9e84"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/buffer-helper/daemon.sh",
+      "title": "daemon.sh",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/buffer-helper/daemon.sh",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/buffer-helper/daemon.sh",
+      "bytes": 2170,
+      "sha256": "0692a8629a4ae42536a86c7309b39d38fc3a8fbef2a1470c01b176dde444f0ed"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/diagnostic-patches/punktfunk-frame-ledger-diagnostic.patch",
+      "title": "punktfunk-frame-ledger-diagnostic.patch",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/diagnostic-patches/punktfunk-frame-ledger-diagnostic.patch",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/diagnostic-patches/punktfunk-frame-ledger-diagnostic.patch",
+      "bytes": 9971,
+      "sha256": "28182071247830a7678e0123b89742d5efb5e599857d56c28a139d53eff3752d"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/diagnostic-patches/punktfunk-frame-wait-diagnostic.patch",
+      "title": "punktfunk-frame-wait-diagnostic.patch",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/diagnostic-patches/punktfunk-frame-wait-diagnostic.patch",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/diagnostic-patches/punktfunk-frame-wait-diagnostic.patch",
+      "bytes": 16227,
+      "sha256": "d4f57ca6db22fd2e91997c4e0c3e747af41360f757f547f3c24f7a6c96f10fd1"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/final-recommendations.md",
+      "title": "Final recommendations \u2014 OPPO Pad Mini",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/final-recommendations.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/final-recommendations.md",
+      "bytes": 6067,
+      "sha256": "c82424e00c635e8fc1fb54297dd6c1787b26296d7e1948ee923f8171c9d3272a"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/hans-findings.md",
+      "title": "Fresh Hans freezer exception precedence",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/hans-findings.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/hans-findings.md",
+      "bytes": 5032,
+      "sha256": "0b402a98b2c07b5dff825fe4527c3e95c91281833d2d95558d1f2ec31a9995a8"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/independent-audit.md",
+      "title": "Independent audit of the 2026-10-11 investigation",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/independent-audit.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/independent-audit.md",
+      "bytes": 20916,
+      "sha256": "6a006d05e512b447c346a35331af7652f9051880c55adb2b34f23d10c6ddbce7"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/metrics/buffer-alignment.json",
+      "title": "buffer-alignment.json",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/metrics/buffer-alignment.json",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/metrics/buffer-alignment.json",
+      "bytes": 3478,
+      "sha256": "60e81eeb4c9f841280067236bd898d929e6515f77e4a53f6f955fb6d55c88987"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/metrics/buffer-comparison.json",
+      "title": "buffer-comparison.json",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/metrics/buffer-comparison.json",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/metrics/buffer-comparison.json",
+      "bytes": 4245,
+      "sha256": "0f357d6318a99942a44c3bfd63c8405fd8b9364803c2fcc8e132c262e32b9714"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/metrics/buffer-installed-helper.json",
+      "title": "buffer-installed-helper.json",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/metrics/buffer-installed-helper.json",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/metrics/buffer-installed-helper.json",
+      "bytes": 4209,
+      "sha256": "a7f94ba81fffce9ddf3cb96936cc73b94f380e17ad0df66419fe62a935f9350f"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/metrics/buffer-producer-wait.json",
+      "title": "buffer-producer-wait.json",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/metrics/buffer-producer-wait.json",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/metrics/buffer-producer-wait.json",
+      "bytes": 4625,
+      "sha256": "38c01fc7c6c4fa8cbfe8e344d238da36a75e6eecdc79e43595a82820d3020575"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/metrics/buffer-value2.json",
+      "title": "buffer-value2.json",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/metrics/buffer-value2.json",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/metrics/buffer-value2.json",
+      "bytes": 4273,
+      "sha256": "4fd4677f73f98990834533bdae8a4b92730ea8ed82a42608451d12ca36441676"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-background-freezing-explained.md",
+      "title": "OPPO background freezing: what the controls actually do",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-background-freezing-explained.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-background-freezing-explained.md",
+      "bytes": 8292,
+      "sha256": "00bb24d1bf7fed9defd2767ce27373da7649db83b0f0b506ddc44da2c3e30a2d"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-app-exception-lists.md",
+      "title": "OPPO app and exception lists",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-app-exception-lists.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-app-exception-lists.md",
+      "bytes": 6003,
+      "sha256": "6a9bb5c571a5bf907e13cc9ffc180de27db0c85124dac19ad5b3b71a59eca177"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-artifact-identities.json",
+      "title": "oppo-mini-artifact-identities.json",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-artifact-identities.json",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-artifact-identities.json",
+      "bytes": 1160,
+      "sha256": "e9e65b8788478223b22c382303c6a8eb220dcc971f02c9c217a89b8896268af1"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-background-activity.md",
+      "title": "OPPO Mini background activity during streaming",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-background-activity.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-background-activity.md",
+      "bytes": 2915,
+      "sha256": "bbe75034209179c9a93b5fdaab6ae6e548ec7975b191c0b717e8fc61dd96874f"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-buffer-alignment-results.md",
+      "title": "Value2 alignment comparison",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-buffer-alignment-results.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-buffer-alignment-results.md",
+      "bytes": 2522,
+      "sha256": "bd775e939a41ae3c1a6cb227e1cc6942e0be32f569cfabfc9a0d1b1dc9c476d0"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-buffer-final-decision.md",
+      "title": "Final buffer-helper decision: disabled",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-buffer-final-decision.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-buffer-final-decision.md",
+      "bytes": 1359,
+      "sha256": "1c00541678228fcd4b3c9c2253f81e58f88e86297a462cd7ce2b0649c470a2e5"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-buffer-installed-helper-results.md",
+      "title": "Installed buffer helper on/off comparison",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-buffer-installed-helper-results.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-buffer-installed-helper-results.md",
+      "bytes": 4425,
+      "sha256": "989aefec391bff30be82d04fae4d342c2a98786414306b1e63b7e792ace13022"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-buffer-latency-results.md",
+      "title": "OPPO Mini buffer latency comparison",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-buffer-latency-results.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-buffer-latency-results.md",
+      "bytes": 3925,
+      "sha256": "7935e7e0d49f5c7ef809c4d576069143da0d80af2a00324ced04fe6d00126449"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-buffer-permanent.md",
+      "title": "Permanent Punktfunk buffer value2",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-buffer-permanent.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-buffer-permanent.md",
+      "bytes": 3503,
+      "sha256": "8f3d417bae0f751c56e1ff75f1775ef015d012bfd4529c2e2339495a9530e2c4"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-buffer-producer-wait-results.md",
+      "title": "OPPO buffer control: earlier producer waiting",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-buffer-producer-wait-results.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-buffer-producer-wait-results.md",
+      "bytes": 4051,
+      "sha256": "165775076f88d1c3a8bcd923e02c048999568bfe13e9896c8bf5766a5090f7d5"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-buffer-reboot-verification.md",
+      "title": "Buffer helper reboot and foreground-switch verification",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-buffer-reboot-verification.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-buffer-reboot-verification.md",
+      "bytes": 1075,
+      "sha256": "b9691579b765a444c431694948302b255e75add34bbd0b0fb53ae7525e115d46"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-buffer-test.md",
+      "title": "Mini OPPO buffer-control test",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-buffer-test.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-buffer-test.md",
+      "bytes": 3181,
+      "sha256": "b3a9bfb7bba38d0119d797b4a11fc59f9337eae8acbf3f6b5c7f3e90fe0846b4"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-buffer-value2-results.md",
+      "title": "OPPO Mini value-2 repeat test",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-buffer-value2-results.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-buffer-value2-results.md",
+      "bytes": 2266,
+      "sha256": "810d780f8febd3a1aeabea2711c18869b49f463dd9e7a7ac33b7448cad942dac"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-controller-timing.md",
+      "title": "Kishi controller timing",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-controller-timing.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-controller-timing.md",
+      "bytes": 1775,
+      "sha256": "ab9c1e205746a9d430b4e044dd4da45f55366ce4c757238d0494dacac13a3f09"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-correlation-findings.md",
+      "title": "OPPO Mini: presentation and scheduling correlation",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-correlation-findings.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-correlation-findings.md",
+      "bytes": 3275,
+      "sha256": "793d72a1df044c732fed7290bf98f79dc9003044caf7a346606ca7b733c9a56a"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-cosa-performance.md",
+      "title": "Cosa performance controls \u2014 OPPO Mini",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-cosa-performance.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-cosa-performance.md",
+      "bytes": 6655,
+      "sha256": "9bee2e376513f0243f302854106ed4b91f0aef0884c4963bd5f20dc2c5e5f43f"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-droiddeck-log-overhead.md",
+      "title": "DroidDeck OPPO event-log overhead check",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-droiddeck-log-overhead.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-droiddeck-log-overhead.md",
+      "bytes": 3008,
+      "sha256": "57b12ef2f7a741b29bcb4e97ae2a4ef8aae828f50ecf6dd12af7f9e1ec3d9a56"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-droiddeck-profile-results.md",
+      "title": "Risk of Rain 2 / DroidDeck Cosa profile test",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-droiddeck-profile-results.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-droiddeck-profile-results.md",
+      "bytes": 2539,
+      "sha256": "3c08668e0fe773bb88e4a22ce007cd57a5e372c91b60bf2d73d17f13214908dc"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-follow-up-notes.md",
+      "title": "OPPO Mini follow-up notes",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-follow-up-notes.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-follow-up-notes.md",
+      "bytes": 1125,
+      "sha256": "7aaa3fc85ce09c6525af5f9c023767c27f4915bc3b4653772e6ef39a696b9b71"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-frame-ledger-results.md",
+      "title": "Punktfunk diagnostic frame ledger",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-frame-ledger-results.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-frame-ledger-results.md",
+      "bytes": 5397,
+      "sha256": "3dba38d7676b89a6a65e0b33908afe495985a7a87c489a97991f9d31a9c75f2e"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-frame-recovery-findings.md",
+      "title": "Punktfunk frame-recovery investigation",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-frame-recovery-findings.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-frame-recovery-findings.md",
+      "bytes": 4667,
+      "sha256": "19dd95f61dc868972ce1ef5bde085d65c090d60af0e46435c78004566c60cd94"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-frame-wait-findings.md",
+      "title": "OPPO Mini decode-to-presentation wait capture",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-frame-wait-findings.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-frame-wait-findings.md",
+      "bytes": 6386,
+      "sha256": "bbff5c3d84a73562dd4fe8da5f1073e2bf3411f0f38cdc2e6b737b884d14d76e"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-game-profile-results.md",
+      "title": "OPPO Cosa performance-profile stream test",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-game-profile-results.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-game-profile-results.md",
+      "bytes": 2397,
+      "sha256": "b344af9de7b9ca5fc2fbc4ec7a94e7e4958b46aef918fdec2c5872c4cf95d916"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-gpu-timing-findings.md",
+      "title": "OPPO Mini PyroWave GPU timing capture",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-gpu-timing-findings.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-gpu-timing-findings.md",
+      "bytes": 2261,
+      "sha256": "154bc3ec580ad6a17b0b7451de399fa8758afa0dfccc20b240f12d97cabbbaca"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-memory-policy-runtime.md",
+      "title": "OPPO memory-policy runtime check",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-memory-policy-runtime.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-memory-policy-runtime.md",
+      "bytes": 3522,
+      "sha256": "7118d3e285cb238ca20180a4f83e46db893799c23c99f2ca37b1de6e7146db10"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-network-audio-findings.md",
+      "title": "OPPO Mini network and audio observation",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-network-audio-findings.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-network-audio-findings.md",
+      "bytes": 3046,
+      "sha256": "10b6891486758b017fb83bf4b33b6aacb6a44f87b3dba4179c0fbc1184ca3bfe"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-scheduling-test.md",
+      "title": "OPPO Mini scheduling experiment",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-scheduling-test.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-scheduling-test.md",
+      "bytes": 3206,
+      "sha256": "586188210275ea6ad0824470010ca10fee643ffd8c3f52a216fd8931adbf9466"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-service-findings.md",
+      "title": "OPPO Pad Mini: service and scheduling investigation",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-service-findings.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-service-findings.md",
+      "bytes": 18059,
+      "sha256": "27ad5dd330a5d6681779b929a59710ac9f969ed90c0bd6a08fd4f396e5874bed"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-touch-and-buffer-options.md",
+      "title": "Mini touch-rate and display-buffer investigation",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-touch-and-buffer-options.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-touch-and-buffer-options.md",
+      "bytes": 8389,
+      "sha256": "b21bbee5579e5908966d0acd3470770597792f91e5a5ae9a5d91909a42d22502"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/oppo-mini-wifi-thermal-presentation.md",
+      "title": "OPPO Mini follow-up: Wi-Fi, presentation, thermal callbacks",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/oppo-mini-wifi-thermal-presentation.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/oppo-mini-wifi-thermal-presentation.md",
+      "bytes": 5163,
+      "sha256": "022f0f5477522b31f634be527d45e02d3b14fef716d14270ba726ae931add635"
+    },
+    {
+      "path": "docs/investigations/2026-10-11/rea-android-bridge-repair.md",
+      "title": "REA Android bridge repair",
+      "url": "https://github.com/Mokomis/opd2515-wifi-fix/blob/main/docs/investigations/2026-10-11/rea-android-bridge-repair.md",
+      "raw_url": "https://raw.githubusercontent.com/Mokomis/opd2515-wifi-fix/main/docs/investigations/2026-10-11/rea-android-bridge-repair.md",
+      "bytes": 2045,
+      "sha256": "45225466275adb87c2c864a60ec950d181b606fb964ecfe9ef66cc8e2585cd75"
+    }
+  ]
+}

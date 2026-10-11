@@ -1,0 +1,42 @@
+[
+  {
+    "name": "gameopt-service",
+    "bytes": 3817984,
+    "sha256": "64452d2b2fad6820b7f3d508ffd2c57ab160ae672dfc49e96162fee7866345f3"
+  },
+  {
+    "name": "oplus-wifi-service.elf",
+    "bytes": 703592,
+    "sha256": "e35f44586da20866ca7b7010678be48a3b35acd2c5842f290ccd6e67368b1f36"
+  },
+  {
+    "name": "libwifi-hal-qcom.so",
+    "bytes": 668288,
+    "sha256": "52650e3fca63bd524516020b28f36badc1853a29a329cc52c47fc4fa4418f492"
+  },
+  {
+    "name": "oplus-evolution-ext.jar",
+    "bytes": 1481134,
+    "sha256": "c20c629ca7eca540723d592393a2073c229baf0061b1d4d7165ffec1bbbbb256"
+  },
+  {
+    "name": "services.jar",
+    "bytes": 40248915,
+    "sha256": "7aae9691a99870a4f20b2ca72b0fd5810770acc9a635ad184f5663025bf0132b"
+  },
+  {
+    "name": "oplus-evolution.jar",
+    "bytes": 2378790,
+    "sha256": "fb2a56c8c13b6f64d7fa7a0935ed16f7fc45b4394147cd43f98e86bf55641c07"
+  },
+  {
+    "name": "liburcccore.so",
+    "bytes": 649368,
+    "sha256": "6f2cfb4b43f832a9fb90432ea9995d9ebd0adda3f4cd8980989722fa689f3009"
+  },
+  {
+    "name": "libuahcore.so",
+    "bytes": 946840,
+    "sha256": "8853da1beaedefff70aea1c46f5c3f9e6007c958cdd61fdafad5c6c43ae0cf78"
+  }
+]

@@ -1,0 +1,390 @@
+--- /dev/null
++++ b/crates/punktfunk-core/src/frame_diagnostic.rs
+@@ -0,0 +1,124 @@
++//! Bounded frame handoff records for the temporary diagnostic build.
++
++use std::collections::VecDeque;
++use std::sync::{Mutex, OnceLock};
++use std::time::{Duration, Instant};
++
++const CAPACITY: usize = 4096;
++const WINDOW: Duration = Duration::from_secs(180);
++
++#[derive(Clone, Copy)]
++struct Entry {
++    stage: &'static str,
++    frame: u32,
++    pts_ns: u64,
++    complete: bool,
++    us: u64,
++}
++
++struct Ledger {
++    start: Instant,
++    entries: VecDeque<Entry>,
++}
++
++fn ledger() -> &'static Mutex<Ledger> {
++    static LEDGER: OnceLock<Mutex<Ledger>> = OnceLock::new();
++    LEDGER.get_or_init(|| {
++        Mutex::new(Ledger {
++            start: Instant::now(),
++            entries: VecDeque::with_capacity(CAPACITY),
++        })
++    })
++}
++
++/// Record a frame boundary for three minutes without retaining packet contents.
++pub fn record(stage: &'static str, frame: u32, pts_ns: u64, complete: bool) {
++    let Ok(mut l) = ledger().lock() else { return };
++    let elapsed = l.start.elapsed();
++    if elapsed > WINDOW {
++        return;
++    }
++    if l.entries.len() == CAPACITY {
++        l.entries.pop_front();
++    }
++    l.entries.push_back(Entry {
++        stage,
++        frame,
++        pts_ns,
++        complete,
++        us: elapsed.as_micros() as u64,
++    });
++}
++
++/// Emit recent boundaries for the recovery range and two neighboring indices.
++pub(crate) fn recovery(first: u32, last: u32) {
++    let entries = {
++        let Ok(l) = ledger().lock() else { return };
++        if l.start.elapsed() > WINDOW {
++            return;
++        }
++        let width = last.wrapping_sub(first).saturating_add(4);
++        l.entries
++            .iter()
++            .filter(|e| e.frame.wrapping_sub(first.wrapping_sub(2)) <= width)
++            .take(96)
++            .copied()
++            .collect::<Vec<_>>()
++    };
++    tracing::info!(
++        first,
++        last,
++        entries = entries.len(),
++        "frame ledger recovery"
++    );
++    for e in entries {
++        tracing::info!(
++            stage = e.stage,
++            frame = e.frame,
++            pts_ns = e.pts_ns,
++            complete = e.complete,
++            mono_us = e.us,
++            "frame ledger"
++        );
++    }
++}
++
++
++struct Timing {
++    frame: u32,
++    start: Instant,
++    marks: Vec<(&'static str, u64)>,
++}
++
++thread_local! {
++    static TIMING: std::cell::RefCell<Option<Timing>> = const { std::cell::RefCell::new(None) };
++}
++
++/// Start one decode-lane timing record without retaining video contents.
++pub fn begin(frame: u32) {
++    TIMING.with(|t| *t.borrow_mut() = Some(Timing {
++        frame, start: Instant::now(), marks: Vec::with_capacity(12),
++    }));
++}
++
++/// Timestamp a decode-lane boundary against its current frame handoff.
++pub fn mark(stage: &'static str) {
++    TIMING.with(|t| {
++        if let Some(t) = t.borrow_mut().as_mut() {
++            t.marks.push((stage, t.start.elapsed().as_micros() as u64));
++        }
++    });
++}
++
++/// Emit one completed frame's relative boundaries during the diagnostic window.
++pub fn finish(shown: bool) {
++    let active = ledger().lock().map(|l| l.start.elapsed() <= WINDOW).unwrap_or(false);
++    TIMING.with(|t| {
++        if let Some(t) = t.borrow_mut().take().filter(|_| active) {
++            let marks = t.marks.iter().map(|(stage, us)| format!("{stage}:{us}"))
++                .collect::<Vec<_>>().join(",");
++            tracing::info!(frame=t.frame, shown, marks, total_us=t.start.elapsed().as_micros() as u64,
++                "frame timing");
++        }
++    });
++}
+--- a/crates/punktfunk-core/src/lib.rs
++++ b/crates/punktfunk-core/src/lib.rs
+@@ -57,6 +57,7 @@
+ pub mod rumble;
+ pub mod session;
+ pub mod stats;
++pub mod frame_diagnostic;
+ /// cbindgen:ignore
+ pub mod time;
+ #[cfg(feature = "tls")]
+--- a/crates/punktfunk-core/src/client/frame_channel.rs
++++ b/crates/punktfunk-core/src/client/frame_channel.rs
+@@ -473,11 +473,15 @@
+         std::mem::take(&mut st.skipped_total)
+     }
+ 
++    /// Queue the frame; the diagnostic ledger records capacity eviction.
+     pub(crate) fn push(&self, frame: Frame) {
++        crate::frame_diagnostic::record("queue_push", frame.frame_index, frame.pts_ns, frame.complete);
+         let mut st = self.inner.lock().unwrap();
+         st.q.push_back(frame);
+         while st.q.len() > FRAME_QUEUE_HARD_CAP {
+-            st.q.pop_front();
++            if let Some(f) = st.q.pop_front() {
++                crate::frame_diagnostic::record("queue_capacity_discard", f.frame_index, f.pts_ns, f.complete);
++            }
+         }
+         drop(st);
+         self.ready.notify_one();
+@@ -496,9 +500,11 @@
+             .count()
+     }
+ 
++    /// Clear queued frames and record their diagnostic discard boundaries.
+     pub(crate) fn clear(&self) -> usize {
+         let mut st = self.inner.lock().unwrap();
+         let n = st.q.len();
++        for f in &st.q { crate::frame_diagnostic::record("queue_clear_discard", f.frame_index, f.pts_ns, f.complete); }
+         st.q.clear();
+         n
+     }
+@@ -508,19 +514,9 @@
+         self.ready.notify_all();
+     }
+ 
+-    /// Oldest AU, waiting up to `timeout`. All-intra ([`Self::set_all_intra`])
+-    /// drains a multi-deep queue to the newest — skipped AUs are superseded and
+-    /// decode independently.
+-    ///
+-    /// The drain counts queue *entries* and assumes one entry == one AU, which
+-    /// holds because PyroWave refuses slice-progressive delivery
+-    /// (`client/pump/handshake.rs`; [`crate::session::Session::set_deliver_frame_parts`]).
+-    /// Combining the two splits an AU: `len > 1` fires mid-AU, returns a suffix,
+-    /// and `clear()`s that AU's prefixes — a headerless frame. To compose them,
+-    /// skip whole superseded AUs (drop up to the newest `part.first`), give
+-    /// `FRAME_QUEUE_HARD_CAP` eviction the same rule, and count `skipped_total`
+-    /// in AUs. Streamed AUs ([`crate::quic::VIDEO_CAP_STREAMED_AU`]) still
+-    /// arrive as one `Frame`.
++    /// Wait for the oldest AU, or keep only the newest when all frames decode independently.
++    /// The all-intra path requires one queue entry per AU; it rejects progressive parts.
++    /// Diagnostic records distinguish intentional supersession from assembly loss.
+     pub(crate) fn pop(&self, timeout: Duration) -> FramePop {
+         self.consumer_seen.store(true, Ordering::Relaxed);
+         let mut st = self.inner.lock().unwrap();
+@@ -530,6 +526,7 @@
+         if st.all_intra && st.q.len() > 1 {
+             st.skipped_total += (st.q.len() - 1) as u64;
+             let newest = st.q.pop_back().expect("len > 1");
++            for f in &st.q { crate::frame_diagnostic::record("queue_newest_discard", f.frame_index, f.pts_ns, f.complete); }
+             st.q.clear();
+             return FramePop::Frame(newest);
+         }
+--- a/crates/punktfunk-core/src/client/mod.rs
++++ b/crates/punktfunk-core/src/client/mod.rs
+@@ -452,6 +452,7 @@
+             last_frame,
+         }))
+         .map_err(|_| PunktfunkError::Closed)?;
++    crate::frame_diagnostic::recovery(first_frame, last_frame);
+     let short = shared.short_frames.lock().unwrap().get(first_frame);
+     tracing::info!(
+         first = first_frame,
+@@ -1395,11 +1396,12 @@
+         }
+     }
+ 
+-    /// Next FEC-recovered AU. [`PunktfunkError::NoFrame`] on timeout, `Closed` once ended.
+-    /// One thread per plane; `&self` is for sharing across planes, not two consumers of one.
++    /// Return the next AU and record its diagnostic decoder handoff.
++    /// One consumer owns the video plane; timeout and closure remain distinct errors.
+     pub fn next_frame(&self, timeout: Duration) -> Result<Frame> {
+         match self.shared.frames.pop(timeout) {
+             FramePop::Frame(f) => {
++                crate::frame_diagnostic::record("decoder_handoff", f.frame_index, f.pts_ns, f.complete);
+                 let completes_au = f.part.as_ref().is_none_or(|p| p.last);
+                 self.hud
+                     .note_received(f.pts_ns, f.received_ns, f.data.len(), completes_au);
+--- a/crates/punktfunk-core/src/client/pump/data.rs
++++ b/crates/punktfunk-core/src/client/pump/data.rs
+@@ -611,6 +611,7 @@
+         if frame.flags & FLAG_PROBE as u32 != 0 {
+             return; // speed-test filler, not video — measured via the counters above
+         }
++        crate::frame_diagnostic::record("assembly_delivered", frame.frame_index, frame.pts_ns, frame.complete);
+         // The decoder's RFI for this gap reads what the skipped frame lacks now.
+         if let Some(first) =
+             super::super::recovery::first_skipped(&mut lp.last_index, frame.frame_index)
+@@ -660,6 +661,7 @@
+             // moment the burst ended.
+             lp.jump.idle();
+         } else if self.jump_to_live(lp, &frame, is_au, clock_offset_ns) {
++            crate::frame_diagnostic::record("jump_discard", frame.frame_index, frame.pts_ns, frame.complete);
+             return; // this frame is the stale past
+         }
+         self.shared.frames.push(frame);
+--- a/crates/punktfunk-core/src/packet/reassemble.rs
++++ b/crates/punktfunk-core/src/packet/reassemble.rs
+@@ -434,6 +434,7 @@
+                 if !is_probe && shard_delay_ns.len() < SHARD_DELAY_SAMPLES {
+                     shard_delay_ns.push(crate::quic::wall_clock_ns() as i64 - hdr.pts_ns as i64);
+                 }
++                if !is_probe { crate::frame_diagnostic::record("packet_first", hdr.frame_index, hdr.pts_ns, false); }
+                 e.insert(FrameBuf {
+                     shard_bytes: g.shard_bytes,
+                     // Slice sentinel `frame_bytes` is the block base, not AU size.
+@@ -1095,6 +1096,7 @@
+             let keep = newest.wrapping_sub(idx) <= HARD_LOSS_WINDOW
+                 && newest_pts.saturating_sub(f.pts_ns) <= window_ns;
+             if !keep {
++                if count_drops { crate::frame_diagnostic::record("assembly_expired", idx, f.pts_ns, false); }
+                 // Remember the index so a straggler cannot resurrect the frame
+                 // (which would re-allocate and double-count the drop). Restored
+                 // shards join late-shard memory exactly like an emitted frame.
+--- a/clients/android/native/src/pyro/mod.rs
++++ b/clients/android/native/src/pyro/mod.rs
+@@ -93,9 +93,8 @@
+         )
+     }
+ 
+-    /// The lane's entry point on the `pf-decode` thread. Runs until `shutdown` is set, the
+-    /// session closes, or bring-up fails — the last of which is terminal for video: nothing
+-    /// else on this client decodes PyroWave, and the host already negotiated it.
++    /// Decode and present PyroWave frames on `pf-decode` until shutdown or a lane error.
++    /// Diagnostic timestamps observe the same synchronous decode and presentation path.
+     pub(crate) fn run(
+         client: Arc<NativeClient>,
+         window: NativeWindow,
+@@ -225,6 +224,7 @@
+             };
+ 
+             let aligned = frame.flags & punktfunk_core::packet::USER_FLAG_CHUNK_ALIGNED != 0;
++            punktfunk_core::frame_diagnostic::begin(frame.frame_index);
+             let decoded = match decoder.decode_frame(&frame.data, aligned, frame.complete) {
+                 Ok(d) => d,
+                 Err(e) => {
+@@ -233,6 +233,7 @@
+                     return Err(anyhow!("decode failed: {e:#}"));
+                 }
+             };
++            punktfunk_core::frame_diagnostic::mark("decode_return");
+             let Some(picture) = decoded else {
+                 continue; // packets accumulated, frame not complete yet
+             };
+@@ -244,7 +245,10 @@
+             let crop = crate::session::unpack_src_crop(
+                 opts.src_crop.load(std::sync::atomic::Ordering::Relaxed),
+             );
++            punktfunk_core::frame_diagnostic::mark("show_enter");
+             let shown = present.show(picture.views, crop, picture.color, depth, msb_packed)?;
++            punktfunk_core::frame_diagnostic::mark("show_return");
++            punktfunk_core::frame_diagnostic::finish(shown);
+             if !shown {
+                 continue; // swapchain was out of date; it has been rebuilt
+             }
+--- a/clients/android/native/src/pyro/present.rs
++++ b/clients/android/native/src/pyro/present.rs
+@@ -424,11 +424,8 @@
+         Ok(())
+     }
+ 
+-    /// Draw one decoded frame and present it.
+-    ///
+-    /// `Ok(false)` means the swapchain went out of date and was rebuilt — the picture was
+-    /// dropped, and the caller simply decodes the next one. Only a real device error is an
+-    /// `Err`, and that ends the lane.
++    /// Draw and submit one decoded picture through the current swapchain.
++    /// `Ok(false)` drops the picture after a swapchain change or acquisition timeout.
+     pub(super) fn show(
+         &mut self,
+         views: [u64; 3],
+@@ -445,6 +442,7 @@
+                 .wait_for_fences(&[fence], true, u64::MAX)
+                 .map_err(|e| anyhow!("wait_for_fences: {e}"))?;
+         }
++        punktfunk_core::frame_diagnostic::mark("present_fence_end");
+         if let Some(t) = self.draw_timer.as_mut() {
+             t.collect(&self.device, frame);
+         }
+@@ -458,6 +456,7 @@
+                 vk::Fence::null(),
+             )
+         };
++        punktfunk_core::frame_diagnostic::mark("acquire_end");
+         let (index, suboptimal) = match acquired {
+             Ok(v) => v,
+             Err(vk::Result::ERROR_OUT_OF_DATE_KHR) => {
+@@ -527,16 +526,20 @@
+             .image_indices(&indices);
+         // The decoder submits to this same queue from this same thread, so the lock is not
+         // guarding against us — it is the contract pyrowave's own internal submits take.
++        punktfunk_core::frame_diagnostic::mark("draw_record_end");
+         let outcome = {
+             let _q = self.queue_lock.guard();
++            punktfunk_core::frame_diagnostic::mark("present_lock_end");
+             // SAFETY: the fence is unsignalled (waited and reset below), every handle is
+             // owned here, and the submit's borrows outlive the call.
+             unsafe {
+                 self.device.reset_fences(&[fence])?;
+                 self.device.queue_submit(self.queue, &[submit], fence)?;
++                punktfunk_core::frame_diagnostic::mark("draw_submit_end");
+                 self.swap_d.queue_present(self.queue, &present)
+             }
+         };
++        punktfunk_core::frame_diagnostic::mark("queue_present_end");
+         if let Some(t) = self.draw_timer.as_mut() {
+             t.written[frame] = true;
+         }
+--- a/crates/pf-client-core/src/video_pyrowave.rs
++++ b/crates/pf-client-core/src/video_pyrowave.rs
+@@ -951,8 +951,8 @@
+         }))
+     }
+ 
+-    /// Record `slot`'s decode, submit it, and wait for its fence. On `Err` the command buffer
+-    /// may be recording or pending; the caller idles the queue before reusing it.
++    /// Record and submit `slot`, then wait for its decode fence.
++    /// The caller idles the queue after an error before reusing the command buffer.
+     fn record_and_wait(&mut self, slot: usize) -> Result<()> {
+         let dev = self.device.clone();
+         // SAFETY: `cmd` is this decoder's and idle: the last submit's fence was waited, or
+@@ -1110,8 +1110,10 @@
+             dev.end_command_buffer(self.cmd)?;
+             dev.reset_fences(&[self.fence])?;
+         }
++        punktfunk_core::frame_diagnostic::mark("decode_record_end");
+         {
+             let _guard = self.queue_lock.guard();
++            punktfunk_core::frame_diagnostic::mark("decode_lock_end");
+             let cmds = [self.cmd];
+             // SAFETY: `queue` external sync is `queue_lock`, held above; `cmd` is executable
+             // and `fence` unsignalled; the submit info and `cmds` are locals.
+@@ -1123,9 +1125,11 @@
+                 )
+             }?;
+         }
++        punktfunk_core::frame_diagnostic::mark("decode_submit_end");
+         // SAFETY: `fence` is this decoder's, named by the submit above.
+         unsafe { dev.wait_for_fences(&[self.fence], true, 5_000_000_000) }
+             .context("pyrowave decode fence")?;
++        punktfunk_core::frame_diagnostic::mark("decode_fence_end");
+         Ok(())
+     }
+ }

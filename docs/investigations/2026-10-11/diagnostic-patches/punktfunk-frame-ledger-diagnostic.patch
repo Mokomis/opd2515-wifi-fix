@@ -1,0 +1,233 @@
+diff --git a/crates/punktfunk-core/src/client/frame_channel.rs b/crates/punktfunk-core/src/client/frame_channel.rs
+index a1ee82818..45f3d6642 100644
+--- a/crates/punktfunk-core/src/client/frame_channel.rs
++++ b/crates/punktfunk-core/src/client/frame_channel.rs
+@@ -473,11 +473,15 @@ impl FrameChannel {
+         std::mem::take(&mut st.skipped_total)
+     }
+ 
++    /// Queue the frame; the diagnostic ledger records capacity eviction.
+     pub(crate) fn push(&self, frame: Frame) {
++        crate::frame_diagnostic::record("queue_push", frame.frame_index, frame.pts_ns, frame.complete);
+         let mut st = self.inner.lock().unwrap();
+         st.q.push_back(frame);
+         while st.q.len() > FRAME_QUEUE_HARD_CAP {
+-            st.q.pop_front();
++            if let Some(f) = st.q.pop_front() {
++                crate::frame_diagnostic::record("queue_capacity_discard", f.frame_index, f.pts_ns, f.complete);
++            }
+         }
+         drop(st);
+         self.ready.notify_one();
+@@ -496,9 +500,11 @@ impl FrameChannel {
+             .count()
+     }
+ 
++    /// Clear queued frames and record their diagnostic discard boundaries.
+     pub(crate) fn clear(&self) -> usize {
+         let mut st = self.inner.lock().unwrap();
+         let n = st.q.len();
++        for f in &st.q { crate::frame_diagnostic::record("queue_clear_discard", f.frame_index, f.pts_ns, f.complete); }
+         st.q.clear();
+         n
+     }
+@@ -508,19 +514,9 @@ impl FrameChannel {
+         self.ready.notify_all();
+     }
+ 
+-    /// Oldest AU, waiting up to `timeout`. All-intra ([`Self::set_all_intra`])
+-    /// drains a multi-deep queue to the newest — skipped AUs are superseded and
+-    /// decode independently.
+-    ///
+-    /// The drain counts queue *entries* and assumes one entry == one AU, which
+-    /// holds because PyroWave refuses slice-progressive delivery
+-    /// (`client/pump/handshake.rs`; [`crate::session::Session::set_deliver_frame_parts`]).
+-    /// Combining the two splits an AU: `len > 1` fires mid-AU, returns a suffix,
+-    /// and `clear()`s that AU's prefixes — a headerless frame. To compose them,
+-    /// skip whole superseded AUs (drop up to the newest `part.first`), give
+-    /// `FRAME_QUEUE_HARD_CAP` eviction the same rule, and count `skipped_total`
+-    /// in AUs. Streamed AUs ([`crate::quic::VIDEO_CAP_STREAMED_AU`]) still
+-    /// arrive as one `Frame`.
++    /// Wait for the oldest AU, or keep only the newest when all frames decode independently.
++    /// The all-intra path requires one queue entry per AU; it rejects progressive parts.
++    /// Diagnostic records distinguish intentional supersession from assembly loss.
+     pub(crate) fn pop(&self, timeout: Duration) -> FramePop {
+         self.consumer_seen.store(true, Ordering::Relaxed);
+         let mut st = self.inner.lock().unwrap();
+@@ -530,6 +526,7 @@ impl FrameChannel {
+         if st.all_intra && st.q.len() > 1 {
+             st.skipped_total += (st.q.len() - 1) as u64;
+             let newest = st.q.pop_back().expect("len > 1");
++            for f in &st.q { crate::frame_diagnostic::record("queue_newest_discard", f.frame_index, f.pts_ns, f.complete); }
+             st.q.clear();
+             return FramePop::Frame(newest);
+         }
+diff --git a/crates/punktfunk-core/src/client/mod.rs b/crates/punktfunk-core/src/client/mod.rs
+index abd0d054e..5c115d727 100644
+--- a/crates/punktfunk-core/src/client/mod.rs
++++ b/crates/punktfunk-core/src/client/mod.rs
+@@ -452,6 +452,7 @@ fn send_rfi(
+             last_frame,
+         }))
+         .map_err(|_| PunktfunkError::Closed)?;
++    crate::frame_diagnostic::recovery(first_frame, last_frame);
+     let short = shared.short_frames.lock().unwrap().get(first_frame);
+     tracing::info!(
+         first = first_frame,
+@@ -1395,11 +1396,12 @@ impl NativeClient {
+         }
+     }
+ 
+-    /// Next FEC-recovered AU. [`PunktfunkError::NoFrame`] on timeout, `Closed` once ended.
+-    /// One thread per plane; `&self` is for sharing across planes, not two consumers of one.
++    /// Return the next AU and record its diagnostic decoder handoff.
++    /// One consumer owns the video plane; timeout and closure remain distinct errors.
+     pub fn next_frame(&self, timeout: Duration) -> Result<Frame> {
+         match self.shared.frames.pop(timeout) {
+             FramePop::Frame(f) => {
++                crate::frame_diagnostic::record("decoder_handoff", f.frame_index, f.pts_ns, f.complete);
+                 let completes_au = f.part.as_ref().is_none_or(|p| p.last);
+                 self.hud
+                     .note_received(f.pts_ns, f.received_ns, f.data.len(), completes_au);
+diff --git a/crates/punktfunk-core/src/client/pump/data.rs b/crates/punktfunk-core/src/client/pump/data.rs
+index 397a51255..553a8dcc4 100644
+--- a/crates/punktfunk-core/src/client/pump/data.rs
++++ b/crates/punktfunk-core/src/client/pump/data.rs
+@@ -611,6 +611,7 @@ impl DataPump {
+         if frame.flags & FLAG_PROBE as u32 != 0 {
+             return; // speed-test filler, not video — measured via the counters above
+         }
++        crate::frame_diagnostic::record("assembly_delivered", frame.frame_index, frame.pts_ns, frame.complete);
+         // The decoder's RFI for this gap reads what the skipped frame lacks now.
+         if let Some(first) =
+             super::super::recovery::first_skipped(&mut lp.last_index, frame.frame_index)
+@@ -660,6 +661,7 @@ impl DataPump {
+             // moment the burst ended.
+             lp.jump.idle();
+         } else if self.jump_to_live(lp, &frame, is_au, clock_offset_ns) {
++            crate::frame_diagnostic::record("jump_discard", frame.frame_index, frame.pts_ns, frame.complete);
+             return; // this frame is the stale past
+         }
+         self.shared.frames.push(frame);
+diff --git a/crates/punktfunk-core/src/frame_diagnostic.rs b/crates/punktfunk-core/src/frame_diagnostic.rs
+new file mode 100644
+index 000000000..01fb4579e
+--- /dev/null
++++ b/crates/punktfunk-core/src/frame_diagnostic.rs
+@@ -0,0 +1,84 @@
++//! Bounded frame handoff records for the temporary diagnostic build.
++
++use std::collections::VecDeque;
++use std::sync::{Mutex, OnceLock};
++use std::time::{Duration, Instant};
++
++const CAPACITY: usize = 4096;
++const WINDOW: Duration = Duration::from_secs(180);
++
++#[derive(Clone, Copy)]
++struct Entry {
++    stage: &'static str,
++    frame: u32,
++    pts_ns: u64,
++    complete: bool,
++    us: u64,
++}
++
++struct Ledger {
++    start: Instant,
++    entries: VecDeque<Entry>,
++}
++
++fn ledger() -> &'static Mutex<Ledger> {
++    static LEDGER: OnceLock<Mutex<Ledger>> = OnceLock::new();
++    LEDGER.get_or_init(|| {
++        Mutex::new(Ledger {
++            start: Instant::now(),
++            entries: VecDeque::with_capacity(CAPACITY),
++        })
++    })
++}
++
++/// Record a frame boundary for three minutes without retaining packet contents.
++pub(crate) fn record(stage: &'static str, frame: u32, pts_ns: u64, complete: bool) {
++    let Ok(mut l) = ledger().lock() else { return };
++    let elapsed = l.start.elapsed();
++    if elapsed > WINDOW {
++        return;
++    }
++    if l.entries.len() == CAPACITY {
++        l.entries.pop_front();
++    }
++    l.entries.push_back(Entry {
++        stage,
++        frame,
++        pts_ns,
++        complete,
++        us: elapsed.as_micros() as u64,
++    });
++}
++
++/// Emit recent boundaries for the recovery range and two neighboring indices.
++pub(crate) fn recovery(first: u32, last: u32) {
++    let entries = {
++        let Ok(l) = ledger().lock() else { return };
++        if l.start.elapsed() > WINDOW {
++            return;
++        }
++        let width = last.wrapping_sub(first).saturating_add(4);
++        l.entries
++            .iter()
++            .filter(|e| e.frame.wrapping_sub(first.wrapping_sub(2)) <= width)
++            .take(96)
++            .copied()
++            .collect::<Vec<_>>()
++    };
++    tracing::info!(
++        first,
++        last,
++        entries = entries.len(),
++        "frame ledger recovery"
++    );
++    for e in entries {
++        tracing::info!(
++            stage = e.stage,
++            frame = e.frame,
++            pts_ns = e.pts_ns,
++            complete = e.complete,
++            mono_us = e.us,
++            "frame ledger"
++        );
++    }
++}
+diff --git a/crates/punktfunk-core/src/lib.rs b/crates/punktfunk-core/src/lib.rs
+index a4777598b..dbdf5d9c2 100644
+--- a/crates/punktfunk-core/src/lib.rs
++++ b/crates/punktfunk-core/src/lib.rs
+@@ -57,6 +57,7 @@ pub mod resolutions;
+ pub mod rumble;
+ pub mod session;
+ pub mod stats;
++pub(crate) mod frame_diagnostic;
+ /// cbindgen:ignore
+ pub mod time;
+ #[cfg(feature = "tls")]
+diff --git a/crates/punktfunk-core/src/packet/reassemble.rs b/crates/punktfunk-core/src/packet/reassemble.rs
+index 63cb0a02c..92f9502ea 100644
+--- a/crates/punktfunk-core/src/packet/reassemble.rs
++++ b/crates/punktfunk-core/src/packet/reassemble.rs
+@@ -434,6 +434,7 @@ impl Reassembler {
+                 if !is_probe && shard_delay_ns.len() < SHARD_DELAY_SAMPLES {
+                     shard_delay_ns.push(crate::quic::wall_clock_ns() as i64 - hdr.pts_ns as i64);
+                 }
++                if !is_probe { crate::frame_diagnostic::record("packet_first", hdr.frame_index, hdr.pts_ns, false); }
+                 e.insert(FrameBuf {
+                     shard_bytes: g.shard_bytes,
+                     // Slice sentinel `frame_bytes` is the block base, not AU size.
+@@ -1095,6 +1096,7 @@ impl ReassemblyWindow {
+             let keep = newest.wrapping_sub(idx) <= HARD_LOSS_WINDOW
+                 && newest_pts.saturating_sub(f.pts_ns) <= window_ns;
+             if !keep {
++                if count_drops { crate::frame_diagnostic::record("assembly_expired", idx, f.pts_ns, false); }
+                 // Remember the index so a straggler cannot resurrect the frame
+                 // (which would re-allocate and double-count the drop). Restored
+                 // shards join late-shard memory exactly like an emitted frame.
