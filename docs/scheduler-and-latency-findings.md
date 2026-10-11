@@ -1,5 +1,7 @@
 # OPPO game scheduling and Wi-Fi latency level 4 on the OPD2515: source findings
 
+> Device follow-up: [current investigation findings, tests and installed state](investigations/2026-10-11/README.md). This original report remains source-only.
+
 Read-only research on public source code, done without the tablet. Nothing here was measured on a device. The question was how two OPPO and Qualcomm features treat a game-streaming client (package `io.unom.punktfunk.mokomis`) that streams smoothly most of the time but stutters now and then.
 
 ## Sources

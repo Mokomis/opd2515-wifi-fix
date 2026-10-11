@@ -1,5 +1,7 @@
 # Wi-Fi stall and width fixes for the OPPO Pad Mini
 
+Additional OPPO scheduling, display-buffer, touch and background-policy research: [current findings index](docs/investigations/2026-10-11/README.md).
+
 Two fixes for the Wi-Fi 7 radio of the **OPPO Pad Mini OPD2515** (Qualcomm WCN7750), and a boot script that keeps both across reboots. They remove short transmit pauses that happen about ten times a minute, and stop the link dropping from 320 MHz to 80 MHz whenever traffic is light. Both showed up as audio dropouts, lost video frames and flicker when streaming games to the tablet.
 
 > [!WARNING]

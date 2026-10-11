@@ -1,0 +1,30 @@
+# Mini OGFR producer control, 2026-10-11
+
+Read-only artifact analysis; no device setting or request changed by this worker. Root independently performed runtime request tests. Two owned native REA sessions were closed and saved as libgui-client.rea.json and libguiext-client.rea.json.
+
+## Answer
+
+Version4 request1/2 is a **pending-frame threshold plus optional timing alignment**, not the total number of allocated graphics buffers. It can throttle a fast producer before excess work builds up. The Mini client implementation exists and the foreground app maps the matching extension. Runtime callback acceptance alone does not prove its pacing branch executes.
+
+## Exact artifacts and method evidence
+
+- libgui.so from Mini: SHA2564064189e6bdc92d9dbc9518dc5c1c0c11d30fa7887de8c66768ff0546c4eddcf. Native procedure inventory ev_2a2ecb660de4a0ad41cfad50169608225bed0ff551983a6fb3314504169cd0c0, client-inventory.json. Ghidra addresses differ from ELF symbol values by loaded image base; all REA requests used provider-returned addresses.
+- Fresh read-only pull /system_ext/lib64/libguiextimpl.so: SHA2569e1bd646892efe62648f70ef18c37408ab4e5b297aa9674ef87d6150a6d6536d. Foreground Punktfunk process maps this exact path, retained client-live-maps.txt. Extension procedure inventory ev_c07ccd0bd53878bf465c926fa25c575d5474f53c9aa7615466ff8dbb8e2b0acf, client-ext-inventory.json.
+- OplusGraphicsEventListener::onFrtcInfoChanged at0x10bccc logs type/rate/info and passes them to android::oplus::updateFrtcInfo without changing meaning. Evidence ev_f24230a7faa5fc0bf3cd53d259f74b564e63a612a959c9cb4f02f934188ef768; client-ext-callback.json.
+- libgui updateFrtcInfo0x29702c stores type, requested count and info string. Rate0 notifies waiters. Evidence ev_7cbfcd78c4078bb0ed15caa4abbae67b9909023adeb72f92166f739e9488c88d; client-updatefrtc.json. Globals at0x2f0e10 type/rate and0x2f0e18 info.
+- BQPExtImpl::queueBuffer0x109048 checks isFrameStabilizationEnable, accumulates producer timestamp history, then calls executeOgfrControl once history reaches360 samples and average interval <=1.2×the current OGFR period. Slower production resets the history; it logs Ogfr exit only with native debug enabled. Evidence ev_3ea9011a98754044f2c05a74f08cf894002899d4fcb02e9d083f5b7724b064ec; client-ext-bqpqueue.json and readable .txt. isFrameStabilizationEnable exact ELF instruction inventory0x197400 checks type4 and requested>0; unlike its name, this checks active per-process client state, not an independent global property. At144Hz, period6.944ms ×1.2=8.333ms; average production must be approximately120fps or faster. Warm-up at144fps is about2.5sec, longer at lower rate. Initializing log alone proves history began, not that throttle ran.
+- libgui updateOgfrInfo0x297420 stores newer timestamp state, display period and pending count, and signals a condition variable. The pending field is explicitly traced as SF-PendingCount. Evidence ev_f29ce02555f8eb618444599ddedd254997d0204e6794c11f9a10eeaf40e0248b; client-updateogfr.json.
+- executeOgfrControl0x297598 requires client type4/request>0. If display period>0 and pending>=requested, waits on the condition variable for up to2 periods; predicate exits when pending<requested. Thus request1 waits at pending1+, request2 at pending2+. Evidence ev_f0455492622c539bea87c340b71f49988479c758a27fbdf3e64fda6cce2e576c and predicate ev_53ee806aae02f4f5a6b0c73d578ea4557f3ac559e6f887bed747e269349026f6; client-executeogfr.json/client-ogfr-predicate.json. At144Hz this bound is about13.89ms. This is bounded pacing, not a guaranteed hard cap when count remains elevated past timeout.
+- When info equals true (server emits this for strictMode=false), executeOgfrControl additionally aligns to max(latest OGFR timestamp, previous locally predicted timestamp)+half display period, sleeping only if positive and less than2 periods, then advances its local predicted timestamp. info=false (strictMode=true) skips this alignment but keeps pending-based wait. Avoid interpreting strict as stronger queue cap: it disables the additional alignment in this implementation.
+
+## Implication for the Mini
+
+Request1 could reduce pending backlog compared with2, with more producer blocking. Request2 is a looser threshold. Default non-strict mode adds deliberate synchronization; whether that reduces frame age or adds latency depends on app pacing. Neither request directly sets max-acquired, max-dequeued, total slot count, or allocation count in the traced helper. The exposed Surface/BufferQueue max-acquire APIs are separate and must not be conflated.
+
+This path is in BufferQueueProducer extension, not merely Java UI rendering, so it is a plausible SurfaceView producer control. Root runtime logs identify callbacks for the intended PID and BQPExtImpl initialization; producer-thread attribution and pending/wait trace remain needed to quantify actual execution and benefits. Another producer in the same process may generate the logs. Native sender updates carry process-wide state; exact per-layer coverage was not traced here.
+
+## Reset and test limits
+
+Root receiver analysis establishes version4 value0 releases matching description. Client callbacktype0/rate0 makes isFrameStabilizationEnable false, disables helper, and clears history on subsequent queueBuffer. updateFrtcInfo0 signals its own wait CV; the OGFR pending CV may still have a bounded in-flight wait until count changes or2-period timeout. No permanent settings needed for a per-process request test. Preserve unique description and watchdog reset; do not alter global extra-buffer properties.
+
+Measure sustained producer wait and SF-PendingCount plus frame presentation ages/misses over clean disjoint windows after warm-up. FPS alone or accepted Binder request is insufficient. Static semantics are established; measured benefit is not established by this report. REA pseudocode is decompiler-generated, includes compiler artifacts/indirect-call limits, and is not original source. Surface core dequeue analyses lacked direct OGFR calls; extension queueBuffer resolved the boundary.

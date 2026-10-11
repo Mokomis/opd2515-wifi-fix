@@ -1,0 +1,70 @@
+# Mini Cosa display-buffer follow-up
+
+> Historical investigation stage. Later runtime results and the current installed state are indexed in [README](README.md).
+
+2026-10-11; read-only. No setting, list, app, or buffer request was changed.
+
+## Answer
+
+The Mini contains a real request path from Cosa into the running display compositor. Its global FRTC switch is enabled. Native REA analysis confirms a version4 stabilization request of1 passes the receiver's numeric validation, while0 resets the corresponding request. Values3and above are explicitly rejected; OGFR stabilization must be enabled. The feature is absent from every configuration string in the captured Cosa database. A narrow per-game buffering experiment is plausible, but total queue depth and a latency win are not established.
+
+## Established path and policy
+
+Matching COSA.apk SHA256 `19c50073113f3b46839970d2ea8c0cf282ff29502ffc8138145eb58f063d704e`; matching local source at `local project/oppo-re/cosa/jadx-out/sources`.
+
+- PerformanceSetting.v parses `simple_client` -> `fg.decision[]` -> `type: ogfr_enable`; PerformanceSetting.r reads `sf_cf_enable`, `isStrictMode`, and integer keys60/90/120/144/165. The default mapping is1 at each rate, but enable defaults false. REA parser evidence `ev_cfd16cc311aff91c7bdb46fd3908c6d7a965ce29a25bed9c38640a8b2bee409e`, Java complete/no fallback, saved `buffer-parser-rea.json`.
+- Model config is parsed first, followed by app-specific simple_client in onFG (PerformanceSetting.o lines1230–1248). App policy can therefore override supplied fields. Parsing merges rates rather than replacing the whole map. Clearing is handled separately in reset, not by arbitrary JSON edits while running.
+- PerformanceSetting.j uses desiredBufCnt0 when backgrounded, during frame insertion, or when stable unless LingXi boost permits it. Otherwise it requests the currently selected rate's integer value. Strict flag is only1 for a nonzero request with configured isStrictMode. Prior REA evidence `ev_65fb856a6870ef12f1b6a4a7c970f333739489964a570b213c3b2bab07f21152` independently covers this method.
+- y8.a.HandlerC0255a.handleMessage message6 calls `IOPlusRefreshRate.setFrameRateTargetControl(desiredBufCnt, package, strict, "version-4-cosa")` on `oplus_vrr_service`.
+- Fresh targeted decompile of device-matching `work/freeze-rea/oplus-services.jar` SHA256 `bca5f72c4daf7a5aaacd78e5b8f82431cc371169dee6cc7ab42f87170bce2180`: `OPlusRefreshRateService.setFrameRateTargetControl` lines978–986 -> `OPlusExternalRefreshRateManager.addFRTCFrameRate` lines1108–1114 -> handler -> handleFrtcRequest lines1407–1411 -> OPlusSurfaceFlingerController.addFrtcRequest.
+- FrtcRefreshRateRequest constructor (External manager lines2280–2301) recognizes `version-4-` and preserves version4. This is important because other callers use the same API for ordinary frame-rate values. The argument1 must not be interpreted as1fps without tracing version4.
+- `work/oppo-investigation/framework/decompiled/sources/com/oplus/vrr/OPlusSurfaceFlingerController.java` lines638–663 serializes subrequest1, integer request, process name, strict flag, description, version, pid, uid and calls SurfaceFlinger Binder transaction22017. This establishes Java-to-native boundary, not native acceptance or buffer limits.
+
+Two focused framework decompiles produced one JADX error each in unrelated method bodies. Relevant quoted methods are readable; exact native reception is not established by their decompilation.
+
+## Actual Mini observations
+
+`vrr-runtime.txt`: live `oplus_vrr_service` exists with com.oplus.vrr.IOPlusRefreshRate. Frtc switch=true, Hybrid Acc switch=true, UseFakeVsync=true, Stabilize=true. ADFR support=0, OSyncEnable=false, CosaDynamicTeEnable=false, DynamicTeEnable=false, IsDropBufferModeEnable=false, IsAbutmentMode=false, CurrentDropMode=false. These separate features must not be conflated: ADFR0 does not by itself disqualify the enabled FRTC path, and the other drop-buffer path is not this Cosa request.
+
+`oplus_vrr_config.json`, read from `/my_product/etc/oplus_vrr_config.json`: version20260224, frtc=true, feature_hybrid_acc=true, stabilize=true; touch-frame-change frtc_capability120 refers to its own strategy and does not prove a version4 buffer request is limited to120Hz.
+
+`surfaceflinger-runtime.txt`: physical/render refresh144Hz, supported modes60/90/120/144Hz, vrrConfig=N/A; FrameFinder StatusFromHybrid off. Plain dump contains no FRTC/frtc entries in a bounded text search. This does not prove the feature never runs, since native dump coverage and game transitions are incomplete. Existing app display request144Hz is independent of Cosa buffer configuration.
+
+`surfaceflinger-maps.txt` confirms native executable `/system/bin/surfaceflinger` is loaded. Its copied artifact contains FRTC parser/request diagnostic strings including `FRTC Request get param from parcel error!`, `FRTC is disable now, ignore this request`, and `FRTC specific reset!`. These strings identify the receiver implementation but are not execution evidence. The mapped libgui has concrete FrtcRequest parcel methods and per-producer acquired-buffer count APIs (`libgui-frtc-symbols.txt`).
+
+Native hashes in `buffer-native-sha256.txt`: SurfaceFlinger `cf485097c8ff5c5d5bebc0456f452f9fb45f03f3af36067b964180f48a78f47e`; libgui `4064189e6bdc92d9dbc9518dc5c1c0c11d30fa7887de8c66768ff0546c4eddcf`. A mapped liboplusplugin copy did not reveal FRTC-specific string matches and is not claimed as the receiver.
+
+Every table and string column in the existing best-effort Cosa DB snapshot was searched for `ogfr_enable` or `sf_cf_enable`; zero hits, saved `buffer-config-hits.json`. PackageConfigBean has just3rows (Douyin, common model, default model); this is not exhaustive coverage of remote or future per-app policies, nor a transactionally consistent live snapshot. Default simple_client enables autoTouchRate/extra_touch_enable only.
+
+## What is possible and what remains
+
+The shipped Mini compositor and Java service support receiving version4 requests; the model policy chooses not to request them in the captured configuration. A per-game request can be formulated using the existing interface without replacing firmware, once native version4 constraints and restoration behavior are verified. No packaged GUI control for this switch was established.
+
+Potential measurable tradeoff: reducing queued/acquired buffers could reduce waiting-frame age when there is a queue, while imposing more producer waits or missed deadlines. That is a hypothesis; default desiredBufCnt1 is not proven to mean total single-buffer rendering. Test criteria should include actual native request acceptance, buffer occupancy/queue age, producer waits, frame deadline misses, and restoration to0; FPS alone is insufficient.
+
+Safe query: plain `dumpsys oplus_vrr_service`, plain `dumpsys SurfaceFlinger`. The VRR dump method doubles as a mutating control parser: arguments `frtc` plus values can switch the feature or submit requests. No such control invocation was made. Do not try global `persist.display.extra.buffer.count` simply because its string exists in libgui; the copied binary's property was not traced to this version4 Cosa policy, and the live value is unset.
+
+Question status: actual service path answered; Cosa configuration fields/precedence answered; model gates/runtime global FRTC answered; native version4 receiver validation and reset answered by the subsequent native pass below; downstream client total-buffer semantics, active accepted request and actual improvement unresolved. This is sufficient to nominate a bounded experiment, not to recommend enabling the policy permanently.
+
+## Native follow-up limitation
+
+Two REA/Ghidra libgui function requests failed to resolve the requested function. First used an incorrectly spelled mangled name (`libgui-frtc-rea.json`); second used the ELF symbol value as an analysis address (`libgui-frtc-execute-rea.json`), but Ghidra's loaded address differs. Neither failure establishes absent functionality, and neither provides native pseudocode evidence. Do not cite these as successful analysis. Independent ELF symbol/instruction inventory is retained (`libgui-frtc-symbols.txt`, `libgui-frtc-instructions.txt`); it shows an ordinary FRTC client timing helper, not the version4 compositor buffer implementation. A subsequent native pass should use the exact exported name after REA provider function inventory or provider-returned mapped address, then follow the version4 receiver in SurfaceFlinger itself.
+
+Safest next experiment, once those semantics are resolved: keep game/app/display mode constant, capture baseline queue age, acquired/dequeued buffers, producer wait time and missed deadlines; submit one Cosa-style per-process version4 request with a defined watchdog reset to0; verify accepted state and compare; restore before leaving foreground or ending the run. Avoid global JSON/property changes and do not interpret a positive Binder reply alone as a working buffer change.
+
+## Successful bounded native receiver pass
+
+An independent persistent REA stdio session used Ghidra12.1.4 and matching existing JDK21; original native artifacts and tablet were never modified. The current chat MCP lacks GHIDRA_INSTALL_DIR, so its attempted native open returned provider_unavailable; the independently launched session supplies that existing path only in its own process environment. No global configuration changed.
+
+Target identity is the exact copied Mini SurfaceFlinger SHA256 `cf485097c8ff5c5d5bebc0456f452f9fb45f03f3af36067b964180f48a78f47e`. Default analysis completed before any result. Procedure inventory evidence `ev_9beff9372b429f408fdc41be85e82e112a00170ee4658ce2f009b356b125b68b` (`sf-rea-frtc-procedures.json`) provided all subsequent addresses.
+
+- `android::OplusFRTC::onTransact` at `0x60dbfc`, evidence `ev_45a6c945aec28f75e1f1554821c5ff56ff9c657f90e6dd555570335d7f822440` (`sf-rea-frtc-onTransact.json`): handles transaction22017 (`0x5601`), subcode1; reads value/process/strict/description/version/pid/uid and calls setFrameRateTarget. Special-reset descriptions are separate and were not used.
+- `android::OplusFRTC::setFrameRateTarget` at `0x40912c` plus `FrameRateTarget` constructor `0x60d4a0`, setRate `0x60be94`, updateRate `0x60c38c`: batch evidence `ev_9f2e8cac8bddf5bf5427937bf627e06f989f959145b373853a17ce73c8145c1f` (`sf-rea-frtc-target-methods.json`). Required process and description must be nonempty; global FRTC enable must be true. Constructor maps supplied version4 to backend4 and initializes a ceiling field at offset0xcc to3. Backend4 additionally requires OplusGameFrameRate stabilization flag at offset0x61. With that flag set, value<=0 takes the release path and values1or2 pass this receiver's numeric gate. A positive value>=3 is rejected with `Ogfr version-1 has been abandoned, ignore this request`. The request is stored using the description-derived key. Existing matching request plus value0 deactivates it, moves it to history and erases it; absent matching request plus0 returns false without introducing one.
+- Active backend4 setRate sends `OplusGraphicsEvent::notifyFrtcInfoChange(processPid,4,requestedValue,info)`; the info string is `true` when strictMode=false and `false` when strictMode=true. Disabling emits type0/value0 and sets the OGFR focus process to `ogfr-null`. This distinguishes1(as a version4 stabilization parameter) from ordinary1FPS. It does not by itself prove that all queues become physically single-buffered.
+- Graphics-event activation is process/monitor dependent. The backend4-specific callback at `0x60fe80` matches monitored process names before applying setRate. If another request map already applies to that process, this callback clears its focus marker rather than blindly overriding it. Evidence `ev_78b0d1779ccc41e6d6b893064269a873e3d3f308e2b369945761edea89aa3536` (`sf-rea-frtc-activation.json`). Therefore a receiver acceptance is not sufficient runtime proof of active producer control.
+- OGFR native config parser at `0x6185e0` confirms stabilization flag offset0x61 is populated independently of fake-vsync and hybrid-focus enable. Native dump `0x618990` names it FrameStablizeEnable. Evidence `ev_c2ca62840125cef7c7bcaa518c9de11fc395896d9e12e11318a469385109c9a0` (`sf-rea-ogfr-config.json`). Exact setter traced: ExternalRefreshRateManager.handleHybirdAccConfigChange line1518 passes mHybridAccUseFakeVsync, mHybridAccStablize, mHybridAccDebug to OPlusSurfaceFlingerController.setHybridAccConfig line1034, which writes transaction22027/subcode1 and those3ints. Native parser stores the secondint into offset0x61, the same gate checked by FRTC. The live Java dump's Stablize=true therefore identifies the exact native gate's configured sender state. Native readback and an active version4 request were not measured; describe values1or2 as accepted when that gate is on, not as experimentally accepted on the running device.
+- Native FRTC dump at `0x60e100` (`sf-rea-frtc-dump.json`, evidence `ev_c0555a4c534f8c5db4acad5b36d5c73ac54dccdb370c1c191d04cbf106f56a6f`) contains further control branches as well as state/history printing. Do not treat arbitrary compositor dump arguments as read-only.
+
+This answers the requested receiver-validation question. Remaining downstream gap is the app/libgui handling of graphics-event type4 and how its requested1 affects dequeue/acquire/queued slot counts in each producer implementation. No buffer experiment was run. A future investigation should resolve that client callback and verify accepted active request state before deciding whether to run a reversible comparison. The earlier failed libgui requests remain recorded for reproducibility but do not invalidate this successful SurfaceFlinger pass.
+
+The owned native session was closed successfully after writing `surfaceflinger.rea.json` (2345702bytes;8retained evidence records); close result in `sf-rea-close.json`. Provider original binary and ephemeral project were not saved over any firmware artifact.
