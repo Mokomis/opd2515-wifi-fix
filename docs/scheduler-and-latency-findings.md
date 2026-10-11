@@ -26,6 +26,7 @@ Module: `vendor/oplus/kernel/cpu/game_opt/`, built as `oplus_bsp_game_opt` and s
 - It writes the render thread IDs to `/proc/game_opt/rt_info` (`game_opt/rt_info.c:453`). All of them must belong to one process.
 - Almost every hook returns early unless `have_valid_game_pid` or `have_valid_render_pid` is set by those writes.
 - The service is not in the kernel source. Nothing in the source shows whether it would ever register the streaming client. Likely it does not, unless the app is in OPPO's game list.
+  - **Superseded by runtime:** on the tablet Punktfunk *is* registered (`game_pid` equals its PID), but heavy and critical task boost were off and CPU minima were zero ([service findings](investigations/2026-10-11/oppo-mini-service-findings.md)).
 - Check on the tablet: `cat /proc/game_opt/game_pid` (mode 0664) prints `game_pid=-1 ...` when no game is registered.
 
 ### What the kernel measures once a game is registered
@@ -88,6 +89,8 @@ The paths in this subsection are under `vendor/qcom/opensource/wlan/`.
 ### OPPO's default flags and what they mean
 
 `qcacld-3.0/components/mlme/dispatcher/inc/cfg_mlme_fe_wlm.h:389`: `CFG_DEFAULT_ULTLOW_FLAGS "0x180D83"`. The comment above it still says Qualcomm's documented default, `0xc83`. The tablet's ini file can override the value; that file is not in the kernel source.
+
+> **Device follow-up:** the tablet's ODM ini sets `wlm_latency_flags_ultralow=0x180c83`: bit 8 is clear, everything else is as in the table below. Which ini the driver actually loads was not resolved ([service findings](investigations/2026-10-11/oppo-mini-service-findings.md)). Punktfunk does hold two low-latency Wi-Fi locks, and power save reported off during streaming.
 
 Bit meanings come from the comment block in that header and from `fw-api/fw/wmi_unified.h` (layout comment at about line 42207, macros at 42305-42337).
 

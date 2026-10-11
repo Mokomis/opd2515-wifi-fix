@@ -2,6 +2,8 @@
 
 ## Finding
 
+> Audit note: the queue-present times here (mean 0.283 ms) match the disabled state of the [producer-wait trace](oppo-mini-buffer-producer-wait-results.md), not value 2 (about 1.1 ms). This capture therefore does not describe the retained buffer helper, which adds about 1 ms on the same thread. See [independent audit 2.4](independent-audit.md#24-app-side-presentation-blocking-is-eliminated-predates-the-retained-change).
+
 The sampled presentation calls do not block long enough to explain the major queue skips. The capture instead shows a long first-frame preparation step, occasional decode-fence stalls, and complete frames reaching the queue close together even during ordinary decode times. This narrows future work to codec startup and delivery pacing; it provides no evidence for another OPPO service adjustment.
 
 ## Method and validation

@@ -38,3 +38,6 @@ Repeated value2 tests reduced completed-frame display waiting by about1.1–1.3m
 
 
 Follow-up: [real reboot and foreground-switch verification passed](oppo-mini-buffer-reboot-verification.md). This supersedes the earlier reboot/switch test limitation.
+
+
+Final review: [independent audit](independent-audit.md) and [final recommendations](final-recommendations.md). Status alone does not prove daemon exit; an absent PID file and the persistent disable marker were verified. The actual installed helper was subsequently measured, then disabled.

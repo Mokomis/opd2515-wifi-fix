@@ -1,5 +1,7 @@
 # Wi-Fi stall and width fixes for the OPPO Pad Mini
 
+Investigation closed: [final recommendations and retained state](docs/investigations/2026-10-11/final-recommendations.md). The optional buffer helper is disabled.
+
 Additional OPPO scheduling, display-buffer, touch and background-policy research: [current findings index](docs/investigations/2026-10-11/README.md).
 
 Two fixes for the Wi-Fi 7 radio of the **OPPO Pad Mini OPD2515** (Qualcomm WCN7750), and a boot script that keeps both across reboots. They remove short transmit pauses that happen about ten times a minute, and stop the link dropping from 320 MHz to 80 MHz whenever traffic is light. Both showed up as audio dropouts, lost video frames and flicker when streaming games to the tablet.
@@ -149,7 +151,7 @@ An app that holds Android's low-latency Wi-Fi lock (`WifiManager.WIFI_MODE_FULL_
 - Android switches 802.11 power save off.
 - Qualcomm's Wi-Fi HAL asks the driver for latency level 4, "ultralow".
 
-What level 4 does comes from one driver setting, `wlm_latency_flags_ultralow`. OPPO's driver source sets it to `0x180D83`:
+What level 4 does comes from one driver setting, `wlm_latency_flags_ultralow`. OPPO's driver source sets it to `0x180D83`. The tablet's ODM ini sets `0x180c83`, the same except that bit 8 (multi-link beacon-loss roaming) is clear; which ini the loaded driver uses was not resolved. With either value:
 
 - Android's scan requests are suppressed, and scans skip DFS channels.
 - The tablet roams only after losing the access point's beacons, not because the signal is weak.
@@ -162,7 +164,7 @@ The boot script can replace that value. Put a hex value in `/data/adb/wifi-fix/u
 su -c 'echo 0x3010000180F83 > /data/adb/wifi-fix/ull-flags'
 ```
 
-`0x3010000180F83` is OPPO's value plus four bits:
+`0x3010000180F83` is the source default plus four bits. It was worked out before the device ini was read, so it also sets bit 8. A value preserving that bit would be `0x3010000180E83`, but neither experimental override is recommended or tested on this tablet. The four added bits are:
 
 | Bit | Effect |
 |---|---|
@@ -217,7 +219,7 @@ If that prints a number above zero, try `gEnablePrimaryStaMloCap=0` in the drive
 - **Multi-link is gone.** The tablet no longer uses two bands at once. On the network used here it never did.
 - One tablet, one firmware build, one router (a TP-Link Deco mesh on 6 GHz). No other OPPO, OnePlus or realme device was tried. The sensor fault may be a defect of this one unit.
 - The firmware command numbers are not documented. Module 42's sub-commands 1 and 9 are the only ones identified; do not try others.
-- The low-latency flags override has not been run on the tablet. Its file rewrite is checked by `tests/make-ini-test.sh` on a computer, not with Android's own `awk`. Whether the firmware loader reads the bind-mounted copy is untested. OPPO's source is from build `16.0.6.103`, older than the build above, so the stock value may differ; `grep -a -c 0x180D83 /vendor_dlkm/lib/modules/qca_cld3_wcn7750.ko` prints a number above zero if your driver has the same default.
+- The low-latency flags override has not been run on the tablet. Its file rewrite is checked by `tests/make-ini-test.sh` on a computer, not with Android's own `awk`. Whether the firmware loader reads the bind-mounted copy is untested. OPPO's source is from build `16.0.6.103`, older than the build above. A device read found `0x180c83` in the ODM ini; whether that file is loaded and overrides the built-in default is unresolved; see [the investigation findings](docs/investigations/2026-10-11/oppo-mini-service-findings.md).
 - `wifi-fix.sh` here differs from the tested copy in one way: switching wireless debugging back on is now behind the `keep-adb-wifi` file. `make-patched-driver.sh` was run on a computer against a copy of the stock driver, where it reproduced the tested file's checksum. It was not run on the tablet.
 
 ## How it was found
