@@ -1,5 +1,8 @@
 # Wi-Fi stall and width fixes for the OPPO Pad Mini
 
+> [!IMPORTANT]
+> **The scripts here (`wifi-fix.sh`, `make-patched-driver.sh`, `wireless-debugging.sh`) are deprecated and no longer updated.** The no-multi-link driver, the thermal workaround and wireless debugging after reboot are now part of **[Ember](https://github.com/Mokomis/ember)**, one app for the OPPO Pad Mini that recognizes this repository's startup helper and backs it up when it takes over. The research and measurements here are unchanged and remain the reference. This repository is archived (read-only) and stays online for reference.
+
 [Fresh OPPO configuration/file inventory for researchers and LLMs](docs/device-inventory/2026-10-11/README.md): read-only device snapshot, archive-member inventories and explicit coverage limits.
 
 **Public OPPO Pad Mini research:** [all findings by topic](FINDINGS.md) · [final recommendations](docs/investigations/2026-10-11/final-recommendations.md) · [machine-readable catalog](findings-index.json) · [LLM entry point](llms.txt).
